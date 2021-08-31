@@ -26,7 +26,7 @@ export const RegisterForm = () => {
                     <input type="text"  className="register-name"  required />
                     <label>Adreça</label>
                     <input type="text"  className="register-address"  required />
-                    <label>Correu Electrònic</label>
+                    <label>Email</label>
                     <input type="text"  className="register-email"  required />
                     <label>Usuari</label>
                     <input type="text"  className="register-email"  required />
@@ -66,7 +66,7 @@ export const RegisterForm = () => {
                 </div>
             </div>
 
-            <button className={"button-save"} type="submit" > GUARDAR </button>
+            <button className={"button-save"} type="submit" > Guardar </button>
 
         </div>
 
