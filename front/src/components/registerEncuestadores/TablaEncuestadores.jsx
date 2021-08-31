@@ -146,7 +146,7 @@ function TablaEncuestadores() {
                             />
                             <br/>
                             <label>Vila</label>
-                            <select className="form-control"
+                            <select className="form-control selectForm"
                                     type="text"
                                     name="vila"
                                     value={nombreSeleccionado && nombreSeleccionado.vila}

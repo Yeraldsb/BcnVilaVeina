@@ -109,6 +109,12 @@ label{
     width: 85px;
     margin: 10px;
 }
+.selectForm{
+    width: 166px;
+    height: 25px;
+    display: inline;
+    margin-left: 9px;
+}
 .modalTite {
     display: inline-block;
     text-align: center;
