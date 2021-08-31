@@ -6,10 +6,10 @@ import {Delete} from "@material-ui/icons";
 
 function TablaEncuestadores() {
     const dataEncuestadores = [
-        {id: 1, nombre: "Yealdin", cognom: "Salazar", vila: "Sant Andreu" , usuari: "Yeraldsb"},
-        {id: 2, nombre: "Yealdin", cognom: "Salazar", vila: "Sant Andreu",  usuari: "Yeraldsb"},
-        {id: 3, nombre: "Yealdin", cognom: "Salazar", vila: "Sant Andreu",  usuari: "Yeraldsb"},
-        {id: 4, nombre: "Yealdin", cognom: "Salazar", vila: "Sant Andreu",  usuari: "Yeraldsb"},
+        {id: 1, nombre: "Yealdin", cognom: "Salazar", vila: "Sant Andreu" , usuari: "Yeraldsb", contrasenya: 2284, telèfon:658444 , adreça: "Carrer de server"},
+        {id: 2, nombre: "Yealdin", cognom: "Salazar", vila: "Sant Andreu",  usuari: "Yeraldsb", contrasenya: 2284, telèfon:658444 , adreça: "Carrer de server"},
+        {id: 3, nombre: "Yealdin", cognom: "Salazar", vila: "Sant Andreu",  usuari: "Yeraldsb", contrasenya: 2284, telèfon:658444 , adreça: "Carrer de server"},
+        {id: 4, nombre: "Yealdin", cognom: "Salazar", vila: "Sant Andreu",  usuari: "Yeraldsb", contrasenya: 2284, telèfon:658444 , adreça: "Carrer de server"},
     ];
 
     const [data, setData] = useState(dataEncuestadores);
@@ -22,7 +22,11 @@ function TablaEncuestadores() {
         nombre: '',
         cognom: '',
         vila: '',
-        usuari: ''
+        usuari: '',
+        contrasenya: '',
+        telèfon: '',
+        adreça: ''
+
     });
 
     const seleccionarNombre=(elemento, caso)=>{
@@ -46,6 +50,8 @@ function TablaEncuestadores() {
                 nombree.nombre=nombreSeleccionado.nombre;
                 nombree.vila= nombreSeleccionado.vila;
                 nombree.usuari= nombreSeleccionado.usuari;
+                nombree.adreça= nombreSeleccionado.adreça;
+                nombree.telèfon= nombreSeleccionado.telèfon;
 
             }
         })
@@ -71,6 +77,9 @@ function TablaEncuestadores() {
                             <TableCell>Cognom</TableCell>
                             <TableCell>Vila</TableCell>
                             <TableCell>Usuari</TableCell>
+                            <TableCell>Contrasenya</TableCell>
+                            <TableCell>Telèfon</TableCell>
+                            <TableCell>Adreça</TableCell>
                             <TableCell>Acciones</TableCell>
                         </TableRow>
                     </TableHead>
@@ -82,6 +91,10 @@ function TablaEncuestadores() {
                                 <TableCell align="left">{elemento.cognom}</TableCell>
                                 <TableCell align="left">{elemento.vila}</TableCell>
                                 <TableCell align="left">{elemento.usuari}</TableCell>
+                                <TableCell align="left">{elemento.contrasenya}</TableCell>
+                                <TableCell align="left">{elemento.telèfon}</TableCell>
+                                <TableCell align="left">{elemento.adreça}</TableCell>
+
                                 <TableCell align="left">
                                     <button className="botonActualizar" onClick={()=>seleccionarNombre(elemento, 'Editar')}>Editar</button>{" "}
                                     <Delete  onClick={()=> seleccionarNombre(elemento, "Eliminar")} />
@@ -133,13 +146,29 @@ function TablaEncuestadores() {
                             />
                             <br/>
                             <label>Vila</label>
-                            <input
-                                className="form-control"
-                                type="text"
-                                name="vila"
-                                value={nombreSeleccionado && nombreSeleccionado.vila}
-                                onChange={handleChange}
-                            />
+                            <select className="form-control"
+                                    type="text"
+                                    name="vila"
+                                    value={nombreSeleccionado && nombreSeleccionado.vila}
+                                    onChange={handleChange}>
+                                <option>Badal</option>
+                                <option>Carmel de dalt</option>
+                                <option>Casc antic d'Horta</option>
+                                <option>Casc antic Les Corts</option>
+                                <option>Consell de Cent - Girona - Eixample</option>
+                                <option>El Camp de l'Arpa - Alchemika</option>
+                                <option>El Congrés i els Indians</option>
+                                <option>Gotic</option>
+                                <option>La Marina - Mare de Déu del Port</option>
+                                <option>La Trinidad Vella</option>
+                                <option>Maresme</option>
+                                <option>Prosperitat</option>
+                                <option>Provençals de Poblenou</option>
+                                <option>Sant Gervasi de Cassoles</option>
+                                <option>Vila de Gracia</option>
+                                <option>Vilapicina i la Torre LLobeta - Cotxeres</option>
+
+                            </select>
                             <br/>
                             <label>Usuari</label>
                             <input
@@ -147,6 +176,33 @@ function TablaEncuestadores() {
                                 type="text"
                                 name="usuari"
                                 value={nombreSeleccionado && nombreSeleccionado.usuari}
+                                onChange={handleChange}
+                            />
+                            <br/>
+                            <label>Contrasenya</label>
+                            <input
+                                className="form-control"
+                                type="number"
+                                name="contraseya"
+                                value={nombreSeleccionado && nombreSeleccionado.contrasenya}
+                                onChange={handleChange}
+                            />
+                            <br/>
+                            <label>Telèfon</label>
+                            <input
+                                className="form-control"
+                                type="text"
+                                name="telefono"
+                                value={nombreSeleccionado && nombreSeleccionado.telèfon}
+                                onChange={handleChange}
+                            />
+                            <br/>
+                            <label>Adreça</label>
+                            <input
+                                className="form-control"
+                                type="text"
+                                name="Adreça"
+                                value={nombreSeleccionado && nombreSeleccionado.adreça}
                                 onChange={handleChange}
                             />
                             <br/>
