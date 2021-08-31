@@ -24,7 +24,8 @@ export default function Estadisticas() {
 
                 <div className="containerbotones">
                     <div className={"rangedatepicker"}>
-                        <div>
+                        <div className="containerdatepicker">
+                            <h6>Selecciona periode</h6>
                             <DatePicker
                                 selected={startDate}
                                 onChange={(date) => setStartDate(date)}
