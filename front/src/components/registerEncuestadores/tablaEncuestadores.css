@@ -1,0 +1,172 @@
+
+:root {
+    --grey-color: #f4f4f4; /*Color Gris para fondo */
+    --black-color: #000000; /**/
+    --purple-color: #683dc3; /**/
+    --orange-color: #ff7432; /**/
+    --green-color: #0cba7e; /**/
+    --pink-color: #ffb3d7; /**/
+}
+
+.registro {
+    font-weight: 400;
+    font-size: 48px;
+    font-family: Arial;
+}
+
+
+.contenedorTabla{
+    width: 60%;
+    border-radius: 50%;
+
+}
+
+.tcolor {
+    background-color: var(--purple-color);
+}
+
+.Tabla {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 350px;
+    align-items: center;
+    margin-right: 50px;
+
+}
+.primerModal {
+    display: flex;
+    align-items: center;
+    margin-top: 120px;
+    width: 500px;
+    height: 500px;
+    border-radius: 12px;
+    background-color: white;
+    flex-direction: column;
+    font-family: "arial";
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    position: fixed;
+    margin-left: 45%;
+    top: 0;
+    -webkit-box-shadow: 3px 2px 25px 7px rgba(0,0,0,0.57);
+    box-shadow: 3px 2px 25px 7px rgba(0,0,0,0.57);
+}
+
+.botonTabla{
+    border: none ;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #009624 ;
+    color: white;
+    cursor: pointer;
+    width: 90px;
+    display: inline;
+
+}
+.botonTablaEncuestadores{
+    background-color: #ff7432;
+    border-style: none;
+    color: white;
+    height: 60px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    font-family: Arial;
+    margin-right: 930px;
+}
+.botonActualizar{
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    background-color: #009624;
+    margin-left: auto;
+    display: inline;
+    width: 100px;
+
+}
+.botonActualizarModal{
+    display: flex;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    background-color: #009624;
+    margin-left: auto;
+}
+.botonCierre{
+    display: flex;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    background-color: #cd0e14;
+    margin-left: auto;
+}
+
+label{
+    display: inline-block;
+    width: 85px;
+    margin: 10px;
+}
+.modalTite {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+.modalBody{
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalEliminar{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 350px;
+    height: 250px;
+    border-radius: 12px;
+    background-color: white;
+    flex-direction: column;
+    font-family: "arial";
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    position: fixed;
+    margin-left: 45%;
+    top: 0;
+    -webkit-box-shadow: 3px 2px 25px 7px rgba(0,0,0,0.57);
+    box-shadow: 3px 2px 25px 7px rgba(0,0,0,0.57);
+}
+.preguntaModal{
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    font-family: Arial;
+    font-weight: 500;
+    font-size: 24px;
+}
+.botonModalEliminarSi{
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 80px;
+    cursor: pointer;
+    background-color: #009624;
+    margin: auto;
+    margin-top: 15px;
+
+}
+.botonModalEliminarNo{
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 80px;
+    cursor: pointer;
+    background-color: #cd0e14;
+    margin: auto;
+    position: sticky;
+}

@@ -1,0 +1,83 @@
+
+.bodyestadisticas{
+    margin: 0;
+    padding: 0;
+    background: var(--grey-color);
+    height: 100vh;
+    width: 100%;
+
+}
+
+.containerestadisticas{
+    position: fixed;
+    margin: 0 0 0 302px;
+    background: var(--grey-color);
+    box-shadow: 2px 0 #E0E0E0;
+    height: 307px;
+    width: 100%;
+}
+
+.containerbotones{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--grey-color);
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+
+}
+.botones{
+    background-color: transparent;
+    text-decoration: none;
+    font-family: "arial";
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 16px;
+    cursor: pointer;
+    border-radius: 5%;
+    width: 166px;
+    border: 2px solid #a6a6a6;
+    box-shadow: 2px 2px #c9c9c9;
+}
+
+.iconoboton{
+    width: 30px;
+    height: 30px;
+    padding-right: 20px;
+}
+
+
+
+.containergrafica{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/*
+input, .formselect {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    cursor: pointer;
+    text-align: center;
+}
+
+.react-datepicker__input-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+    padding: 16px;
+    border-radius: 5%;
+    height: 31px;
+    width: 135px;
+    border: 2px solid #a6a6a6;
+    box-shadow: 2px 2px #c9c9c9;
+    cursor: pointer;
+} */
