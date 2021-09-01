@@ -19,12 +19,9 @@
 
 .containerbotones{
     display: flex;
-    flex-wrap: wrap;
     background-color: var(--grey-color);
     align-items: center;
     justify-content: center;
-    height: 260px;
-
 }
 .botones{
     background-color: transparent;
@@ -55,7 +52,22 @@
     justify-content: center;
 }
 
+.containerdatepicker {
+    background-color: var(--purple-color);
+    width: 200px;
+    padding: 10px;
+    height: 150px;
+    border-radius: 10%;
+    margin-left: 90px;
 
+}
+h6 {
+
+    margin: 10px 0 10px 10px;
+    color: var(--grey-color);
+    font-size: 14px;
+
+}
 
 /*
 input, .formselect {
