@@ -1,0 +1,43 @@
+/* -------------- MOTHER DIVS -------------------------------------------- */
+
+.pollbackground {
+    padding: 50px 300px 150px 50px;
+    font-family: Arial;
+    width: 500px;
+    height: 440px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 85px;
+    margin: 0px 0% 0px 27%;
+
+}
+
+.form-content{
+    display: flex;
+}
+
+/* ----------------- COLUMN 1 -------------------------------------------- */
+.form-column-1 {
+    display: flex;
+
+}
+.form-column-1-content {
+    flex-direction: column;
+}
+.label.data.form-label{
+
+}
+.form-datalabelpicker {
+    display: flex;
+}
+input.datepickerbox {
+    border: 1px solid #683dc3;
+    border-radius: 5px;
+    height: 20px;
+    width: 67px;
+}
+.form-checkboxgenre {
+    display: flex;
+}
+/* ----------------- COLUMN 2 -------------------------------------------- */
+/* ------------- BOOTSTRAP CLASSES --------------------------------------- */
