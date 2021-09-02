@@ -4,13 +4,20 @@ import TablaEncuestadores from "./components/registerEncuestadores/TablaEncuesta
 import {FormEnquestas} from "./components/Form/FormEnquestas";
 import Estadisticas from "./components/estadisticas/Estadisticas";
 import {RegisterForm} from "./components/registerForm/RegisterForm";
+import {PaginaHome} from "./components/welcomePage/PaginaHome";
+
+
 
 
 function App() {
   return (
 
       <Router>
-        <SideBarUser/>
+          <Route exact path="/">
+              <PaginaHome/>
+          </Route>
+
+          <SideBarUser/>
         <Switch>
           <Route path="/tabla">
             <TablaEncuestadores />
