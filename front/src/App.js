@@ -4,32 +4,31 @@ import TablaEncuestadores from "./components/registerEncuestadores/TablaEncuesta
 import {FormEnquestas} from "./components/Form/FormEnquestas";
 import Estadisticas from "./components/estadisticas/Estadisticas";
 import {RegisterForm} from "./components/registerForm/RegisterForm";
+import {PaginaHome} from "./components/welcomePage/PaginaHome";
+import {useState} from "react";
+import {Home} from "@material-ui/icons";
+import AppAdmin from "./AppAdmin";
+import AppEncuestador from "./AppEncuestador";
+
 
 
 function App() {
-  return (
+  const [isLoggedIn, setLoggedIn] = useState(false)
+    const [isAdmin, setIsAdmin] = useState(false)
 
-      <Router>
-        <SideBarUser/>
-        <Switch>
-          <Route path="/tabla">
-            <TablaEncuestadores />
-          </Route>
+    const enquestadorLogin = () => {
+      setLoggedIn(true)
+    }
 
-          <Route path="/enquesta">
-            <FormEnquestas />
-          </Route>
-          <Route path="/estadistiques">
-            <Estadisticas />
-          </Route>
-          <Route path="/register">
-            <RegisterForm />
-          </Route>
+    if (isLoggedIn) {
+        if (isAdmin) {
+            return <AppAdmin />
+        }
+        return <AppEncuestador />
+    }
+    return <PaginaHome onSuccessfulLogin={enquestadorLogin} />
 
-        </Switch>
 
-      </Router>
-  );
 }
 
 export default App;

@@ -26,6 +26,8 @@ function PopupModal(props) {
                         <button className="form-login" type="submit" value="login">
                             Entrar  </button>
 
+                        <button onClick={props.onSuccessfulLogin}>Login enquestador</button>
+
 
                     </div>
                 </form>

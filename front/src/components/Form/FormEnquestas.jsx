@@ -5,6 +5,7 @@ import "./FormEnquestas.css";
 import Form from 'react-bootstrap/Form';
 import Button from "react-bootstrap/Button";
 import CustomDatePicker from "./CustomDatePicker";
+import SideBarUser from "../sideBarUser/SideBarUser";
 
 
 export const FormEnquestas = () => {
@@ -17,7 +18,9 @@ export const FormEnquestas = () => {
         window.location.reload(false);
     }
     return (
+
         <div className={"pollbackground"}>
+            <SideBarUser />
             <Form className={"poll-form"} onSubmit={handleOnSubmit}>
                 <div className={"form-content"}>
 

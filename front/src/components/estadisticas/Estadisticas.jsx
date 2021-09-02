@@ -7,6 +7,7 @@ import consulta from '../img/escales.png'
 import suport from '../img/cor.png'
 import genere from '../img/cures.png'
 import DatePicker from "react-datepicker";
+import SideBarUser from "../sideBarUser/SideBarUser";
 
 
 
@@ -18,7 +19,7 @@ export default function Estadisticas() {
 
     return (
         <div className="bodyestadisticas">
-
+            <SideBarUser />
             <div className="containerestadisticas">
 
 
