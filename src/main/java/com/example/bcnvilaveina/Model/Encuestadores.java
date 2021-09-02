@@ -13,7 +13,7 @@ public class Encuestadores {
     private String vilaveina;
     private String usuari;
     private String contrasenya;
-    private int telefon;
+    private String telefon;
     private String adreca;
 
 
@@ -28,7 +28,6 @@ public class Encuestadores {
     public String getNom() {
         return nom;
     }
-
     public void setNom(String nom) {
         this.nom = nom;
     }
@@ -65,11 +64,11 @@ public class Encuestadores {
         this.contrasenya = contrasenya;
     }
 
-    public int getTelefon() {
+    public String getTelefon() {
         return telefon;
     }
 
-    public void setTelefon(int telefon) {
+    public void setTelefon(String telefon) {
         this.telefon = telefon;
     }
 

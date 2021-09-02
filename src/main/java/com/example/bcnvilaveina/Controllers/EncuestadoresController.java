@@ -17,10 +17,12 @@ public class EncuestadoresController {
     private void crearEncuestador(@RequestBody Encuestadores encuestadores){
         encuestadoresRepository.insert(encuestadores);
     }
+
     @GetMapping("/lista")
      private List<Encuestadores> ListaEncuestadores(){
         return encuestadoresRepository.findAll();
      }
+
      @DeleteMapping("/eliminar/{id}")
      private void eliminarEcuestadores(@PathVariable String id){
         encuestadoresRepository.deleteById(id);
