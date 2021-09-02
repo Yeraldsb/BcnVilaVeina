@@ -2,7 +2,6 @@ import React from "react";
 import "./registerForm.css";
 import Form from "react-bootstrap/Form";
 import {useHistory} from "react-router-dom";
-import SideBarUser from "../sideBarUser/SideBarUser";
 import SideBarAdmin from "../sideBarAdmin/SideBarAdmin";
 
 

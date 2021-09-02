@@ -17,10 +17,11 @@ export const FormEnquestas = () => {
         history.push("/enquesta");
         window.location.reload(false);
     }
+
     return (
 
         <div className={"pollbackground"}>
-            <SideBarUser />
+            <SideBarUser/>
             <Form className={"poll-form"} onSubmit={handleOnSubmit}>
                 <div className={"form-content"}>
 

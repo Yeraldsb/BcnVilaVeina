@@ -10,8 +10,6 @@ import DatePicker from "react-datepicker";
 import SideBarUser from "../sideBarUser/SideBarUser";
 
 
-
-
 export default function Estadisticas() {
 
     const [startDate, setStartDate] = useState(new Date ("2021/08/31"));

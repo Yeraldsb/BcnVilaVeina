@@ -68,6 +68,7 @@ function TablaEncuestadores() {
 
 
     return (
+
         <div className="Tabla">
             <SideBarAdmin />
             <h1 align="center" className="registro">Registre enquestadors</h1>
@@ -149,7 +150,7 @@ function TablaEncuestadores() {
                             />
                             <br/>
                             <label>Vila</label>
-                            <select className="form-control"
+                            <select className="form-control selectForm"
                                     type="text"
                                     name="vila"
                                     value={nombreSeleccionado && nombreSeleccionado.vila}
