@@ -4,7 +4,7 @@ import TablaEncuestadores from "./components/registerEncuestadores/TablaEncuesta
 import Estadisticas from "./components/estadisticas/Estadisticas";
 import {RegisterForm} from "./components/registerForm/RegisterForm";
 import {PaginaHome} from "./components/welcomePage/PaginaHome";
-import {FormEnquestas} from "./components/form/FormEnquestas";
+import {FormEnquestas} from "./components/Form/FormEnquestas";
 
 
 
