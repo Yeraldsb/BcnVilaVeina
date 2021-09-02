@@ -4,6 +4,7 @@ import {Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@material-ui/core";
 import {Delete} from "@material-ui/icons";
 import SideBarUser from "../sideBarUser/SideBarUser";
+import SideBarAdmin from "../sideBarAdmin/SideBarAdmin";
 
 function TablaEncuestadores() {
     const dataEncuestadores = [
@@ -69,7 +70,7 @@ function TablaEncuestadores() {
     return (
 
         <div className="Tabla">
-            <SideBarUser/>
+            <SideBarAdmin />
             <h1 align="center" className="registro">Registre enquestadors</h1>
             <TableContainer component={Paper} >
                 <Table className="contenedorTabla">

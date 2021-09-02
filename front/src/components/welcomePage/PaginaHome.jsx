@@ -8,7 +8,7 @@ import {useState} from "react";
 import "./paginaHome.css"
 
 
-export function PaginaHome() {
+export function PaginaHome(props) {
     const [buttonPopup, setButtonPopup] = useState(false);
 
     return (
@@ -24,7 +24,7 @@ export function PaginaHome() {
                 <img className="imgFoment" src={logoFoment} alt="logo foment"/>
 
             </div>
-            <PopupModal trigger={buttonPopup} setTrigger={setButtonPopup}>
+            <PopupModal trigger={buttonPopup} setTrigger={setButtonPopup} onSuccessfulLogin={props.onSuccessfulLogin}>
 
             </PopupModal>
 
