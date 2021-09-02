@@ -1,0 +1,152 @@
+/* -------------- MOTHER DIVS -------------------------------------------- */
+.pollbackground {
+    padding: 50px 300px 150px 50px;
+    font-family: Arial;
+    width: 500px;
+    height: 440px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 85px;
+    margin: 0px 0% 0px 27%;
+}
+.form-content{
+    display: flex;
+}
+
+/* ----------------- COLUMN 1 -------------------------------------------- */
+.form-column-1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 50px 50px 0px;
+    padding: 0px 80px 0px 40px;
+}
+
+.form-column-1-content {
+}
+.form-datalabelpicker {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+label.data.form-label{
+    margin: 0;
+    width: 43px;
+}
+
+input.datepickerbox {
+    border: 1px solid #683dc3;
+    border-radius: 5px;
+    height: 28px;
+    width: 85px;
+    text-align: center;
+}
+.form-checkboxgenre {
+    display: flex;
+}
+
+.form-age-origin{
+    align-items: flex-end;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+}
+label.age.form-label{
+    display: flex;
+    margin: 5px;
+    width: 60px;
+    font-size: 14px;
+}
+label.origin.form-label{
+    display: flex;
+    margin: 5px;
+    width: 10px;
+    font-size: 14px;
+}
+select.age.form-select{
+    border: 1px solid #683dc3;
+    border-radius: 5px;
+    height: 23px;
+    margin-left: 8px;
+    width: 60px;
+}
+select.origin.form-select {
+    border: 1px solid #683dc3;
+    border-radius: 5px;
+    height: 23px;
+    margin-left: 8px;
+    width: 150px;
+}
+
+.form-ambits-theme{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+
+}
+input.ambit-box{
+    border: 1px solid #683dc3;
+    border-radius: 5px;
+    height: 20px;
+}
+.ambit-p {
+    font-size: 16px;
+}
+
+/* ----------------- COLUMN 2 -------------------------------------------- */
+.form-column-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.submitpoll {
+    background-color: #ff7432;
+    width: 240px;
+    height: 60px;
+    margin: 10% 0%;
+
+
+    font-family: "Arial Black" ;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+
+/* ------------- BOOTSTRAP CLASSES --------------------------------------- */
+label {
+    width: 150px;
+    margin: 8px 146px 9px -21px;
+}
+select.form-select {
+    border: 1px solid #683dc3;
+    border-radius: 5px;
+    height: 23px;
+    margin-left: 8px;
+    width: 230px;
+}
+.genrebox,.ambitbox {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 20px;
+    height: 18px;
+
+}
+input#genrebox.genrebox{
+    margin: 10px 0px 0px 3px;
+    padding: 0;
+    display: block;
+    height: 12px;
+    overflow: hidden;
+}
+
+p{
+    margin: 10px 0px 30px 1px;
+    font-size: 14px;
+}
