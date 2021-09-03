@@ -4,6 +4,7 @@ import vila from '../img/LogoVila.png'
 import green from '../img/listaVerde.png'
 import orange from '../img/estadisticaNaranja.png'
 import {Footer} from "../footer/Footer";
+import {Link} from 'react-router-dom';
 
 
 export default function SideBarUser() {
@@ -11,11 +12,17 @@ export default function SideBarUser() {
         <div className="sidebar">
             <img src={vila} alt="" className="vila"/>
             <div className="containerButton">
-                <button><img src={green} alt="" className="logoSidebar"/>Nova enquesta</button>
+                <Link to="/enquesta">
+                    <button><img src={green} alt="" className="logoSidebar"/>Nova enquesta</button>
+                </Link >
                 <br/>
-                <button><img src={orange} alt="" className="logoSidebar"/>Estadístiques</button>
-                <button className="button-logout">Sortir</button>
-            </div>
+                <Link to="/estadistiques">
+                    <button><img src={orange} alt="" className="logoSidebar"/>Estadístiques</button>
+                </Link>
+                <Link to="/paginaHome">
+                    <button className="button-logout">Sortir</button>
+                </Link>
+                </div>
             <Footer/>
         </div>
     )
