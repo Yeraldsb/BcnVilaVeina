@@ -28,7 +28,10 @@ export default function SideBarAdmin() {
                     <button><img src={altaBaja} alt="" className="logoSidebar"/>Alta/Baixa Usuaris</button>
 
                 </Link>
-                <button className="button-logout">Sortir</button>
+                <Link to="/paginaHome">
+                    <button className="button-logout">Sortir</button>
+                </Link>
+
             </div>
             <Footer/>
         </div>

@@ -22,6 +22,7 @@ export default function SideBarUser() {
                 <Link to="/paginaHome">
                     <button className="button-logout">Sortir</button>
                 </Link>
+
                 </div>
             <Footer/>
         </div>
