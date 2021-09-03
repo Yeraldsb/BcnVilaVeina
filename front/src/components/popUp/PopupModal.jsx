@@ -1,9 +1,11 @@
 import * as React from "react";
 import './popupModal.css'
 import imgLogoVeina from "../img/LogoVila.png";
+import {useState} from "react";
 
 
 function PopupModal(props) {
+    const [username, setusername]=useState("")
     return (props.trigger) ? (
         <div className="popup">
             <div className="popup-inner">
@@ -15,7 +17,7 @@ function PopupModal(props) {
                         <div className="form-element">
                             <div className="form-label">
                                 <label htmlFor="usuario">Usuario</label></div>
-                            <input type="text" id="usuario" name="usuario" placeholder="Enter Usuario"/>
+                            <input onChange={e => setusername(e.target.value)} type="text" id="usuario" name="usuario" placeholder="Enter Usuario"/>
                         </div>
                         <div className="form-element">
                             <div className="form-label">
@@ -26,7 +28,7 @@ function PopupModal(props) {
                         <button className="form-login" type="submit" value="login">
                             Entrar  </button>
 
-                        <button onClick={props.onSuccessfulLogin}>Login enquestador</button>
+                        <button onClick={()=>props.onSuccessfulLogin(username==="admin")}>Login</button>
 
 
                     </div>

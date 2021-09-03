@@ -10,8 +10,9 @@ function App() {
   const [isLoggedIn, setLoggedIn] = useState(false)
     const [isAdmin, setIsAdmin] = useState(false)
 
-    const enquestadorLogin = () => {
+    const login = (admin) => {
       setLoggedIn(true)
+        setIsAdmin(admin)
     }
 
     if (isLoggedIn) {
@@ -20,7 +21,7 @@ function App() {
         }
         return <AppEncuestador />
     }
-    return <PaginaHome onSuccessfulLogin={enquestadorLogin} />
+    return <PaginaHome onSuccessfulLogin={login} />
 
 }
 
