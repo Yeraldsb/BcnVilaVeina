@@ -11,11 +11,8 @@ function AppEncuestador() {
     return (
 
         <Router>
-            <TablaEncuestadores />
+            <FormEnquestas />
             <Switch>
-                <Route path="/enquesta">
-                    <FormEnquestas />
-                </Route>
                 <Route path="/estadistiques">
                     <Estadisticas />
                 </Route>

@@ -21,7 +21,7 @@ export const FormEnquestas = () => {
     return (
 
         <div className={"pollbackground"}>
-            <SideBarUser/>
+
             <Form className={"poll-form"} onSubmit={handleOnSubmit}>
                 <div className={"form-content"}>
 

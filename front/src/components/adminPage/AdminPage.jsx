@@ -1,20 +1,16 @@
 import React from "react";
 import "./adminPage.css";
-import {useHistory} from "react-router-dom";
+import {FormEnquestas} from "../form/FormEnquestas";
 import SideBarAdmin from "../sideBarAdmin/SideBarAdmin";
-import {Footer} from "../footer/Footer";
-import {RegisterForm} from "../registerForm/RegisterForm";
-
 
 
 export const AdminPage = () => {
 
     return (
 
-        <div className={"registerForm"}>
+        <div >
             <SideBarAdmin/>
-            <RegisterForm/>
-            <Footer/>
+            <FormEnquestas />
         </div>
 
 
