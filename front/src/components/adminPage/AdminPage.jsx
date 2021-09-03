@@ -1,8 +1,7 @@
 import React from "react";
-import "./adminPage.css";
 import {FormEnquestas} from "../form/FormEnquestas";
 import SideBarAdmin from "../sideBarAdmin/SideBarAdmin";
-
+import "./adminPage.css"
 
 export const AdminPage = () => {
 
