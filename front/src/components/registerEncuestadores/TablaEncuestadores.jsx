@@ -1,25 +1,62 @@
-import React, { useState} from "react";
+import React, {useState} from "react";
 import './tablaEncuestadores.css'
 import {Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
-import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@material-ui/core";
+import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@material-ui/core";
 import {Delete} from "@material-ui/icons";
 import SideBarUser from "../sideBarUser/SideBarUser";
 import SideBarAdmin from "../sideBarAdmin/SideBarAdmin";
+import {Link} from "react-router-dom";
 
 function TablaEncuestadores() {
     const dataEncuestadores = [
-        {id: 1, nombre: "Yealdin", cognom: "Salazar", vila: "Sant Andreu" , usuari: "Yeraldsb", contrasenya: 2284, telèfon:658444 , adreça: "Carrer de server"},
-        {id: 2, nombre: "Yealdin", cognom: "Salazar", vila: "Sant Andreu",  usuari: "Yeraldsb", contrasenya: 2284, telèfon:658444 , adreça: "Carrer de server"},
-        {id: 3, nombre: "Yealdin", cognom: "Salazar", vila: "Sant Andreu",  usuari: "Yeraldsb", contrasenya: 2284, telèfon:658444 , adreça: "Carrer de server"},
-        {id: 4, nombre: "Yealdin", cognom: "Salazar", vila: "Sant Andreu",  usuari: "Yeraldsb", contrasenya: 2284, telèfon:658444 , adreça: "Carrer de server"},
+        {
+            id: 1,
+            nombre: "Yealdin",
+            cognom: "Salazar",
+            vila: "Sant Andreu",
+            usuari: "Yeraldsb",
+            contrasenya: 2284,
+            telèfon: 658444,
+            adreça: "Carrer de server"
+        },
+        {
+            id: 2,
+            nombre: "Yealdin",
+            cognom: "Salazar",
+            vila: "Sant Andreu",
+            usuari: "Yeraldsb",
+            contrasenya: 2284,
+            telèfon: 658444,
+            adreça: "Carrer de server"
+        },
+        {
+            id: 3,
+            nombre: "Yealdin",
+            cognom: "Salazar",
+            vila: "Sant Andreu",
+            usuari: "Yeraldsb",
+            contrasenya: 2284,
+            telèfon: 658444,
+            adreça: "Carrer de server"
+        },
+        {
+            id: 4,
+            nombre: "Yealdin",
+            cognom: "Salazar",
+            vila: "Sant Andreu",
+            usuari: "Yeraldsb",
+            contrasenya: 2284,
+            telèfon: 658444,
+            adreça: "Carrer de server"
+        },
     ];
 
     const [data, setData] = useState(dataEncuestadores);
-    const [modalEditar, setModalEditar]= useState(false);
+    const [modalEditar, setModalEditar] = useState(false);
 
-    const [modalEliminar, setModalEliminar]= useState(false)
+    const [modalEliminar, setModalEliminar] = useState(false)
 
-    const [nombreSeleccionado, setNombreSeleccionado]= useState({
+    const [nombreSeleccionado, setNombreSeleccionado] = useState({
         id: '',
         nombre: '',
         cognom: '',
@@ -31,29 +68,29 @@ function TablaEncuestadores() {
 
     });
 
-    const seleccionarNombre=(elemento, caso)=>{
+    const seleccionarNombre = (elemento, caso) => {
         setNombreSeleccionado(elemento);
-        (caso==='Editar')?setModalEditar(true): setModalEliminar(true)
+        (caso === 'Editar') ? setModalEditar(true) : setModalEliminar(true)
     }
 
-    const handleChange=e=>{
-        const {name, value}=e.target;
+    const handleChange = e => {
+        const {name, value} = e.target;
         setNombreSeleccionado(prevState => ({
             ...prevState,
             [name]: value
         }))
     }
 
-    const editar=()=>{
-        const dataNueva=data;
-        dataNueva.map(nombree=>{
-            if(nombree.id===nombreSeleccionado.id){
-                nombree.cognom=nombreSeleccionado.cognom;
-                nombree.nombre=nombreSeleccionado.nombre;
-                nombree.vila= nombreSeleccionado.vila;
-                nombree.usuari= nombreSeleccionado.usuari;
-                nombree.adreça= nombreSeleccionado.adreça;
-                nombree.telèfon= nombreSeleccionado.telèfon;
+    const editar = () => {
+        const dataNueva = data;
+        dataNueva.map(nombree => {
+            if (nombree.id === nombreSeleccionado.id) {
+                nombree.cognom = nombreSeleccionado.cognom;
+                nombree.nombre = nombreSeleccionado.nombre;
+                nombree.vila = nombreSeleccionado.vila;
+                nombree.usuari = nombreSeleccionado.usuari;
+                nombree.adreça = nombreSeleccionado.adreça;
+                nombree.telèfon = nombreSeleccionado.telèfon;
 
             }
         })
@@ -61,8 +98,8 @@ function TablaEncuestadores() {
         setModalEditar(false)
     };
 
-    const eliminar =()=>{
-        setData(data.filter(nombre=> nombre.id !== nombreSeleccionado.id))
+    const eliminar = () => {
+        setData(data.filter(nombre => nombre.id !== nombreSeleccionado.id))
         setModalEliminar(false);
     }
 
@@ -70,9 +107,9 @@ function TablaEncuestadores() {
     return (
 
         <div className="Tabla">
-            <SideBarAdmin />
+            <SideBarAdmin/>
             <h1 align="center" className="registro">Registre enquestadors</h1>
-            <TableContainer component={Paper} >
+            <TableContainer component={Paper}>
                 <Table className="contenedorTabla">
                     <TableHead>
                         <TableRow className="tcolor">
@@ -100,8 +137,11 @@ function TablaEncuestadores() {
                                 <TableCell align="left">{elemento.adreça}</TableCell>
 
                                 <TableCell align="left">
-                                    <button className="botonActualizar" onClick={()=>seleccionarNombre(elemento, 'Editar')}>Editar</button>{" "}
-                                    <Delete  onClick={()=> seleccionarNombre(elemento, "Eliminar")} />
+                                    <button className="botonActualizar"
+                                            onClick={() => seleccionarNombre(elemento, 'Editar')}>Editar
+                                    </button>
+                                    {" "}
+                                    <Delete onClick={() => seleccionarNombre(elemento, "Eliminar")}/>
                                     {}</TableCell>
 
 
@@ -113,7 +153,7 @@ function TablaEncuestadores() {
 
 
             <div className="modalContainer">
-                <Modal className="primerModal" isOpen={modalEditar} >
+                <Modal className="primerModal" isOpen={modalEditar}>
                     <ModalHeader>
                         <div>
                             <h3>Editar Informacion</h3>
@@ -215,12 +255,12 @@ function TablaEncuestadores() {
                     <ModalFooter>
                         <button variant="outlined"
                                 className="botonActualizarModal"
-                                onClick={()=> editar()}>
+                                onClick={() => editar()}>
                             Actualizar
                         </button>
                         <button variant="outline"
                                 className="botonCierre"
-                                onClick={()=>setModalEditar(false)}>
+                                onClick={() => setModalEditar(false)}>
                             Cancelar
                         </button>
                     </ModalFooter>
@@ -231,11 +271,12 @@ function TablaEncuestadores() {
                         Esta Seguro que desea eliminar el usuario {nombreSeleccionado && nombreSeleccionado.nombre}
                     </ModalBody>
                     <ModalFooter>
-                        <button className="botonModalEliminarSi" onClick={()=>eliminar()}>
+                        <button className="botonModalEliminarSi" onClick={() => eliminar()}>
                             Si
-                        </button><br/>
+                        </button>
+                        <br/>
                         <button className="botonModalEliminarNo"
-                                onClick={()=> setModalEliminar(false)}>
+                                onClick={() => setModalEliminar(false)}>
                             No
                         </button>
                     </ModalFooter>
@@ -243,7 +284,7 @@ function TablaEncuestadores() {
 
             </div>
 
-            <button className="botonTablaEncuestadores " type="submit" >
+            <button className="botonTablaEncuestadores " type="submit">
                 NUEVO REGISTRO
             </button>
 

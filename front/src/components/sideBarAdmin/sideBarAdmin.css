@@ -14,15 +14,7 @@ body{
     height: 100vh;
 }
 
-.vila{
-    height: 150px;
-    width: 220px;
-    margin-top: 40px;
-    margin-left: 35px;
-    text-decoration: none;
-    font-size: 25px;
-    text-transform: uppercase;
-}
+
 .containerButton{
     display: flex;
     flex-direction: column;
@@ -44,7 +36,7 @@ button{
     width: 230px;
     display: flex;
     align-items: center;
-    margin: 20px;
+    margin: -4px;
     border-style: none;
     box-shadow: 2px 2px #c9c9c9;
 }
@@ -69,4 +61,8 @@ button{
     margin-bottom: 10px;
     margin-top: 15vh;
     padding: 23px;
+}
+.link{
+    text-decoration: none;
+    color: inherit;
 }

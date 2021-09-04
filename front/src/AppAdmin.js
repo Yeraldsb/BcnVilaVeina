@@ -7,29 +7,25 @@ import TablaEncuestadores from "./components/registerEncuestadores/TablaEncuesta
 
 
 
-
 function AppAdmin() {
     return (
         <Router>
-              <SideBarAdmin />
-            <Switch>
-                <Route path="/enquesta">
-                    <FormEnquestas />
-                </Route>
+            <SideBarAdmin exact path="/"/>
+            <div className=" contenedorRutas">
+                <Switch>
+                    <Route path="/enquesta">
+                        <FormEnquestas/>
+                    </Route>
+                    <Route path="/estadistiques">
+                        <Estadisticas/>
+                    </Route>
+                    <Route path="/tablaEncuestadores">
+                        <TablaEncuestadores/>
+                    </Route>
 
-                <Route path="/estadistiques">
-                    <Estadisticas />
-                </Route>
+                </Switch>
+            </div>
 
-
-
-                <Route path="/tablaEncuestadores">
-                    <TablaEncuestadores />
-                </Route>
-
-
-
-            </Switch>
         </Router>
     );
 }

@@ -14,21 +14,21 @@ export default function SideBarAdmin() {
         <div className="sidebar">
             <img src={vila} alt="" className="vila"/>
             <div className="containerButton">
-                <Link to="/enquesta">
+                <Link to="/enquesta" className="link">
                     <button><img src={green} alt="" className="logoSidebar"/>Nova enquesta</button>
 
                 </Link>
                 <br/>
-                <Link to="/estadistiques">
+                <Link to="/estadistiques" className="link">
                     <button><img src={orange} alt="" className="logoSidebar"/>Estadístiques</button>
 
                 </Link>
                 <br/>
-                <Link to="/tablaEncuestadores">
+                <Link to="/tablaEncuestadores" className="link">
                     <button><img src={altaBaja} alt="" className="logoSidebar"/>Alta/Baixa Usuaris</button>
 
                 </Link>
-                <Link to="/paginaHome">
+                <Link to="/paginaHome" className="link">
                     <button className="button-logout">Sortir</button>
                 </Link>
 

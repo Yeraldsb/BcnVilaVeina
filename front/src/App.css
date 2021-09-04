@@ -1,3 +1,12 @@
+:root{
+  --grey-color: #f4f4f4;     /*Color Gris para fondo */
+  --black-color: #000000;   /**/
+  --purple-color: #683dc3;  /**/
+  --orange-color: #ff7432;  /**/
+  --green-color: #0cba7e;   /**/
+  --pink-color: #ffb3d7;    /**/
+}
+
 .App {
   text-align: center;
 }
@@ -26,6 +35,10 @@
 
 .App-link {
   color: #61dafb;
+}
+Link{
+  text-decoration: none;
+  color: inherit;
 }
 
 @keyframes App-logo-spin {

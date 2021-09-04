@@ -6,6 +6,7 @@ import logoFoment from "../img/LogoFoment.png";
 import PopupModal from "../popUp/PopupModal";
 import {useState} from "react";
 import "./paginaHome.css"
+import {StartSession} from "../startSession/StartSession";
 
 
 export function PaginaHome(props) {
@@ -16,8 +17,9 @@ export function PaginaHome(props) {
             <div className="containerLogoVila">
                 <img src={imgLogoVeina} alt="logo veina"/>
             </div>
+            <StartSession/>
 
-            <button className="containerEntrar" onClick={() => setButtonPopup(true)}> Entrar</button>
+            <button className="botonEntrar" onClick={() => setButtonPopup(true)}> Entrar</button>
             <div className="containerFooter">
                 <img className="imgAgenda" src={logoAgenda} alt="logo agenda"/>
                 <img className="imgAyuntament" src={logoAjuntament} alt="logo ajuntament"/>
