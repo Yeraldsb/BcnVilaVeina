@@ -10,10 +10,9 @@ import TablaEncuestadores from "./components/registerEncuestadores/TablaEncuesta
 function AppAdmin() {
     return (
         <Router>
-            <SideBarAdmin exact path="/"/>
-            <div className=" contenedorRutas">
+            <SideBarAdmin />
                 <Switch>
-                    <Route path="/enquesta">
+                    <Route exact path="/">
                         <FormEnquestas/>
                     </Route>
                     <Route path="/estadistiques">
@@ -24,7 +23,6 @@ function AppAdmin() {
                     </Route>
 
                 </Switch>
-            </div>
 
         </Router>
     );
