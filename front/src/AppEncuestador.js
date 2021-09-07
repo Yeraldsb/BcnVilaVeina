@@ -5,22 +5,18 @@ import SideBarUser from "./components/sideBarUser/SideBarUser";
 import {StartSession} from "./components/startSession/StartSession";
 
 
-
-
 function AppEncuestador() {
     return (
-
         <Router>
-            <SideBarUser />
-            <StartSession />
+            <SideBarUser/>
+                <Switch>
 
-            <Switch>
-                <Route path="/estadistiques">
-                    <Estadisticas />
-                </Route>
-                <Route path="/enquesta">
-                    <FormEnquestas />
-                </Route>
+             <Route exact path="/">
+                <FormEnquestas/>
+            </Route>
+                    <Route  path="/estadistiques">
+                    <Estadisticas/>
+                    </Route>
 
             </Switch>
 
