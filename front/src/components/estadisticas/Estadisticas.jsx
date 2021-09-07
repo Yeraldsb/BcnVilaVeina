@@ -7,7 +7,7 @@ import enquestes from "../img/cures.png"
 import consulta from "../img/arbre.png"
 import suport from "../img/escales.png"
 import DatePicker from "react-datepicker";
-import {BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Line} from 'recharts';
+import {BarChart, Bar, Cell, XAxis, YAxis, ResponsiveContainer} from 'recharts';
 
 export default function Estadisticas() {
 

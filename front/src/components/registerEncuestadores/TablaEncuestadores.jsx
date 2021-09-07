@@ -3,9 +3,8 @@ import './tablaEncuestadores.css'
 import {Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
 import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@material-ui/core";
 import {Delete} from "@material-ui/icons";
-import SideBarUser from "../sideBarUser/SideBarUser";
 import SideBarAdmin from "../sideBarAdmin/SideBarAdmin";
-import {Link} from "react-router-dom";
+
 
 function TablaEncuestadores() {
     const dataEncuestadores = [
