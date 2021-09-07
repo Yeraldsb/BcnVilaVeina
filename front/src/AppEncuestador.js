@@ -11,7 +11,7 @@ function AppEncuestador() {
             <SideBarUser/>
                 <Switch>
 
-             <Route exact path="/">
+             <Route exact path="/enquesta">
                 <FormEnquestas/>
             </Route>
                     <Route  path="/estadistiques">

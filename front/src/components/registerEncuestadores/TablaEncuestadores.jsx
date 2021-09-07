@@ -4,6 +4,7 @@ import {Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
 import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@material-ui/core";
 import {Delete} from "@material-ui/icons";
 import SideBarAdmin from "../sideBarAdmin/SideBarAdmin";
+import {Link} from "react-router-dom";
 
 
 function TablaEncuestadores() {
@@ -282,11 +283,13 @@ function TablaEncuestadores() {
                 </Modal>
 
             </div>
-
-            <button className="botonTablaEncuestadores " type="submit">
+        <div>
+            <Link to="/registerForm" style={{ textDecoration: 'none' }}>
+                <button className="botonTablaEncuestadores " type="submit">
                 NUEVO REGISTRO
             </button>
-
+            </Link>
+        </div>
 
         </div>
     )

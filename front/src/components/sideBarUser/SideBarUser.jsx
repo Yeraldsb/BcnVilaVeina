@@ -12,14 +12,14 @@ export default function SideBarUser() {
         <div className="sidebar">
             <img src={vila} alt="" className="vila"/>
             <div className="containerButton">
-                <Link to="/enquesta">
+                <Link to="/enquesta" style={{ textDecoration: 'none' }}>
                     <button><img src={green} alt="" className="logoSidebar"/>Nova enquesta</button>
                 </Link >
                 <br/>
-                <Link to="/estadistiques">
+                <Link to="/estadistiques" style={{ textDecoration: 'none' }}>
                     <button><img src={orange} alt="" className="logoSidebar"/>Estadístiques</button>
                 </Link>
-                <Link to="/paginaHome">
+                <Link to="/paginaHome" style={{ textDecoration: 'none' }}>
                     <button className="button-logout">Sortir</button>
                 </Link>
 
