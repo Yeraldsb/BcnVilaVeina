@@ -69,7 +69,7 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                         </TableBody>
                     </Table>
                 </TableContainer>
-                <Link  to="/registre" style={{ textDecoration: "none"}} >
+                <Link  to="/registerForm" style={{ textDecoration: "none"}} >
                     <button className="botonTablaEncuestadores " type="submit">
                         NUEVO REGISTRO
                     </button>
