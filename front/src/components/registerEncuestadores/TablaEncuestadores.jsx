@@ -1,13 +1,98 @@
-import React, {useState} from "react";
+import React, {Component, useState} from "react";
 import './tablaEncuestadores.css'
 import {Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
 import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@material-ui/core";
 import {Delete} from "@material-ui/icons";
 import SideBarAdmin from "../sideBarAdmin/SideBarAdmin";
+import axios from "axios";
+import {Link} from "react-router-dom";
+
+interface MyState {
+    Encuestadores: [];
+    count:1
+}
+
+export default class TablaEncuestadores extends Component<{}, MyState> {
+
+    state: MyState = {
+        Encuestadores: [],
+        count:1
+    }
+    handleSuma = () =>
+    {
+        this.setState({count: this.state.count + 1})
+    }
+    componentDidMount() {
+        axios.get('http://localhost:8080/lista')
+            .then(response => {
+                const Encuestadores = response.data
+                this.setState({Encuestadores});
+                console.log("Data has been recived")
+            })
+            .catch(()=> {
+                alert("Error");
+            })
+    }
 
 
-function TablaEncuestadores() {
-    const dataEncuestadores = [
+    render() {
+       const { count } = this.state;
+
+        return (
+            <div className="Tabla">
+                <h1 align="center" className="registro">Registre enquestadors</h1>
+                <TableContainer component={Paper}>
+                    <Table className="contenedorTabla">
+                        <TableHead>
+                            <TableRow className="tcolor">
+                                <TableCell>#</TableCell>
+                                <TableCell>Nom</TableCell>
+                                <TableCell>Cognom</TableCell>
+                                <TableCell>Vila</TableCell>
+                                <TableCell>Usuari</TableCell>
+                                <TableCell>Contrasenya</TableCell>
+                                <TableCell>Telèfon</TableCell>
+                                <TableCell>Adreça</TableCell>
+                                <TableCell>Acciones</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {this.state.Encuestadores.map(encuestadores =>
+                                <TableRow key={encuestadores.id}>
+                                    <TableCell onClick={this.handleSuma}>{this.state.count}</TableCell>
+                                    <TableCell align="left">{encuestadores.nom}</TableCell>
+                                    <TableCell align="left">{encuestadores.cognom}</TableCell>
+                                    <TableCell align="left">{encuestadores.vilaveina}</TableCell>
+                                    <TableCell align="left">{encuestadores.usuari}</TableCell>
+                                    <TableCell align="left">{encuestadores.contrasenya}</TableCell>
+                                    <TableCell align="left">{encuestadores.telefon}</TableCell>
+                                    <TableCell align="left">{encuestadores.adreca}</TableCell>
+                                </TableRow>
+                            )}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+                <Link  to="/registre" style={{ textDecoration: "none"}} >
+                    <button className="botonTablaEncuestadores " type="submit">
+                        NUEVO REGISTRO
+                    </button>
+                </Link>
+
+            </div>
+        )
+
+
+    }
+
+
+}
+
+
+{/*
+
+Link to={"/LittlePress"} style={{ textDecoration:
+
+*  const dataEncuestadores = [
         {
             id: 1,
             nombre: "Yealdin",
@@ -290,6 +375,5 @@ function TablaEncuestadores() {
 
         </div>
     )
+}*/
 }
-
-export default TablaEncuestadores;

@@ -4,25 +4,28 @@ import {FormEnquestas} from "./components/form/FormEnquestas";
 import React from "react";
 import SideBarAdmin from "./components/sideBarAdmin/SideBarAdmin";
 import TablaEncuestadores from "./components/registerEncuestadores/TablaEncuestadores";
-
+import {RegisterForm} from "./components/registerForm/RegisterForm";
 
 
 function AppAdmin() {
     return (
         <Router>
-            <SideBarAdmin />
-                <Switch>
-                    <Route exact path="/">
-                        <FormEnquestas/>
-                    </Route>
-                    <Route path="/estadistiques">
-                        <Estadisticas/>
-                    </Route>
-                    <Route path="/tablaEncuestadores">
-                        <TablaEncuestadores/>
-                    </Route>
+            <SideBarAdmin/>
+            <Switch>
+                <Route exact path="/">
+                    <FormEnquestas/>
+                </Route>
+                <Route path="/estadistiques">
+                    <Estadisticas/>
+                </Route>
+                <Route path="/tablaEncuestadores">
+                    <TablaEncuestadores/>
+                </Route>
+                <Route path="/registre">
+                    <RegisterForm/>
+                </Route>
 
-                </Switch>
+            </Switch>
 
         </Router>
     );
