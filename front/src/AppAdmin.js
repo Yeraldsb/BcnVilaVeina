@@ -10,20 +10,20 @@ import {RegisterForm} from "./components/registerForm/RegisterForm";
 function AppAdmin() {
     return (
         <Router>
-            <SideBarAdmin/>
-            <Switch>
-                <Route exact path="/">
-                    <FormEnquestas/>
-                </Route>
-                <Route path="/estadistiques">
-                    <Estadisticas/>
-                </Route>
-                <Route path="/tablaEncuestadores">
-                    <TablaEncuestadores/>
-                </Route>
-                <Route path="/registre">
-                    <RegisterForm/>
-                </Route>
+            <SideBarAdmin />
+                <Switch>
+                    <Route path="/enquesta">
+                        <FormEnquestas/>
+                    </Route>
+                    <Route path="/estadistiques">
+                        <Estadisticas/>
+                    </Route>
+                    <Route path="/tablaEncuestadores">
+                        <TablaEncuestadores/>
+                    </Route>
+                    <Route path="/registerForm">
+                        <RegisterForm />
+                    </Route>
 
             </Switch>
 

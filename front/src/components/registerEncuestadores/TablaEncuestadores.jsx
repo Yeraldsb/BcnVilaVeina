@@ -1,9 +1,6 @@
 import React, {Component, useState} from "react";
 import './tablaEncuestadores.css'
-import {Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
 import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@material-ui/core";
-import {Delete} from "@material-ui/icons";
-import SideBarAdmin from "../sideBarAdmin/SideBarAdmin";
 import axios from "axios";
 import {Link} from "react-router-dom";
 
@@ -367,11 +364,13 @@ Link to={"/LittlePress"} style={{ textDecoration:
                 </Modal>
 
             </div>
-
-            <button className="botonTablaEncuestadores " type="submit">
+        <div>
+            <Link to="/registerForm" style={{ textDecoration: 'none' }}>
+                <button className="botonTablaEncuestadores " type="submit">
                 NUEVO REGISTRO
             </button>
-
+            </Link>
+        </div>
 
         </div>
     )
