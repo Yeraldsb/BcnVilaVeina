@@ -87,7 +87,7 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
 
 {/*
 
-Link to={"/LittlePress"} style={{ textDecoration:
+Link to={"/EditEncuestador"} style={{ textDecoration:
 
 *  const dataEncuestadores = [
         {

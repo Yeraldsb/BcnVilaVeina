@@ -5,6 +5,7 @@ import React from "react";
 import SideBarAdmin from "./components/sideBarAdmin/SideBarAdmin";
 import TablaEncuestadores from "./components/registerEncuestadores/TablaEncuestadores";
 import {RegisterForm} from "./components/registerForm/RegisterForm";
+import EditEncuestador from "./components/editEncuestador/EditEncuestador";
 
 
 function AppAdmin() {
@@ -22,7 +23,10 @@ function AppAdmin() {
                         <TablaEncuestadores/>
                     </Route>
                     <Route path="/registerForm">
-                        <RegisterForm />
+                        <RegisterForm/>
+                    </Route>
+                    <Route path="/editar">
+                        <EditEncuestador/>
                     </Route>
 
             </Switch>
