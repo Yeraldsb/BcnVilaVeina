@@ -8,21 +8,24 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
+@RestController
 public class VilaveinaController {
     @Autowired
     private VilaveinaRepository vilaveinaRepository;
 
-    @PostMapping("/crear")
+    @PostMapping("/crearbarrios")
     private void crearVilaveina(@RequestBody Vilaveina vilaveina){
         vilaveinaRepository.insert(vilaveina);
     }
-    @GetMapping("/lista")
+
+    @GetMapping("/barrios")
     private List<Vilaveina> ListaVilaveina(){
         return vilaveinaRepository.findAll();
     }
 
-    @DeleteMapping("/eliminar/{id}")
-    private void eliminarEcuestadores(@PathVariable String id){
+    @DeleteMapping("/eliminarbarrios/{id}")
+    private void eliminarVilaveina(@PathVariable String id){
         vilaveinaRepository.deleteById(id);
     }
 

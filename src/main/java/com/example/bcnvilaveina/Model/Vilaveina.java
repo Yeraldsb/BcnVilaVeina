@@ -3,7 +3,7 @@ package com.example.bcnvilaveina.Model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "VilaVeina")
+@Document(collection = "Vilaveina")
 public class Vilaveina {
     @Id
     private String id;
@@ -26,6 +26,6 @@ public class Vilaveina {
     }
     @Override
     public String toString() {
-        return "VilaVeina [id=" + id + ", nom=" + nom + "]";
+        return "Vilaveina [id=" + id + ", nom=" + nom + "]";
     }
 }
