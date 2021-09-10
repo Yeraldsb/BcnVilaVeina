@@ -27,4 +27,6 @@ public class EncuestadoresController {
      private void eliminarEcuestadores(@PathVariable String id){
         encuestadoresRepository.deleteById(id);
      }
+
+
 }
