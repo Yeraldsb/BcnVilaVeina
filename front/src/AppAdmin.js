@@ -4,7 +4,7 @@ import {FormEnquestas} from "./components/form/FormEnquestas";
 import React from "react";
 import SideBarAdmin from "./components/sideBarAdmin/SideBarAdmin";
 import TablaEncuestadores from "./components/registerEncuestadores/TablaEncuestadores";
-import {RegisterForm} from "./components/registerForm/RegisterForm";
+import RegisterForm from "./components/registerForm/RegisterForm";
 import EditEncuestador from "./components/editEncuestador/EditEncuestador";
 
 

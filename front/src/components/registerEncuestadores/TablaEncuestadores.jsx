@@ -6,6 +6,7 @@ import {Link} from "react-router-dom";
 import {Delete} from "@material-ui/icons";
 
 interface MyState {
+    handleSubmit: [],
     Encuestadores: [];
 
 }
@@ -13,13 +14,11 @@ interface MyState {
 export default class TablaEncuestadores extends Component<{}, MyState> {
 
     state: MyState = {
+        handleSubmit: [],
         Encuestadores: [],
 
     }
-    handleSuma = () =>
-    {
-        this.setState({count: this.state.count + 1})
-    }
+
     componentDidMount() {
         axios.get('http://localhost:8080/enquestadors')
             .then(response => {
@@ -49,6 +48,7 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                                 <TableCell>Contrasenya</TableCell>
                                 <TableCell>Telèfon</TableCell>
                                 <TableCell>Adreça</TableCell>
+                                <TableCell>Correu</TableCell>
                                 <TableCell>Acciones</TableCell>
                             </TableRow>
                         </TableHead>
@@ -63,6 +63,7 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                                     <TableCell align="left">{encuestador.contrasenya}</TableCell>
                                     <TableCell align="left">{encuestador.telefon}</TableCell>
                                     <TableCell align="left">{encuestador.adreca}</TableCell>
+                                    <TableCell align="left">{encuestador.correu}</TableCell>
                                     <TableCell align="left">
                                         <Link to="/editar" style={{ textDecoration: "none"}}>
                                             <button className="botonActualizar"
