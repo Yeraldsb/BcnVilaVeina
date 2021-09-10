@@ -3,24 +3,25 @@ import './tablaEncuestadores.css'
 import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@material-ui/core";
 import axios from "axios";
 import {Link} from "react-router-dom";
+import {Delete} from "@material-ui/icons";
 
 interface MyState {
     Encuestadores: [];
-    count:1
+
 }
 
 export default class TablaEncuestadores extends Component<{}, MyState> {
 
     state: MyState = {
         Encuestadores: [],
-        count:1
+
     }
     handleSuma = () =>
     {
         this.setState({count: this.state.count + 1})
     }
     componentDidMount() {
-        axios.get('http://localhost:8080/lista')
+        axios.get('http://localhost:8080/enquestadors')
             .then(response => {
                 const Encuestadores = response.data
                 this.setState({Encuestadores});
@@ -33,8 +34,6 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
 
 
     render() {
-       const { count } = this.state;
-
         return (
             <div className="Tabla">
                 <h1 align="center" className="registro">Registre enquestadors</h1>
@@ -54,16 +53,25 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {this.state.Encuestadores.map(encuestadores =>
-                                <TableRow key={encuestadores.id}>
-                                    <TableCell onClick={this.handleSuma}>{this.state.count}</TableCell>
-                                    <TableCell align="left">{encuestadores.nom}</TableCell>
-                                    <TableCell align="left">{encuestadores.cognom}</TableCell>
-                                    <TableCell align="left">{encuestadores.vilaveina}</TableCell>
-                                    <TableCell align="left">{encuestadores.usuari}</TableCell>
-                                    <TableCell align="left">{encuestadores.contrasenya}</TableCell>
-                                    <TableCell align="left">{encuestadores.telefon}</TableCell>
-                                    <TableCell align="left">{encuestadores.adreca}</TableCell>
+                            {this.state.Encuestadores.map((encuestador, index) =>
+                                <TableRow key={encuestador.id}>
+                                    <TableCell>{index + 1}</TableCell>
+                                    <TableCell align="left">{encuestador.nom}</TableCell>
+                                    <TableCell align="left">{encuestador.cognom}</TableCell>
+                                    <TableCell align="left">{encuestador.vilaveina}</TableCell>
+                                    <TableCell align="left">{encuestador.usuari}</TableCell>
+                                    <TableCell align="left">{encuestador.contrasenya}</TableCell>
+                                    <TableCell align="left">{encuestador.telefon}</TableCell>
+                                    <TableCell align="left">{encuestador.adreca}</TableCell>
+                                    <TableCell align="left">
+                                        <Link to="/editar" style={{ textDecoration: "none"}}>
+                                            <button className="botonActualizar"
+                                            >Editar
+                                            </button>
+                                        </Link>
+
+                                        <Delete />
+                                        {}</TableCell>
                                 </TableRow>
                             )}
                         </TableBody>

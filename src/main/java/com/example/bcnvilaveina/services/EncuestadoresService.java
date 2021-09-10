@@ -20,8 +20,8 @@ public class EncuestadoresService {
         return (List<Encuestadores>) encuestadoresRepository.findAll();
     }
 
-    public Encuestadores getEncuestadores(String encuestadorId) {
-        return encuestadoresRepository.findById(encuestadorId).get();
+    public Encuestadores findById(String id) {
+        return encuestadoresRepository.findById(id).orElse(null);
     }
 
 }
