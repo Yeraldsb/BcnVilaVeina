@@ -15,7 +15,7 @@ public class Encuestadores {
     private String contrasenya;
     private String telefon;
     private String adreca;
-
+    private String correu;
 
     public String getId() {
         return id;
@@ -78,6 +78,14 @@ public class Encuestadores {
 
     public void setAdreca(String adreca) {
         this.adreca = adreca;
+    }
+
+    public String getCorreu() {
+        return correu;
+    }
+
+    public void setCorreu(String correu) {
+        this.correu = correu;
     }
 }
 

@@ -48,7 +48,7 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                                 <TableCell>Contrasenya</TableCell>
                                 <TableCell>Telèfon</TableCell>
                                 <TableCell>Adreça</TableCell>
-                                <TableCell>Correu</TableCell>
+                                <TableCell>Correu electrònic</TableCell>
                                 <TableCell>Acciones</TableCell>
                             </TableRow>
                         </TableHead>
@@ -65,7 +65,7 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                                     <TableCell align="left">{encuestador.adreca}</TableCell>
                                     <TableCell align="left">{encuestador.correu}</TableCell>
                                     <TableCell align="left">
-                                        <Link to="/editar" style={{ textDecoration: "none"}}>
+                                        <Link to={`/editar/${encuestador.id}`} style={{ textDecoration: "none"}}>
                                             <button className="botonActualizar"
                                             >Editar
                                             </button>

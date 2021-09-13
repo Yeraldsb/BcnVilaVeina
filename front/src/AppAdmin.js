@@ -3,9 +3,9 @@ import Estadisticas from "./components/estadisticas/Estadisticas";
 import {FormEnquestas} from "./components/form/FormEnquestas";
 import React from "react";
 import SideBarAdmin from "./components/sideBarAdmin/SideBarAdmin";
-import TablaEncuestadores from "./components/registerEncuestadores/TablaEncuestadores";
-import RegisterForm from "./components/registerForm/RegisterForm";
-import EditEncuestador from "./components/editEncuestador/EditEncuestador";
+import TablaEncuestadores from "./components/tablaEncuestadores/TablaEncuestadores";
+import {CreateEncuestador} from "./components/createEncuestador/CreateEncuestador";
+import {EditEncuestador} from "./components/editEncuestador/EditEncuestador"
 
 
 function AppAdmin() {
@@ -23,7 +23,7 @@ function AppAdmin() {
                         <TablaEncuestadores/>
                     </Route>
                     <Route path="/registerForm">
-                        <RegisterForm/>
+                        <CreateEncuestador/>
                     </Route>
                     <Route path="/editar">
                         <EditEncuestador/>
