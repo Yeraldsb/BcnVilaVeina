@@ -30,7 +30,7 @@ public class EncuestadoresController {
      }
 
      @DeleteMapping("/eliminar/{id}")
-     private void eliminarEcuestadores(@PathVariable String id){
+     private void eliminarEcuestador(@PathVariable String id){
         encuestadoresRepository.deleteById(id);
      }
 
