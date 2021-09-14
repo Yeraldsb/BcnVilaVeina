@@ -19,7 +19,7 @@ public class EncuestadoresController {
     @Autowired
     private EncuestadoresRepository encuestadoresRepository;
 
-    @PostMapping("/enquestadors")
+    @PostMapping("/create")
     private void crearEncuestador(@RequestBody Encuestadores encuestadores){
         encuestadoresRepository.insert(encuestadores);
     }
