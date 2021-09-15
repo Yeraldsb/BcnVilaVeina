@@ -5,10 +5,10 @@ import axios from "axios";
 import {Link} from "react-router-dom";
 import {Delete} from "@material-ui/icons";
 
+
 interface MyState {
     handleSubmit: [],
     Encuestadores: [];
-
 }
 
 export default class TablaEncuestadores extends Component<{}, MyState> {
@@ -20,17 +20,33 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
     }
 
     componentDidMount() {
+        this.getEncuestadores();
+        console.log("Data has been recived")
+
+    }
+
+    getEncuestadores = () => {
         axios.get('http://localhost:8080/enquestadors')
             .then(response => {
                 const Encuestadores = response.data
                 this.setState({Encuestadores});
-                console.log("Data has been recived")
             })
-            .catch(()=> {
+            .catch(() => {
                 alert("Error");
             })
     }
 
+    deleteEncuestador = (encuestadorId) => {
+
+        console.log(encuestadorId)
+        axios.delete('http://localhost:8080/eliminar/' + encuestadorId)
+            .then(r => {
+                this.getEncuestadores();
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
 
     render() {
         return (
@@ -65,20 +81,20 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                                     <TableCell align="left">{encuestador.adreca}</TableCell>
                                     <TableCell align="left">{encuestador.correu}</TableCell>
                                     <TableCell align="left">
-                                        <Link to={`/editar/${encuestador.id}`} style={{ textDecoration: "none"}}>
+                                        <Link to={`/editar/${encuestador.id}`} style={{textDecoration: "none"}}>
                                             <button className="botonActualizar"
                                             >Editar
                                             </button>
                                         </Link>
 
-                                        <Delete />
-                                        {}</TableCell>
+                                        <Delete onClick={() => this.deleteEncuestador(encuestador.id)}/>
+                                    </TableCell>
                                 </TableRow>
                             )}
                         </TableBody>
                     </Table>
                 </TableContainer>
-                <Link  to="/registerForm" style={{ textDecoration: "none"}} >
+                <Link to="/registerForm" style={{textDecoration: "none"}}>
                     <button className="botonTablaEncuestadores " type="submit">
                         NUEVO REGISTRO
                     </button>
@@ -97,49 +113,6 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
 {/*
 
 Link to={"/EditEncuestador"} style={{ textDecoration:
-
-*  const dataEncuestadores = [
-        {
-            id: 1,
-            nombre: "Yealdin",
-            cognom: "Salazar",
-            vila: "Sant Andreu",
-            usuari: "Yeraldsb",
-            contrasenya: 2284,
-            telèfon: 658444,
-            adreça: "Carrer de server"
-        },
-        {
-            id: 2,
-            nombre: "Yealdin",
-            cognom: "Salazar",
-            vila: "Sant Andreu",
-            usuari: "Yeraldsb",
-            contrasenya: 2284,
-            telèfon: 658444,
-            adreça: "Carrer de server"
-        },
-        {
-            id: 3,
-            nombre: "Yealdin",
-            cognom: "Salazar",
-            vila: "Sant Andreu",
-            usuari: "Yeraldsb",
-            contrasenya: 2284,
-            telèfon: 658444,
-            adreça: "Carrer de server"
-        },
-        {
-            id: 4,
-            nombre: "Yealdin",
-            cognom: "Salazar",
-            vila: "Sant Andreu",
-            usuari: "Yeraldsb",
-            contrasenya: 2284,
-            telèfon: 658444,
-            adreça: "Carrer de server"
-        },
-    ];
 
     const [data, setData] = useState(dataEncuestadores);
     const [modalEditar, setModalEditar] = useState(false);
@@ -192,6 +165,29 @@ Link to={"/EditEncuestador"} style={{ textDecoration:
         setData(data.filter(nombre => nombre.id !== nombreSeleccionado.id))
         setModalEliminar(false);
     }
+    const [modalEliminar, setModalEliminar] = useState(false)
+
+
+  <Modal className="modalEliminar" isOpen={modalEliminar}>
+                    <ModalBody className="preguntaModal">
+                        Esta Seguro que desea eliminar el usuario {nombreSeleccionado && nombreSeleccionado.nombre}
+                    </ModalBody>
+                    <ModalFooter>
+                        <button className="botonModalEliminarSi" onClick={() => eliminar()}>
+                            Si
+                        </button>
+                        <br/>
+                        <button className="botonModalEliminarNo"
+                                onClick={() => setModalEliminar(false)}>
+                            No
+                        </button>
+                    </ModalFooter>
+                </Modal>
+
+
+
+
+
 
 
     return (
@@ -356,21 +352,6 @@ Link to={"/EditEncuestador"} style={{ textDecoration:
                     </ModalFooter>
                 </Modal>
 
-                <Modal className="modalEliminar" isOpen={modalEliminar}>
-                    <ModalBody className="preguntaModal">
-                        Esta Seguro que desea eliminar el usuario {nombreSeleccionado && nombreSeleccionado.nombre}
-                    </ModalBody>
-                    <ModalFooter>
-                        <button className="botonModalEliminarSi" onClick={() => eliminar()}>
-                            Si
-                        </button>
-                        <br/>
-                        <button className="botonModalEliminarNo"
-                                onClick={() => setModalEliminar(false)}>
-                            No
-                        </button>
-                    </ModalFooter>
-                </Modal>
 
             </div>
         <div>
