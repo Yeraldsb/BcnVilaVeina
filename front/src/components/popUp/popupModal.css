@@ -15,12 +15,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    padding: 32px;
-    width: 100%;
-    max-width: 640px;
-    background-color: var(--grey-color);
-    border-radius: 10px;
+    width: 545px;
+    height: 471px;
+    left: 417px;
+    top: 226px;
+    background-color: var(--purple-color);
+    border-radius: 66px;
+    padding: 3rem;
 }
 .popup-inner .close-btn{
     position: absolute;
@@ -36,47 +37,54 @@
     font-weight: 550;
 }
 
+.logomodalvilaveina {
+    width: 12rem;
+    height: auto;
+}
+
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--grey-color);
+    background-color: var(--purple-color);
 
 }
 .form-element {
     position: relative;
     border-radius: 10%;
     display: block;
-    background-color: var(--grey-color);
+    background-color: var(--purple-color);
     padding: 10px;
     z-index: 2;
 }
-input {
+.inputpopupmodal {
     background-color: white;
     border: 1px solid #683dc3;
-    border-radius: 3px;
-    width: 200px;
-    height: 23px;
+    border-radius: 10px;
+    width: 22rem;
+    height: 3rem;
     margin-top: 5px;
+    margin-left: -2px;
 
 }
 .form-login{
-    margin: 10px;
-    background-color: var(--orange-color);
-    border-style: none;
+    margin: 3rem;
+    background-color: var(--green-color);
     color: white;
-    width: 110px;
-    height: 40px;
-    border-radius: 5px;
-    font-weight: 600;
+    width: 119px;
+    height: 39px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 21px;
-    -webkit-box-shadow: 0px 7px 19px -5px rgba(0,0,0,0.91);
-    box-shadow: 0px 7px 19px -5px rgba(0,0,0,0.91);
+    font-size: 18px;
+    box-shadow: none;
+    font-weight: bold;
+
 }
 .labelUsuario{
     font-size: 20px;
-    font-weight: 700;
+    font-weight: normal;
     display: contents;
+    font-family: Arial;
+    color: white;
 }

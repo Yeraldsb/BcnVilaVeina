@@ -3,7 +3,7 @@ body{
     padding: 0;
 }
 
-.sidebar{
+.sidebaradmin{
     position: fixed;
     width: 300px;
     top:0;
@@ -15,35 +15,38 @@ body{
 }
 
 
-.containerButton{
+.containerButtonsideadmin{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 70px 20px;
+    margin-top: 2rem;
 
 
 }
-button{
-    background-color: #e0e0e0;
+.buttonsidebaradmin{
+    background-color: #fafafa;
     text-decoration: none;
     font-family: "arial";
     letter-spacing: 1px;
-    font-size: 20px;
-    font-weight: 400;
-    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 11px;
     cursor: pointer;
     border-radius: 10px;
-    width: 230px;
+    width: 234px;
     display: flex;
     align-items: center;
-    margin: -4px;
+    margin: 0px;
     border-style: none;
-    box-shadow: 2px 2px #c9c9c9;
+    color: var(--purple-color);
 }
-.logoSidebar{
-    width: 30px;
-    height: 30px;
-    padding-right: 20px;
+.logovilasideadmin{
+    display: block;
+    width: 65%;
+    height: auto;
+    padding: 2.5rem 52px;
+
 }
 
 .sidebar a:hover{
@@ -52,17 +55,25 @@ button{
     transition: 0.4s;
 }
 .button-logout{
-    background-color: #ff7432;
+    background-color: var(--purple-color);
     border-style: none;
-    color: white;
-    width: 100px;
+    color: #fafafa;
+    width: 8rem;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 10px;
     margin-top: 15vh;
-    padding: 23px;
+    padding: 26px;
+    font-weight: bold;
 }
-.link{
+.linktoenquesta{
     text-decoration: none;
     color: inherit;
+}
+
+.logobotonsidebar{
+
+    width: 40px;
+    height: auto;
+    padding-right: 6px;
 }
