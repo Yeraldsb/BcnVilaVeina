@@ -19,11 +19,11 @@ export function PaginaHome(props) {
             </div>
             <StartSession/>
 
-            <button className="botonEntrar" onClick={() => setButtonPopup(true)}> Entrar</button>
+            <button className="botonWelcome" onClick={() => setButtonPopup(true)}> ENTRAR</button>
             <div className="containerFooter">
-                <img className="imgAgenda" src={logoAgenda} alt="logo agenda"/>
-                <img className="imgAyuntament" src={logoAjuntament} alt="logo ajuntament"/>
-                <img className="imgFoment" src={logoFoment} alt="logo foment"/>
+                <img className="imgAgendahome" src={logoAgenda} alt="logo agenda"/>
+                <img className="imgAyuntamenthome" src={logoAjuntament} alt="logo ajuntament"/>
+                <img className="imgFomenthome" src={logoFoment} alt="logo foment"/>
 
             </div>
             <PopupModal trigger={buttonPopup} setTrigger={setButtonPopup} onSuccessfulLogin={props.onSuccessfulLogin}>

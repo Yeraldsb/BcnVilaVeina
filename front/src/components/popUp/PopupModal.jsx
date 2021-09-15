@@ -1,6 +1,6 @@
 import * as React from "react";
 import './popupModal.css'
-import imgLogoVeina from "../img/LogoVila.png";
+import imgLogoVeinablanco from "../img/Logo_blanco.png";
 import {useState} from "react";
 
 
@@ -11,19 +11,19 @@ function PopupModal(props) {
             <div className="popup-inner">
                 <button className="close-btn" onClick={() => props.setTrigger(false)}> X</button>
                 {props.children}
-                <img src={imgLogoVeina} alt="logo veina"/>
+                <img className="logomodalvilaveina" src={imgLogoVeinablanco} alt="logo veina"/>
                 <form>
                     <div className="form">
                         <div className="form-element">
                             <div className="form-label">
                                 <label htmlFor="usuario" className="labelUsuario">Usuari</label></div>
-                            <input onChange={e => setusername(e.target.value)} type="text" id="usuario" name="usuario"
+                            <input className="inputpopupmodal" onChange={e => setusername(e.target.value)} type="text" id="usuario" name="usuario"
                                    placeholder="Ingressi usuari"/>
                         </div>
                         <div className="form-element">
                             <div className="form-label">
                                 <label htmlFor="contraseña" className="labelUsuario" >Contrasenya</label></div>
-                            <input type="text" id="contraseña" name="contraseña" placeholder="Ingressi contrasenya"/>
+                            <input className="inputpopupmodal" type="text" id="contraseña" name="contraseña" placeholder="Ingressi contrasenya"/>
 
                         </div>
 
@@ -32,7 +32,7 @@ function PopupModal(props) {
                                 type="submit"
                                 value="login"
                         >
-                            Login
+                            ENTRAR
                         </button>
 
 

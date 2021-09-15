@@ -28,6 +28,8 @@ export class CreateEncuestador extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
+        const values = JSON.stringify(this.state.values)
+        alert("El nou enquestador ha estat donat d'alta");
 
 
         axios.post(`http://localhost:8080/create`, {

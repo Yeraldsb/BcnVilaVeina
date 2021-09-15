@@ -6,20 +6,22 @@
 
 }
 
-.botonEntrar {
+.containerLogoVila{
+    margin-top: 4rem;
+}
+
+.botonWelcome {
     margin: 10px;
     background-color: #ff7432;
     border-style: none;
     color: white;
-    width: 120px;
+    width: 130px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 4px;
     display: flex;
     justify-content: center;
-    font-weight: 600;
+    font-weight: bold;
     cursor: pointer;
-    -webkit-box-shadow: 0px 2px 21px -3px rgba(0,0,0,0.91);
-    box-shadow: 0px 2px 21px -3px rgba(0,0,0,0.91);
 }
 
 .containerFooter {
@@ -30,31 +32,18 @@
     padding: 0 20px 0 20px;
 }
 
-.imgAgenda {
-    margin-right: 30px;
+.imgAgendahome {
+    width: 5rem;
+    margin-right: 2rem;
 }
 
-.imgAyuntament {
-    margin-right: 30px;
-
+.imgAyuntamenthome {
+    width: 10rem;
+    margin-right:2rem
 }
 
-.containerHome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-
-}
-
-.imgAgenda {
-    margin-right: 20px;
-
-}
-
-.imgAyuntament {
-    margin-right: 20px;
-
+.imgFomenthome {
+    width: 6rem;
 }
 
 

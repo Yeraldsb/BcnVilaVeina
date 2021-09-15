@@ -6,7 +6,7 @@ import Typical from 'react-typical'
 export const StartSession = () => {
     return (
         <div className="typical">
-            <p>Benvinguts a Vilaveïna {' '}
+            <p className="textintropage">Benvinguts a Vilaveïna {' '}
 
                 <Typical
                     loop={Infinity}
