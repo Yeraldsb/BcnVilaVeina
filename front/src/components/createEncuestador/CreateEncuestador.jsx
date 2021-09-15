@@ -59,7 +59,6 @@ export class CreateEncuestador extends Component {
     }
 
     render() {
-
         return (
             <form action="" onSubmit={this.handleSubmit}>
                 <div className="registerForm">
