@@ -16,7 +16,8 @@ public class EncuestasController {
     private EncuestasRepository encuestasRepository;
 
     @PostMapping("/encuestas")
-    private void crearEncuesta(@RequestBody Encuestas encuestas){
+    private void crearEncuesta
+            (@RequestBody Encuestas encuestas){
         encuestasRepository.insert(encuestas);
     }
 
