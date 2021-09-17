@@ -1,94 +1,132 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import './editEncuestador.css';
-import Form from "react-bootstrap/Form";
+import {Redirect, useLocation, useParams} from "react-router-dom";
 import axios from "axios";
 
-export class EditEncuestador extends Component {
+export const EditEncuestador = (props) => {
+    const locationData = useLocation()
+    const [encuestador, setEncuestador] = useState(locationData.state?.encuestador || {
+        id: "",
+        nom: "",
+        cognom: "",
+        vilaveina: "",
+        usuari: "",
+        contrasenya: "",
+        telefon: "",
+        adreca: "",
+        correu: "",
+    })
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            Encuestadores: {}
-        };
+    const handleInputChange = (e) => {
+        setEncuestador({
+            ...encuestador,
+            [e.target.name]: e.target.value
+        })
+        console.log(encuestador)
     }
 
-
-    onChange = (e) => {
-        const state = this.state.Encuestadores
-        state[e.target.name] = e.target.value;
-        this.setState({Encuestadores:state});
+    const handleSubmit = (event) => {
+        console.log(`Quiero hacer PUT http://localhost:8080/update/${encuestador.id} con el body ${encuestador}`)
     }
 
-    onSubmit = (e) => {
-        e.preventDefault();
-
-        const { nom, cognom, vilaveina, usuari, contrasenya, telefon, adreca, correu } = this.state.Encuestadores;
-
-        axios.post('http://localhost:8080/enquestadors'+this.props.match.params.id, { nom, cognom, vilaveina, usuari, contrasenya, telefon, adreca, correu })
-            .then((result) => {
-                this.props.history.push("http://localhost:8080/enquestadors"+this.props.match.params.id)
-            });
-    }
-
-
-
-    render() {
-        return (
+    return (
+        <form>
             <div className={"registerForm"}>
                 <h3>Editar dades enquestador</h3>
                 <div className={"columnpile"}>
 
                     <div className={"columna-1"}>
                         <label>Nom</label>
-                        <input type="text" className="register-name" required/>
+                        <input
+                            type="text"
+                            className="register-name"
+                            name="nom"
+                            value={encuestador.nom}
+                            onChange={handleInputChange}
+                            required
+                        />
+
                         <label>Adreça</label>
-                        <input type="text" className="register-address" required/>
+                        <input type="text"
+                               className="register-address"
+                               name="adreca"
+                               value={encuestador.adreca}
+                               onChange={handleInputChange}
+                               required
+                        />
+
                         <label>Email</label>
-                        <input type="text" className="register-email" required/>
+                        <input type="text"
+                               className="register-email"
+                               name="correu"
+                               value={encuestador.correu}
+                               onChange={handleInputChange}
+                               required
+                        />
+
                         <label>Usuari</label>
-                        <input type="text" className="register-email" required/>
+                        <input type="text"
+                               className="register-email"
+                               name="usuari"
+                               value={encuestador.usuari}
+                               onChange={handleInputChange}
+                               required
+                        />
                     </div>
 
                     <div className={"columna-2"}>
+
                         <label>Cognom</label>
-                        <input type="text" className="register-surname" required/>
-                        <Form.Group>
-                            <Form.Label> Vila Veïna : </Form.Label>
-                            <div className={"formselect"}>
-                                <Form.Select>
-                                    <option></option>
-                                    <option>Badal</option>
-                                    <option>Carmel de dalt</option>
-                                    <option>Casc antic d'Horta</option>
-                                    <option>Casc antic Les Corts</option>
-                                    <option>Consell de Cent - Girona - Eixample</option>
-                                    <option>El Camp de l'Arpa - Alchemika</option>
-                                    <option>El Congrés i els Indians</option>
-                                    <option>Gotic</option>
-                                    <option>La Marina - Mare de Déu del Port</option>
-                                    <option>La Trinidad Vella</option>
-                                    <option>Maresme</option>
-                                    <option>Prosperitat</option>
-                                    <option>Provençals de Poblenou</option>
-                                    <option>Sant Gervasi de Cassoles</option>
-                                    <option>Vila de Gracia</option>
-                                    <option>Vilapicina i la Torre LLobeta - Cotxeres</option>
-                                </Form.Select>
-                            </div>
-                        </Form.Group>
+                        <input type="text"
+                               className="register-surname"
+                               name="cognom"
+                               value={encuestador.cognom}
+                               onChange={handleInputChange}
+                               required
+                        />
+
+                        <label> Vila Veïna</label>
+                        <input type="text"
+                               className="form-control"
+                               name="vilaveina"
+                               value={encuestador.vilaveina}
+                               onChange={handleInputChange}
+                               required
+                        />
+
+
                         <label>Telèfon</label>
-                        <input type="text" className="register-phone" required/>
+
+                        <input type="text"
+                               className="register-phone"
+                               name="telefon"
+                               value={encuestador.telefon}
+                               onChange={handleInputChange}
+                               required
+                        />
                         <label>Contrasenya</label>
-                        <input type="password" className="register-phone" required/>
+                        <input type="password"
+                               className="register-phone"
+                               name="contrasenya"
+                               value={encuestador.contrasenya}
+                               onChange={handleInputChange}
+                               required
+                        />
                     </div>
                 </div>
 
-                <button className={"button-save"} type="submit"> Guardar</button>
+                <button
+                    className="button-save"
+                    type="submit"
+                    onClick={() => console.log("Pinche callback")}
+                >
+                    Update
+                </button>
 
             </div>
 
-        );
-    }
+        </form>
+    );
 
 
 }

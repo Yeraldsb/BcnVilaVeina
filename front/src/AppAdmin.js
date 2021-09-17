@@ -8,7 +8,8 @@ import {CreateEncuestador} from "./components/createEncuestador/CreateEncuestado
 import {EditEncuestador} from "./components/editEncuestador/EditEncuestador"
 
 
-function AppAdmin() {
+
+function AppAdmin(props) {
     return (
         <Router>
             <SideBarAdmin />
@@ -19,13 +20,16 @@ function AppAdmin() {
                     <Route path="/estadistiques">
                         <Estadisticas/>
                     </Route>
-                    <Route path="/tablaEncuestadores">
+                    <Route
+                        path="/tablaEncuestadores">
                         <TablaEncuestadores/>
                     </Route>
+
                     <Route path="/registerForm">
                         <CreateEncuestador/>
                     </Route>
-                    <Route path="/editar">
+
+                    <Route path="/editar/:id">
                         <EditEncuestador/>
                     </Route>
 

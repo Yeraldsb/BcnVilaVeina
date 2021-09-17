@@ -13,6 +13,7 @@ interface MyState {
 
 export default class TablaEncuestadores extends Component<{}, MyState> {
 
+
     state: MyState = {
         handleSubmit: [],
         Encuestadores: [],
@@ -25,7 +26,7 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
 
     }
 
-    getEncuestadores = () => {
+    getEncuestadores = (props) => {
         axios.get('http://localhost:8080/enquestadors')
             .then(response => {
                 const Encuestadores = response.data
@@ -81,9 +82,14 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                                     <TableCell align="left">{encuestador.adreca}</TableCell>
                                     <TableCell align="left">{encuestador.correu}</TableCell>
                                     <TableCell align="left">
-                                        <Link to={`/editar/${encuestador.id}`} style={{textDecoration: "none"}}>
-                                            <button className="botonActualizar"
-                                            >Editar
+                                        <Link  to={{
+                                            pathname:`/editar/${encuestador.id}`,
+                                            state: {encuestador: encuestador}
+                                        }} style={{textDecoration: "none"}}>
+                                            <button
+                                                className="botonActualizar"
+                                            >
+                                                Editar
                                             </button>
                                         </Link>
 
@@ -183,13 +189,6 @@ Link to={"/EditEncuestador"} style={{ textDecoration:
                         </button>
                     </ModalFooter>
                 </Modal>
-
-
-
-
-
-
-
     return (
 
         <div className="Tabla">

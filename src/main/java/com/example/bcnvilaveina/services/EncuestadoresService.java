@@ -24,6 +24,10 @@ public class EncuestadoresService {
         return encuestadoresRepository.findById(id).orElse(null);
     }
 
+    public Encuestadores update(Encuestadores encuestadores){
+        return encuestadoresRepository.save(encuestadores);
+    }
+
 }
 
 
