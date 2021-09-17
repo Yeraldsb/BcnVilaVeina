@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "./createEncuestador.css";
 import axios from "axios";
+import Form from "react-bootstrap/Form";
 
 export class CreateEncuestador extends Component {
 
@@ -108,16 +109,40 @@ export class CreateEncuestador extends Component {
                                    value={this.state.telefon}
                                    onChange={this.handleChange}
                                    required/>
+                            <Form.Group>
+                                <Form.Label> Vila Veïna </Form.Label>
+                                <div>
+                                    <Form.Select>
+                                        <option></option>
+                                        <option>Badal</option>
+                                        <option>Carmel de dalt</option>
+                                        <option>Casc antic d'Horta</option>
+                                        <option>Casc antic Les Corts</option>
+                                        <option>Consell de Cent - Girona - Eixample</option>
+                                        <option>El Camp de l'Arpa - Alchemika</option>
+                                        <option>El Congrés i els Indians</option>
+                                        <option>Gotic</option>
+                                        <option>La Marina - Mare de Déu del Port</option>
+                                        <option>La Trinidad Vella</option>
+                                        <option>Maresme</option>
+                                        <option>Prosperitat</option>
+                                        <option>Provençals de Poblenou</option>
+                                        <option>Sant Gervasi de Cassoles</option>
+                                        <option>Vila de Gracia</option>
+                                        <option>Vilapicina i la Torre LLobeta - Cotxeres</option>
+                                    </Form.Select>
+                                </div>
+                            </Form.Group>
 
-                            <label> Vila Veïna</label>
-                            <input type="text"
+
+                            {/* <input type="text"
                                    className="form-control"
                                    name="vilaveina"
                                    value={this.state.vilaveina}
                                    onChange={this.handleChange}
                                    required
                             />
-
+*/}
                             <label>Adreca</label>
                             <input type="text"
                                    className="form-control"
