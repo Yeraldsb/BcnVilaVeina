@@ -1,12 +1,11 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './editEncuestador.css';
 import {Redirect, useLocation, useParams} from "react-router-dom";
 import axios from "axios";
 
 export const EditEncuestador = (props) => {
     const locationData = useLocation()
-    const [encuestador, setEncuestador] = useState(locationData.state?.encuestador || {
-        id: "",
+    const [encuestadorInfo, setEncuestadorInfo] = React.useState(locationData.state?.encuestador || {
         nom: "",
         cognom: "",
         vilaveina: "",
@@ -16,17 +15,37 @@ export const EditEncuestador = (props) => {
         adreca: "",
         correu: "",
     })
-
-    const handleInputChange = (e) => {
-        setEncuestador({
-            ...encuestador,
-            [e.target.name]: e.target.value
+    const handleChange = (event) => {
+        let value = event.target.value;
+        let name = event.target.name;
+        setEncuestadorInfo((info) =>{
+            return{
+                ...info,
+                [name]: value
+            }
         })
-        console.log(encuestador)
     }
 
-    const handleSubmit = (event) => {
-        console.log(`Quiero hacer PUT http://localhost:8080/update/${encuestador.id} con el body ${encuestador}`)
+
+    React.useEffect(() =>{
+        axios.get('http://localhost:8080/enquestadors/${id}' )
+            .then((res) => {
+                setEncuestadorInfo(res.data);
+                console.log("Respuesta get")
+                console.log(res.data)
+            })
+    }, []);
+
+    const handleSubmit = () => {
+        console.log()
+        axios.put('http://localhost:8080/update/${id}',
+            encuestadorInfo
+        )
+            .then((res) => {
+                console.log(encuestadorInfo)
+                setEncuestadorInfo(res.data)
+            })
+            .catch(err => alert(err))
     }
 
     return (
@@ -41,8 +60,8 @@ export const EditEncuestador = (props) => {
                             type="text"
                             className="register-name"
                             name="nom"
-                            value={encuestador.nom}
-                            onChange={handleInputChange}
+                            value={encuestadorInfo.nom}
+                            onChange={handleChange}
                             required
                         />
 
@@ -50,8 +69,8 @@ export const EditEncuestador = (props) => {
                         <input type="text"
                                className="register-address"
                                name="adreca"
-                               value={encuestador.adreca}
-                               onChange={handleInputChange}
+                               value={encuestadorInfo.adreca}
+                               onChange={handleChange}
                                required
                         />
 
@@ -59,8 +78,8 @@ export const EditEncuestador = (props) => {
                         <input type="text"
                                className="register-email"
                                name="correu"
-                               value={encuestador.correu}
-                               onChange={handleInputChange}
+                               value={encuestadorInfo.correu}
+                               onChange={handleChange}
                                required
                         />
 
@@ -68,8 +87,8 @@ export const EditEncuestador = (props) => {
                         <input type="text"
                                className="register-email"
                                name="usuari"
-                               value={encuestador.usuari}
-                               onChange={handleInputChange}
+                               value={encuestadorInfo.usuari}
+                               onChange={handleChange}
                                required
                         />
                     </div>
@@ -80,8 +99,8 @@ export const EditEncuestador = (props) => {
                         <input type="text"
                                className="register-surname"
                                name="cognom"
-                               value={encuestador.cognom}
-                               onChange={handleInputChange}
+                               value={encuestadorInfo.cognom}
+                               onChange={handleChange}
                                required
                         />
 
@@ -89,8 +108,8 @@ export const EditEncuestador = (props) => {
                         <input type="text"
                                className="form-control"
                                name="vilaveina"
-                               value={encuestador.vilaveina}
-                               onChange={handleInputChange}
+                               value={encuestadorInfo.vilaveina}
+                               onChange={handleChange}
                                required
                         />
 
@@ -100,16 +119,16 @@ export const EditEncuestador = (props) => {
                         <input type="text"
                                className="register-phone"
                                name="telefon"
-                               value={encuestador.telefon}
-                               onChange={handleInputChange}
+                               value={encuestadorInfo.telefon}
+                               onChange={handleChange}
                                required
                         />
                         <label>Contrasenya</label>
                         <input type="password"
                                className="register-phone"
                                name="contrasenya"
-                               value={encuestador.contrasenya}
-                               onChange={handleInputChange}
+                               value={encuestadorInfo.contrasenya}
+                               onChange={handleChange}
                                required
                         />
                     </div>
@@ -118,7 +137,7 @@ export const EditEncuestador = (props) => {
                 <button
                     className="button-save"
                     type="submit"
-                    onClick={() => console.log("Pinche callback")}
+                    onClick={handleSubmit}
                 >
                     Update
                 </button>
