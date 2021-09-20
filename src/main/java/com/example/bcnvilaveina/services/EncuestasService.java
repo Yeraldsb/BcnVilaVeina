@@ -1,41 +1,28 @@
 package com.example.bcnvilaveina.services;
 
+import com.example.bcnvilaveina.Model.Encuestadores;
 import com.example.bcnvilaveina.Model.Encuestas;
-
 import com.example.bcnvilaveina.Repository.EncuestasRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+public class EncuestasService {
 
-@Service
-public class EncuestasService implements IEncuestaService {
+    private final EncuestasRepository encuestasRepository;
 
-    @Autowired
-    private EncuestasRepository encuestasRepository;
+    public EncuestasService(EncuestasRepository encuestasRepository){
+        this.encuestasRepository = encuestasRepository;
+    }
 
-    @Override
-    public Encuestas create(Encuestas encuestas) {
+    public List<Encuestas> allEncuestas(){
+        return (List<Encuestas>) encuestasRepository.findAll();
+    }
+
+    public Encuestas finById(String id){
+        return encuestasRepository.findById(id).orElse(null);
+    }
+    public Encuestas update(Encuestas encuestas){
         return encuestasRepository.save(encuestas);
     }
 
-
-    @Override
-    public List<Encuestas> findAll() {
-        return encuestasRepository.findAll();
-    }
-
-    @Override
-    public void delete(String id) {
-        encuestasRepository.deleteById(id);
-
-    }
-
-    @Override
-    public Encuestas update(Encuestas encuestas) {
-        return encuestasRepository.save(encuestas);
-    }
 }
-
-
