@@ -4,12 +4,9 @@ import com.example.bcnvilaveina.Model.Encuestas;
 
 import java.util.List;
 
-public interface IEncuestaRepository {
+public interface IEncuestaService {
 
     Encuestas create(Encuestas encuestas);
-
-
-    List<Encuestas> findByBarris(String barris);
 
     List<Encuestas> findAll();
 

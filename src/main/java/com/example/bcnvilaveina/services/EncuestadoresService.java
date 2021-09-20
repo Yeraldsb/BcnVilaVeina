@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class EncuestadoresService {
 
-    private EncuestadoresRepository encuestadoresRepository;
+    private final EncuestadoresRepository encuestadoresRepository;
 
     @Autowired
     public EncuestadoresService(EncuestadoresRepository encuestadoresRepository) {
