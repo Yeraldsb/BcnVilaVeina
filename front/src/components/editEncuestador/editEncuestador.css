@@ -1,14 +1,17 @@
 
 .registerForm-edit {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 5px 20px -6px #683dc3;
     margin: 5% 50%;
     font-family: Arial;
-    background: #FFFFFF;
+    background: #f4f4f4;
     border-radius: 1%;
     height: 400px;
     padding:  4rem 5rem  12rem 5rem;
     width: 43rem;
     margin-left: 32%;
+    border: 3rem solid #683dc3;
+
+
 }
 
 .columnpile {
@@ -18,12 +21,13 @@
 .button-save {
     color: white;
     text-align: center;
-    background-color: #ff7432;
+    background-color: #0cba7e;
     font-family: Arial;
     padding: 15px 15px 15px;
     width: 140px;
-    margin-top: 50px;
+    margin-top: 8px;
     font-weight: bold;
+    margin-left: 50px;
 }
 
 .columna-1 {
@@ -50,11 +54,12 @@ h3 {
     padding: 3px;
     font-size: 33px;
     font-weight: lighter;
+    color: #000000;
 }
 
 
 input {
-    border: 1px solid #683dc3;
+    border: none;
     border-radius: 5px;
     height: 30px;
     margin-left: 8px;
