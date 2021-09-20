@@ -83,10 +83,11 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                                     <TableCell align="left">{encuestador.correu}</TableCell>
                                     <TableCell align="left">
                                         <Link  to={{
-                                            pathname:`/editar/${encuestador.id}`,
+                                            pathname:`/editar/` + encuestador.id,
                                             state: {encuestador: encuestador}
                                         }} style={{textDecoration: "none"}}>
                                             <button
+                                                type="submit"
                                                 className="botonActualizar"
                                             >
                                                 Editar
@@ -166,76 +167,6 @@ Link to={"/EditEncuestador"} style={{ textDecoration:
         setData(dataNueva);
         setModalEditar(false)
     };
-
-    const eliminar = () => {
-        setData(data.filter(nombre => nombre.id !== nombreSeleccionado.id))
-        setModalEliminar(false);
-    }
-    const [modalEliminar, setModalEliminar] = useState(false)
-
-
-  <Modal className="modalEliminar" isOpen={modalEliminar}>
-                    <ModalBody className="preguntaModal">
-                        Esta Seguro que desea eliminar el usuario {nombreSeleccionado && nombreSeleccionado.nombre}
-                    </ModalBody>
-                    <ModalFooter>
-                        <button className="botonModalEliminarSi" onClick={() => eliminar()}>
-                            Si
-                        </button>
-                        <br/>
-                        <button className="botonModalEliminarNo"
-                                onClick={() => setModalEliminar(false)}>
-                            No
-                        </button>
-                    </ModalFooter>
-                </Modal>
-    return (
-
-        <div className="Tabla">
-            <SideBarAdmin/>
-            <h1 align="center" className="registro">Registre enquestadors</h1>
-            <TableContainer component={Paper}>
-                <Table className="contenedorTabla">
-                    <TableHead>
-                        <TableRow className="tcolor">
-                            <TableCell>Id</TableCell>
-                            <TableCell>Nom</TableCell>
-                            <TableCell>Cognom</TableCell>
-                            <TableCell>Vila</TableCell>
-                            <TableCell>Usuari</TableCell>
-                            <TableCell>Contrasenya</TableCell>
-                            <TableCell>Telèfon</TableCell>
-                            <TableCell>Adreça</TableCell>
-                            <TableCell>Acciones</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {data.map(elemento => (
-                            <TableRow key={elemento.id}>
-                                <TableCell>{elemento.id}</TableCell>
-                                <TableCell align="left">{elemento.nombre}</TableCell>
-                                <TableCell align="left">{elemento.cognom}</TableCell>
-                                <TableCell align="left">{elemento.vila}</TableCell>
-                                <TableCell align="left">{elemento.usuari}</TableCell>
-                                <TableCell align="left">{elemento.contrasenya}</TableCell>
-                                <TableCell align="left">{elemento.telèfon}</TableCell>
-                                <TableCell align="left">{elemento.adreça}</TableCell>
-
-                                <TableCell align="left">
-                                    <button className="botonActualizar"
-                                            onClick={() => seleccionarNombre(elemento, 'Editar')}>Editar
-                                    </button>
-                                    {" "}
-                                    <Delete onClick={() => seleccionarNombre(elemento, "Eliminar")}/>
-                                    {}</TableCell>
-
-
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
-
 
             <div className="modalContainer">
                 <Modal className="primerModal" isOpen={modalEditar}>

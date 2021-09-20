@@ -15,38 +15,39 @@ export const EditEncuestador = (props) => {
         adreca: "",
         correu: "",
     })
-    const handleChange = (event) => {
-        let value = event.target.value;
-        let name = event.target.name;
-        setEncuestadorInfo((info) =>{
-            return{
+
+
+    React.useEffect(() => {
+        axios.get('http://localhost:8080/enquestadors/${encuestadoresInfo.id}')
+            .then((res) => {
+                setEncuestadorInfo(res.data);
+                console.log("Getting data here")
+                console.log(res.data)
+            })
+    }, []);
+
+    let {id} = useParams()
+    console.log(id)
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axios.post( `http://localhost:8080/update/${id} `,
+            encuestadorInfo
+        ).then((res) => {
+            setEncuestadorInfo(res.data)
+        }).catch(err => alert(err))
+    }
+
+    const handleChange = (e) => {
+        let value = e.target.value;
+        let name = e.target.name;
+        setEncuestadorInfo((info) => {
+            return {
                 ...info,
                 [name]: value
             }
         })
     }
 
-
-    React.useEffect(() =>{
-        axios.get('http://localhost:8080/enquestadors/${id}' )
-            .then((res) => {
-                setEncuestadorInfo(res.data);
-                console.log("Respuesta get")
-                console.log(res.data)
-            })
-    }, []);
-
-    const handleSubmit = () => {
-        console.log()
-        axios.put('http://localhost:8080/update/${id}',
-            encuestadorInfo
-        )
-            .then((res) => {
-                console.log(encuestadorInfo)
-                setEncuestadorInfo(res.data)
-            })
-            .catch(err => alert(err))
-    }
 
     return (
         <form>

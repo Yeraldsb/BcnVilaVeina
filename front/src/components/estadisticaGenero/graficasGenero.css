@@ -1,0 +1,28 @@
+.barras-genero-container{
+    padding: 0;
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-left: 320px ;
+}
+.butones-Container-barras-genero{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100px;
+    width: 800px;
+    margin-left: 700px;
+}
+.butones-estadistica-genero{
+    background-color: #f6f6f6;
+    height: 50px;
+    width: 200px;
+    margin: 10px;
+}
+.container-wrapper-genero{
+    margin-left: 50px;
+    margin-top: 50px;
+    height: 80%;
+    width: 50%;
+}
