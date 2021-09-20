@@ -26,9 +26,16 @@ public class EncuestasController {
         return encuestaService.findAll();
     }
 
+<<<<<<< HEAD
     @PostMapping("/createencuesta")
     private Encuestas create(@RequestBody Encuestas encuestas){
         return encuestaService.create(encuestas);
+=======
+    @PostMapping("/encuestas")
+    private void crearEncuesta
+            (@RequestBody Encuestas encuestas){
+        encuestasRepository.insert(encuestas);
+>>>>>>> 7440db8afcdcdca54e1403abe80eeefc95fe038a
     }
 
     @PostMapping("/updateencuesta")
