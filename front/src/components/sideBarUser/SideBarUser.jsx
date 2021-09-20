@@ -20,7 +20,7 @@ export default function SideBarUser() {
                     <button><img src={orange} alt="" className="logoSidebar"/>Estadístiques</button>
                 </Link>
                 <Link to="/paginaHome" style={{ textDecoration: 'none' }}>
-                    <button className="button-logout">Sortir</button>
+                    <button className="button-logout-user">SORTIR</button>
                 </Link>
 
                 </div>

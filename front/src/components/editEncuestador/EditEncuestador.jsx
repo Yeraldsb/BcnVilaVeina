@@ -51,7 +51,7 @@ export const EditEncuestador = (props) => {
 
     return (
         <form>
-            <div className={"registerForm"}>
+            <div className="registerForm-edit">
                 <h3>Editar dades enquestador</h3>
                 <div className={"columnpile"}>
 
@@ -140,7 +140,7 @@ export const EditEncuestador = (props) => {
                     type="submit"
                     onClick={handleSubmit}
                 >
-                    Update
+                    GUARDAR
                 </button>
 
             </div>

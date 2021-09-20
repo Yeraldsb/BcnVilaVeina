@@ -59,15 +59,16 @@ button{
     margin-left: 20px;
     transition: 0.4s;
 }
-.button-logout{
+.button-logout-user{
     background-color: #ff7432;
     border-style: none;
     color: white;
-    width: 100px;
+    width: 125px;
     height: 40px;
     border-radius: 5px;
     margin-bottom: 10px;
     margin-top: 15vh;
     padding: 23px;
+    font-weight: bold;
 }
 

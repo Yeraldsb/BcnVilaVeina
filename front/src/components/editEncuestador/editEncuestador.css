@@ -1,15 +1,14 @@
 
-.registerForm {
+.registerForm-edit {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 5% 50%;
     font-family: Arial;
     background: #FFFFFF;
-
-    border-radius: 53px;
+    border-radius: 1%;
     height: 400px;
-    padding: 10px 20px 30px;
-    width: 600px;
-    margin-left: 40%;
+    padding:  4rem 5rem  12rem 5rem;
+    width: 43rem;
+    margin-left: 32%;
 }
 
 .columnpile {
@@ -22,21 +21,25 @@
     background-color: #ff7432;
     font-family: Arial;
     padding: 15px 15px 15px;
-    width: 125px;
+    width: 140px;
     margin-top: 50px;
-    border: 2px solid #a6a6a6;
+    font-weight: bold;
 }
 
 .columna-1 {
     display: flex;
     flex-direction: column;
-
     padding: 0px 10px 40px 30px
 }
+label , .columna-1 {
+       margin: 8px 90px 0 11px;
+}
+
 .columna-2 {
     display: flex;
     flex-direction: column;
     padding: 0px 20px 40px 40px;
+    margin: 8px 0 9px 0;
 }
 input , .formselect {
     margin: 10px 20px 10px 10px;
@@ -45,11 +48,14 @@ input , .formselect {
 h3 {
     text-align: center;
     padding: 3px;
+    font-size: 33px;
+    font-weight: lighter;
 }
+
 
 input {
     border: 1px solid #683dc3;
     border-radius: 5px;
-    height: 20px;
+    height: 30px;
     margin-left: 8px;
 }

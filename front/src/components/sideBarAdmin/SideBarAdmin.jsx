@@ -29,7 +29,7 @@ export default function SideBarAdmin() {
 
                 </Link>
                 <Link to="/paginaHome" className="linktoenquesta">
-                    <button className="button-logout">SORTIR</button>
+                    <button className="button-logout-admin">SORTIR</button>
                 </Link>
 
             </div>

@@ -94,7 +94,7 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                                             </button>
                                         </Link>
 
-                                        <Delete onClick={() => this.deleteEncuestador(encuestador.id)}/>
+                                        <Delete onClick={() => this.deleteEncuestador(encuestador.id)} className="borrar"/>
                                     </TableCell>
                                 </TableRow>
                             )}

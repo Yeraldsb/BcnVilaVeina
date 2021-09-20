@@ -8,6 +8,14 @@
     --pink-color: #ffb3d7; /**/
 }
 
+
+
+
+
+
+
+
+
 .registro {
     font-weight: 400;
     font-size: 48px;
@@ -18,12 +26,16 @@
 .contenedorTabla{
     width: 60%;
     border-radius: 50%;
+    color:#FFFFFF;
+    font-size: 17px;
 
 }
 
 .tcolor {
     background-color: var(--purple-color);
+
 }
+
 
 .Tabla {
     height: 80%;
@@ -80,6 +92,12 @@
     font-family: Arial;
     margin-right: 930px;
 }
+
+.borrar {
+    color: grey;
+}
+
+
 .botonActualizar{
     justify-content: center;
     color: white;
@@ -87,7 +105,8 @@
     background-color: #009624;
     margin-left: auto;
     display: inline;
-    width: 100px;
+    width: 87px;
+    padding: 10px;
 
 }
 .botonActualizarModal{
@@ -106,6 +125,7 @@
     background-color: #cd0e14;
     margin-left: auto;
 }
+
 
 label{
     display: inline-block;
