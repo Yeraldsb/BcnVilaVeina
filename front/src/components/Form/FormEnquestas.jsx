@@ -17,27 +17,7 @@ export default function FormEnquestas() {
         alert("Hem rebut la seva enquesta");
         history.push("/enquesta");
         window.location.reload(false);
-
     }
-    const [encuesta, setEncuesta] = useState({
-
-        id: '',
-        data: '',
-        barris: '',
-        genere: '',
-        canalDeAtencio: '',
-        edat: '',
-        llocDeNaixement: '',
-        ambitsTematiques: '',
-        consultaDeTitol: '',
-        motiuCures: '',
-        situacioJuridica: '',
-        serveisTramits: '',
-        nivelEstudis: '',
-       situacioLaboral: '',
-         comenshaconegut: '',
-         altres: '',
-    });
 
     const [encuesta, setEncuesta] = useState({
         barris: "",
