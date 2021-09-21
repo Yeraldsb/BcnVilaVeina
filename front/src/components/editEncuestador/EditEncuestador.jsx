@@ -54,7 +54,6 @@ export const EditEncuestador = (props) => {
             <div className="registerForm-edit">
                 <h3>Editar dades enquestador</h3>
                 <div className={"columnpile"}>
-
                     <div className={"columna-1"}>
                         <label>Nom</label>
                         <input

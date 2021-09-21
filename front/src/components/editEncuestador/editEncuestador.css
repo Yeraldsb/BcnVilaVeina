@@ -16,6 +16,8 @@
 
 .columnpile {
     display: flex;
+    font-weight: normal;
+    font-size: 16px;
 }
 
 .button-save {
@@ -23,11 +25,16 @@
     text-align: center;
     background-color: #0cba7e;
     font-family: Arial;
-    padding: 15px 15px 15px;
-    width: 140px;
-    margin-top: 8px;
     font-weight: bold;
     margin-left: 50px;
+    border-style: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 2vh;
+    padding: 10px;
+    font-size: 16px;
 }
 
 .columna-1 {
@@ -54,7 +61,7 @@ h3 {
     padding: 3px;
     font-size: 33px;
     font-weight: lighter;
-    color: #000000;
+    color: #683dc3;
 }
 
 

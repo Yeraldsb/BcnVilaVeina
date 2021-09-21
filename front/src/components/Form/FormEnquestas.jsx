@@ -56,8 +56,8 @@ export default function FormEnquestas() {
 
         <div className={"pollbackground"}>
             <Form className="poll-form" onSubmit={onCreatePost}>
+                <h3> Nova Enquesta</h3>
                 <div className={"form-content"}>
-
                     <div className={"form-column-1"}>
                         <div className={"form-column-1-content"}>
                             <div className={"form-datalabelpicker"}>
@@ -279,7 +279,7 @@ export default function FormEnquestas() {
                             </Form.Group>
                         </div>
                         <Button className={"submitpoll"} type="submit" variant="success">
-                            ENVIAR ENQUESTA
+                            ENVIAR
                         </Button>
                     </div>
                 </div>

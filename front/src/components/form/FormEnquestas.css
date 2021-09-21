@@ -1,24 +1,28 @@
 /* -------------- MOTHER DIVS -------------------------------------------- */
 .pollbackground {
-    padding: 50px 300px 150px 50px;
+    box-shadow: 5px 5px 20px -6px #683dc3;
+    margin: 5% 50%;
     font-family: Arial;
-    width: 500px;
-    height: 440px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 85px;
-    margin: 0px 0% 0px 27%;
+    background: #f4f4f4;
+    border-radius: 1%;
+    height: 400px;
+    padding:  2rem 5rem 15rem 5rem;
+    width: 43rem;
+    margin-left: 32%;
+    border: 3rem solid #683dc3;
 }
 .form-content{
     display: flex;
+    font-size: 16px;
+    font-width: normal;
+
 }
 
 /* ----------------- COLUMN 1 -------------------------------------------- */
 .form-column-1 {
     display: flex;
-    justify-content: space-evenly;
-    margin: 40px 50px 50px 0px;
-    padding: 0px 80px 0px 40px;
+    flex-direction: column;
+    padding: 0px 10px 40px 10px;
 }
 
 .form-column-1-content {
@@ -59,18 +63,14 @@ label.age.form-label{
 label.origin.form-label{
     display: flex;
     margin: 5px;
-    width: 10px;
     font-size: 14px;
 }
 select.age.form-select{
-    border: 1px solid #683dc3;
     border-radius: 5px;
     height: 23px;
     margin-left: 8px;
-    width: 60px;
 }
 select.origin.form-select {
-    border: 1px solid #683dc3;
     border-radius: 5px;
     height: 23px;
     margin-left: 8px;
@@ -99,36 +99,39 @@ input.ambit-box{
 .form-column-2 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    padding: 0px 20px 40px 40px;
+    margin: 8px 0 9px 0;
 }
 .submitpoll {
-    background-color: #ff7432;
-    width: 240px;
-    height: 60px;
-    margin: 10% 0%;
-
-
-    font-family: "Arial Black" ;
-    border: none;
-    border-radius: 10px;
-    font-weight: bolder;
-    font-size: 14px;
-    letter-spacing: 2px;
-    color: #FFFFFF;
+    color: white;
+    text-align: center;
+    background-color: #0cba7e;
+    font-family: Arial;
+    font-weight: bold;
+    margin-left: 50px;
+    border-style: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 2vh;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
 }
 
 
 /* ------------- BOOTSTRAP CLASSES --------------------------------------- */
 label {
-    width: 150px;
-    margin: 8px 146px 9px -21px;
+    width: 170px;
 }
+
 select.form-select {
-    border: 1px solid #683dc3;
+    margin: 8px 90px 0 11px;
+    border: none;
     border-radius: 5px;
-    height: 23px;
-    margin-left: 8px;
-    width: 230px;
+    height: 30px;
 }
 .genrebox,.ambitbox {
     background-color: white;

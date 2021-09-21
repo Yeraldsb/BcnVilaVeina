@@ -8,14 +8,6 @@
     --pink-color: #ffb3d7; /**/
 }
 
-
-
-
-
-
-
-
-
 .registro {
     font-weight: 400;
     font-size: 48px;
@@ -31,10 +23,14 @@
 
 }
 
+
+
 .tcolor {
     background-color: var(--purple-color);
 
 }
+
+
 
 
 .Tabla {
@@ -80,18 +76,19 @@
 
 }
 .botonTablaEncuestadores{
-    margin-top: 10px;
-    background-color: #ff7432;
+    margin-top: 20px;
+    background-color: #0cba7e;
     border-style: none;
     color: white;
-    height: 60px;
-    border-radius: 10px;
+    height: 40px;
+    width: 195px;
+    border-radius: 5px;
     font-weight: 600;
-    display: flex;
-    justify-content: center;
     font-family: Arial;
-    margin-right: 930px;
+    font-size: 20px;
 }
+
+
 
 .borrar {
     color: grey;
@@ -102,11 +99,13 @@
     justify-content: center;
     color: white;
     cursor: pointer;
-    background-color: #009624;
+    background-color: #683dc3;
     margin-left: auto;
     display: inline;
-    width: 87px;
-    padding: 10px;
+    width: 68px;
+    padding: 8px;
+    font-size: 14px;
+    margin-right: 15px;
 
 }
 .botonActualizarModal{

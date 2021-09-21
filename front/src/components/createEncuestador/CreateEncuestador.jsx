@@ -62,11 +62,11 @@ export class CreateEncuestador extends Component {
     render() {
         return (
             <form action="" onSubmit={this.handleSubmit}>
-                <div className="registerForm">
+                <div className="registerFormalta">
                     <h3>Alta Enquestadores</h3>
-                    <div className="columnpile">
+                    <div className="columnpilecreate">
 
-                        <div className="columna-1">
+                        <div className="columna-1encuestador">
                             <label htmlFor="nom">Nom</label>
                             <input type="text"
                                    className="form-control"
@@ -100,7 +100,7 @@ export class CreateEncuestador extends Component {
                                    required/>
                         </div>
 
-                        <div className={"columna-2"}>
+                        <div className={"columna-2encuestador"}>
 
                             <label>Telèfon</label>
                             <input type="text"
@@ -161,7 +161,7 @@ export class CreateEncuestador extends Component {
                             />
                         </div>
                     </div>
-                    <button className="button-save" type="submit"> Guardar</button>
+                    <button className="button-save" type="submit"> GUARDAR</button>
 
                 </div>
             </form>

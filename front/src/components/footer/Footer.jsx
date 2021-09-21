@@ -1,7 +1,7 @@
 import * as React from "react";
-import logoAgenda from "../img/logoagendablanco.jpeg";
-import logoAjuntament from "../img/logoAjuntamentlila.jpeg";
-import logoFoment from "../img/logofomentblanco.jpeg";
+import logoAgenda from "../img/LogoAgenda.png";
+import logoAjuntament from "../img/LogoAjuntament.gif";
+import logoFoment from "../img/LogoFoment.png";
 import "./footer.css";
 
 

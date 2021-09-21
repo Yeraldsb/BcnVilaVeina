@@ -56,17 +56,17 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                 <TableContainer component={Paper}>
                     <Table className="contenedorTabla">
                         <TableHead>
-                            <TableRow className="tcolor">
-                                <TableCell>#</TableCell>
-                                <TableCell>Nom</TableCell>
-                                <TableCell>Cognom</TableCell>
-                                <TableCell>Vila</TableCell>
-                                <TableCell>Usuari</TableCell>
-                                <TableCell>Contrasenya</TableCell>
-                                <TableCell>Telèfon</TableCell>
-                                <TableCell>Adreça</TableCell>
-                                <TableCell>Correu electrònic</TableCell>
-                                <TableCell>Acciones</TableCell>
+                            <TableRow className="tcolor" >
+                                <TableCell style={{color: "white"}} >#</TableCell>
+                                <TableCell style={{color: "white"}}>NOM</TableCell>
+                                <TableCell style={{color: "white"}}>COGNOM</TableCell>
+                                <TableCell style={{color: "white"}}>VILA</TableCell>
+                                <TableCell style={{color: "white"}}>USUARI</TableCell>
+                                <TableCell style={{color: "white"}}>CONTRASENYA</TableCell>
+                                <TableCell style={{color: "white"}}>TELÈFON</TableCell>
+                                <TableCell style={{color: "white"}}>ADREÇA</TableCell>
+                                <TableCell style={{color: "white"}}>MAIL</TableCell>
+                                <TableCell style={{color: "white"}}>ACCIONS</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -103,7 +103,7 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                 </TableContainer>
                 <Link to="/registerForm" style={{textDecoration: "none"}}>
                     <button className="botonTablaEncuestadores " type="submit">
-                        NUEVO REGISTRO
+                        NOU REGISTRE
                     </button>
                 </Link>
 

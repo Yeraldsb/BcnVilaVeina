@@ -59,8 +59,6 @@ export default function Estadisticas() {
     const [startDate, setStartDate] = useState(new Date("2021/08/31"));
     const [endDate, setEndDate] = useState(new Date("2021/08/31"));
 
-    console.log(this.state.Encuestas)
-    console.log(this.state.Encuestas.map(e=>e.edat))
 
     return (
        <div className="mainContainer">
@@ -115,6 +113,8 @@ export default function Estadisticas() {
 }
 
 /*
+    console.log(this.state.Encuestas)
+    console.log(this.state.Encuestas.map(e=>e.edat))
 
 
 *  <div className="bodyestadisticas">
