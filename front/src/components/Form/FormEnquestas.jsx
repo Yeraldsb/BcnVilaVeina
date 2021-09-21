@@ -38,31 +38,39 @@ export default function FormEnquestas() {
     })
     console.log(encuesta)
 
-    function onCreatePost(e){
+    function onCreatePost(e) {
         e.preventDefault();
-        const postData={
+        const postData = {
             encuesta
         };
         axios.post(`http://localhost:8080/createencuesta`,
             postData,
-            )
+        )
             .then(res => {
                 console.log(encuesta)
                 console.log(res)
             })
     }
 
+    function handleFormChange(e) {
+        setEncuesta({
+            ...encuesta,
+            [e.target.name]: e.target.value
+        })
+
+    }
+
     return (
 
-        <div className={"pollbackground"}>
+        <div className="pollbackground">
             <Form className="poll-form" onSubmit={onCreatePost}>
                 <h3> Nova Enquesta</h3>
-                <div className={"form-content"}>
-                    <div className={"form-column-1"}>
-                        <div className={"form-column-1-content"}>
-                            <div className={"form-datalabelpicker"}>
+                <div className="form-content">
+                    <div className="form-column-1">
+                        <div className="form-column-1-content">
+                            <div className="form-datalabelpicker">
                                 <Form.Group>
-                                    <Form.Label className={"data"}> Data : </Form.Label>
+                                    <Form.Label className="data"> Data : </Form.Label>
                                 </Form.Group>
                                 <Form.Group className={"formdatepicker"}>
                                     <CustomDatePicker className="form-control" dateFormat="dd/MM/yyyy"
@@ -97,25 +105,39 @@ export default function FormEnquestas() {
 
                                 <Form.Group>
                                     <Form.Label> Gènere </Form.Label>
-                                    <div className={"form-checkboxgenre"}>
-                                        <input type="checkbox" id="genrebox" className="genrebox" name="Home"
-                                               value="Home"/>
+                                    <div className="form-checkboxgenre">
+                                        <input type="checkbox"
+                                               className="genrebox"
+                                               name="genero"
+                                               value="Home"
+                                               onChange={handleFormChange}
+                                        />
                                         <p>Home</p>
-                                        <input type="checkbox" id="genrebox" className="genrebox" name="Dona"
-                                               value="Dona"/>
+                                        <input type="checkbox"
+                                               className="genrebox"
+                                               name="Dona"
+                                               value="Dona"
+                                        />
                                         <p>Dona</p>
-                                        <input type="checkbox" id="genrebox" className="genrebox" name="NoBinari"
-                                               value="NoBinari"/>
+                                        <input
+                                            type="checkbox"
+                                            className="genrebox"
+                                            name="NoBinari"
+                                            value="NoBinari"
+                                        />
                                         <p>No binari</p>
-                                        <input type="checkbox" id="genrebox" className="genrebox" name="Altres"
-                                               value="Altres"/>
+                                        <input type="checkbox"
+                                               className="genrebox"
+                                               name="Altres"
+                                               value="Altres"
+                                        />
                                         <p>Altres</p>
                                     </div>
                                 </Form.Group>
                                 <Form.Group>
                                     <Form.Label> Canal d'Atenció </Form.Label>
                                     <div>
-                                        <Form.Select >
+                                        <Form.Select>
                                             <option></option>
                                             <option>Presencial Espai</option>
                                             <option>Presencial Descentralizat</option>
@@ -128,7 +150,7 @@ export default function FormEnquestas() {
                                 <div className={"form-age-origin"}>
                                     <Form.Group>
                                         <Form.Label className={"age"}> Edat </Form.Label>
-                                        <Form.Select className={"age"} >
+                                        <Form.Select className={"age"}>
                                             <option></option>
                                             <option>-18 anys</option>
                                             <option>De 18 a 24 anys</option>
@@ -145,7 +167,7 @@ export default function FormEnquestas() {
 
                                     <Form.Group className={"llocdenaixement"}>
                                         <Form.Label className="origin"> Lloc de naixement </Form.Label>
-                                        <Form.Select className="origin" >
+                                        <Form.Select className="origin">
                                             <option></option>
                                             <option>Catalunya</option>
                                             <option>Resta de l'Estat</option>
@@ -176,7 +198,7 @@ export default function FormEnquestas() {
                             <Form.Group>
                                 <Form.Label> Consulta de títol: </Form.Label>
                                 <br/>
-                                <Form.Select >
+                                <Form.Select>
                                     <option></option>
                                     <option> Professional de les cures i de la llar</option>
                                     <option> Persona cuidadora familiar</option>
@@ -189,7 +211,7 @@ export default function FormEnquestas() {
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label> Motiu cures o suport: </Form.Label>
-                                <Form.Select >
+                                <Form.Select>
                                     <option></option>
                                     <option>Edat: petita infància</option>
                                     <option>Edat: procés d'envelliment</option>
@@ -203,7 +225,7 @@ export default function FormEnquestas() {
                             <Form.Group>
                                 <Form.Label> Situació Jurídica: </Form.Label>
                                 <div>
-                                    <Form.Select >
+                                    <Form.Select>
                                         <option></option>
                                         <option>Nacionalitat espanyola</option>
                                         <option>Autorització de residència i treball</option>
@@ -218,7 +240,7 @@ export default function FormEnquestas() {
                             <Form.Group>
                                 <Form.Label> Serveis i Tràmits: </Form.Label>
                                 <div>
-                                    <Form.Select >
+                                    <Form.Select>
                                         <option></option>
                                         <option>Informació</option>
                                         <option>Orientació</option>
@@ -232,7 +254,7 @@ export default function FormEnquestas() {
                             <Form.Group>
                                 <Form.Label> Nivell d'estudis: </Form.Label>
                                 <div>
-                                    <Form.Select >
+                                    <Form.Select>
                                         <option></option>
                                         <option>No sap llegir ni esciure</option>
                                         <option>Primària incompleta</option>
@@ -246,7 +268,7 @@ export default function FormEnquestas() {
                             <Form.Group>
                                 <Form.Label> Situació Laboral: </Form.Label>
                                 <div>
-                                    <Form.Select >
+                                    <Form.Select>
                                         <option></option>
                                         <option>Treball a temps parcial</option>
                                         <option>Treball a temps complet</option>
@@ -262,7 +284,7 @@ export default function FormEnquestas() {
                             <Form.Group>
                                 <Form.Label> Com ens ha conegut: </Form.Label>
                                 <div>
-                                    <Form.Select >
+                                    <Form.Select>
                                         <option></option>
                                         <option>Boca-orella</option>
                                         <option>Web</option>
