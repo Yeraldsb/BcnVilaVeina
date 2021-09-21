@@ -10,16 +10,7 @@ import axios from "axios";
 
 export default function FormEnquestas() {
     const [datepick] = useState(new Date());
-    const history = useHistory();
-
-    function handleOnSubmit(e) {
-        e.preventDefault();
-        alert("Hem rebut la seva enquesta");
-        history.push("/enquesta");
-        window.location.reload(false);
-    }
-
-    const [encuesta, setEncuesta] = useState({
+    const initialData = {
         barris: "",
         genere: "",
         canalDeAtencio: "",
@@ -35,7 +26,9 @@ export default function FormEnquestas() {
         comenshaconegut: "",
         altres: "",
 
-    })
+    }
+
+    const [encuesta, setEncuesta] = useState(initialData)
     console.log(encuesta)
 
     function onCreatePost(e) {
@@ -47,8 +40,8 @@ export default function FormEnquestas() {
             postData,
         )
             .then(res => {
-                console.log(encuesta)
-                console.log(res)
+                alert("Enquesta guardada correctament")
+               setEncuesta(initialData)
             })
     }
 
@@ -81,114 +74,100 @@ export default function FormEnquestas() {
                                 <Form.Group>
                                     <Form.Label> Vila Veïna : </Form.Label>
                                     <div>
-                                        <Form.Select >
+                                        <Form.Select name="barris" id="barris"
+                                                     onChange={handleFormChange} defaultValue={encuesta.barris}>
                                             <option></option>
-                                            <option>Badal</option>
-                                            <option>Carmel de dalt</option>
-                                            <option>Casc antic d'Horta</option>
-                                            <option>Casc antic Les Corts</option>
-                                            <option>Consell de Cent - Girona - Eixample</option>
-                                            <option>El Camp de l'Arpa - Alchemika</option>
-                                            <option>El Congrés i els Indians</option>
-                                            <option>Gotic</option>
-                                            <option>La Marina - Mare de Déu del Port</option>
-                                            <option>La Trinidad Vella</option>
-                                            <option>Maresme</option>
-                                            <option>Prosperitat</option>
-                                            <option>Provençals de Poblenou</option>
-                                            <option>Sant Gervasi de Cassoles</option>
-                                            <option>Vila de Gracia</option>
-                                            <option>Vilapicina i la Torre LLobeta - Cotxeres</option>
+                                            <option value="Badal">Badal</option>
+                                            <option value="Carmel de dalt">Carmel de dalt</option>
+                                            <option value="Casc antic d'Horta">Casc antic d'Horta</option>
+                                            <option value="Casc antic Les Corts">Casc antic Les Corts</option>
+                                            <option value="Consell de Cent - Girona - Eixample">Consell de Cent - Girona
+                                                - Eixample
+                                            </option>
+                                            <option value="El Camp de l'Arpa - Alchemika">El Camp de l'Arpa -
+                                                Alchemika
+                                            </option>
+                                            <option value="El Congrés i els Indians">El Congrés i els Indians</option>
+                                            <option value="Gotic">Gotic</option>
+                                            <option value="La Marina - Mare de Déu del Port">La Marina - Mare de Déu del
+                                                Port
+                                            </option>
+                                            <option value="La Trinidad Vella">La Trinidad Vella</option>
+                                            <option value="Maresme">Maresme</option>
+                                            <option value="Prosperitat">Prosperitat</option>
+                                            <option value="Provençals de Poblenou">Provençals de Poblenou</option>
+                                            <option value="Sant Gervasi de Cassoles">Sant Gervasi de Cassoles</option>
+                                            <option value="Vila de Gracia">Vila de Gracia</option>
+                                            <option value="Vilapicina i la Torre LLobeta - Cotxeres">Vilapicina i la
+                                                Torre LLobeta - Cotxeres
+                                            </option>
                                         </Form.Select>
                                     </div>
                                 </Form.Group>
 
-                                <Form.Group>
-                                    <Form.Label> Gènere </Form.Label>
-                                    <div className="form-checkboxgenre">
-                                        <input type="checkbox"
-                                               className="genrebox"
-                                               name="genero"
-                                               value="Home"
-                                               onChange={handleFormChange}
-                                        />
-                                        <p>Home</p>
-                                        <input type="checkbox"
-                                               className="genrebox"
-                                               name="Dona"
-                                               value="Dona"
-                                        />
-                                        <p>Dona</p>
-                                        <input
-                                            type="checkbox"
-                                            className="genrebox"
-                                            name="NoBinari"
-                                            value="NoBinari"
-                                        />
-                                        <p>No binari</p>
-                                        <input type="checkbox"
-                                               className="genrebox"
-                                               name="Altres"
-                                               value="Altres"
-                                        />
-                                        <p>Altres</p>
-                                    </div>
-                                </Form.Group>
+
                                 <Form.Group>
                                     <Form.Label> Canal d'Atenció </Form.Label>
                                     <div>
-                                        <Form.Select>
+                                        <Form.Select name="canalDeAtencio" id="canalDeAtencio"
+                                                     onChange={handleFormChange} defaultValue={encuesta.canalDeAtencio}>
                                             <option></option>
-                                            <option>Presencial Espai</option>
-                                            <option>Presencial Descentralizat</option>
-                                            <option>Telefónic</option>
-                                            <option>Correu Electrònic</option>
-                                            <option>Telemàtic</option>
+                                            <option value="Presencial Espai">Presencial Espai</option>
+                                            <option value="Presencial Descentralizat">Presencial Descentralizat</option>
+                                            <option value="Telefónic">Telefónic</option>
+                                            <option value="Correu Electrònic">Correu Electrònic</option>
+                                            <option value="Telemàtic">Telemàtic</option>
                                         </Form.Select>
                                     </div>
                                 </Form.Group>
                                 <div className={"form-age-origin"}>
                                     <Form.Group>
                                         <Form.Label className={"age"}> Edat </Form.Label>
-                                        <Form.Select className={"age"}>
+                                        <Form.Select className={"age"} name="edat" id="edat"
+                                                     onChange={handleFormChange} defaultValue={encuesta.edat}>
                                             <option></option>
-                                            <option>-18 anys</option>
-                                            <option>De 18 a 24 anys</option>
-                                            <option>De 25 a 34 anys</option>
-                                            <option>De 35 a 44 anys</option>
-                                            <option>De 45 a 54 anys</option>
-                                            <option>De 55 a 64 anys</option>
-                                            <option>De 65 a 74 anys</option>
-                                            <option>De 75 a 84 anys</option>
-                                            <option>De 85 y més</option>
-                                            <option>NS/NC</option>
+                                            <option value="-18 anys">-18 anys</option>
+                                            <option value="De 18 a 24 anys">De 18 a 24 anys</option>
+                                            <option value="De 25 a 34 anys">De 25 a 34 anys</option>
+                                            <option value="De 35 a 44 anys">De 35 a 44 anys</option>
+                                            <option value="De 45 a 54 anys">De 45 a 54 anys</option>
+                                            <option value="De 55 a 64 anys">De 55 a 64 anys</option>
+                                            <option value="De 65 a 74 anys">De 65 a 74 anys</option>
+                                            <option value="De 75 a 84 anys">De 75 a 84 anys</option>
+                                            <option value="De 85 y més">De 85 y més</option>
+                                            <option value="NS/NC">NS/NC</option>
                                         </Form.Select>
                                     </Form.Group>
 
                                     <Form.Group className={"llocdenaixement"}>
                                         <Form.Label className="origin"> Lloc de naixement </Form.Label>
-                                        <Form.Select className="origin">
+                                        <Form.Select className="origin" name="llocDeNaixement" id="llocDeNaixement"
+                                                     onChange={handleFormChange} defaultValue={encuesta.llocDeNaixement}>
                                             <option></option>
-                                            <option>Catalunya</option>
-                                            <option>Resta de l'Estat</option>
-                                            <option>Unión Europea</option>
-                                            <option>Resta d'Europa</option>
-                                            <option>Asia</option>
-                                            <option>Àfrica del Nord</option>
-                                            <option>Resta d'Àfrica</option>
-                                            <option>América del Sud i Central</option>
-                                            <option>América del Nord</option>
-                                            <option>Oceania</option>
-                                            <option>NS/NC</option>
+                                            <option value="Catalunya">Catalunya</option>
+                                            <option value="Resta de l'Estat">Resta de l'Estat</option>
+                                            <option value="Unión Europea">Unión Europea</option>
+                                            <option value="Resta d'Europa">Resta d'Europa</option>
+                                            <option value="Asia">Asia</option>
+                                            <option value="Àfrica del Nord">Àfrica del Nord</option>
+                                            <option value="Resta d'Àfrica">Resta d'Àfrica</option>
+                                            <option value="América del Sud i Central">América del Sud i Central</option>
+                                            <option value="América del Nord">América del Nord</option>
+                                            <option value="Oceania">Oceania</option>
+                                            <option value="NS/NC">NS/NC</option>
                                         </Form.Select>
                                     </Form.Group>
                                 </div>
                                 <Form.Group>
-                                    <Form.Label> Àmbits Temàtiques </Form.Label>
-                                    <div className={"form-ambits-theme"}>
-                                        <input type="checkbox" className="ambit-box"/>
-                                        <p className={"ambit-p"}>Pendent de desenvolupar</p>
-                                    </div>
+                                    <Form.Label> Gènere </Form.Label>
+                                    <Form.Select className="genere" name="genere" id="genere"
+                                                 onChange={handleFormChange} defaultValue={encuesta.genere}>
+                                        <option></option>
+                                        <option value="Home">Home</option>
+                                        <option value="Dona">Dona</option>
+                                        <option value="No binari">No binari</option>
+                                        <option value="Altres">Altres</option>
+                                    </Form.Select>
                                 </Form.Group>
                             </div>
                         </div>
@@ -198,104 +177,111 @@ export default function FormEnquestas() {
                             <Form.Group>
                                 <Form.Label> Consulta de títol: </Form.Label>
                                 <br/>
-                                <Form.Select>
+                                <Form.Select name="consultaDeTitol" id="consultaDeTitol"
+                                             onChange={handleFormChange} defaultValue={encuesta.consultaDeTitol}>
                                     <option></option>
-                                    <option> Professional de les cures i de la llar</option>
-                                    <option> Persona cuidadora familiar</option>
-                                    <option> Persona receptora de cures</option>
-                                    <option> Professional d'altres serveis públics</option>
-                                    <option> Entitat, empresa o organització</option>
-                                    <option> Altres</option>
-                                    <option> NS / NC</option>
+                                    <option value="Professional de les cures i de la llar"> Professional de les cures i de la llar</option>
+                                    <option value="Persona cuidadora familiar"> Persona cuidadora familiar</option>
+                                    <option value="Persona receptora de cures"> Persona receptora de cures</option>
+                                    <option value="Professional d'altres serveis públics"> Professional d'altres serveis públics</option>
+                                    <option value="Entitat, empresa o organització"> Entitat, empresa o organització</option>
+                                    <option value="Altres"> Altres</option>
+                                    <option value="NS / NC"> NS / NC</option>
                                 </Form.Select>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label> Motiu cures o suport: </Form.Label>
-                                <Form.Select>
+                                <Form.Select name="motiuCures" id="motiuCures"
+                                             onChange={handleFormChange} defaultValue={encuesta.motiuCures}>
                                     <option></option>
-                                    <option>Edat: petita infància</option>
-                                    <option>Edat: procés d'envelliment</option>
-                                    <option>Malaltia crònica</option>
-                                    <option>Diversitat funcional</option>
-                                    <option>Necessitats de cura puntuals (accident o malaltia)</option>
-                                    <option>Altres</option>
-                                    <option>NS/NC</option>
+                                    <option value="Edat: petita infància">Edat: petita infància</option>
+                                    <option value="Edat: procés d'envelliment">Edat: procés d'envelliment</option>
+                                    <option value="Malaltia crònica">Malaltia crònica</option>
+                                    <option value="Diversitat funcional">Diversitat funcional</option>
+                                    <option value="Necessitats de cura puntuals (accident o malaltia)">Necessitats de cura puntuals (accident o malaltia)</option>
+                                    <option value="Altres">Altres</option>
+                                    <option value="NS/NC">NS/NC</option>
                                 </Form.Select>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label> Situació Jurídica: </Form.Label>
                                 <div>
-                                    <Form.Select>
+                                    <Form.Select name="situacioJuridica" id="situacioJuridica"
+                                                 onChange={handleFormChange} defaultValue={encuesta.situacioJuridica}>
                                         <option></option>
-                                        <option>Nacionalitat espanyola</option>
-                                        <option>Autorització de residència i treball</option>
-                                        <option>Autorització de residència sense treball</option>
-                                        <option>Residència per estudis</option>
-                                        <option>Sense papers</option>
-                                        <option>Altres</option>
-                                        <option>NS/NC</option>
+                                        <option value="Nacionalitat espanyola">Nacionalitat espanyola</option>
+                                        <option value="Autorització de residència i treball">Autorització de residència i treball</option>
+                                        <option value="Autorització de residència sense treball">Autorització de residència sense treball</option>
+                                        <option value="Residència per estudis">Residència per estudis</option>
+                                        <option value="Sense papers">Sense papers</option>
+                                        <option value="Altres">Altres</option>
+                                        <option value="NS/NC">NS/NC</option>
                                     </Form.Select>
                                 </div>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label> Serveis i Tràmits: </Form.Label>
                                 <div>
-                                    <Form.Select>
+                                    <Form.Select name="serveisTramits" id="serveisTramits"
+                                                 onChange={handleFormChange} defaultValue={encuesta.serveisTramits}>
                                         <option></option>
-                                        <option>Informació</option>
-                                        <option>Orientació</option>
-                                        <option>Assessorament especialitzat</option>
-                                        <option>Tramitació</option>
-                                        <option>Dinamització de la informació</option>
-                                        <option>Estada a l'espai VilaVeïna</option>
+                                        <option value="Informació">Informació</option>
+                                        <option value="Orientació">Orientació</option>
+                                        <option value="Assessorament especialitzat">Assessorament especialitzat</option>
+                                        <option value="Tramitació">Tramitació</option>
+                                        <option value="Dinamització de la informació"> Dinamització de la informació</option>
+                                        <option value="Estada a l'espai VilaVeïna">Estada a l'espai VilaVeïna</option>
                                     </Form.Select>
                                 </div>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label> Nivell d'estudis: </Form.Label>
                                 <div>
-                                    <Form.Select>
+                                    <Form.Select name="nivelEstudis" id="nivelEstudis"
+                                                 onChange={handleFormChange} defaultValue={encuesta.nivelEstudis}>
                                         <option></option>
-                                        <option>No sap llegir ni esciure</option>
-                                        <option>Primària incompleta</option>
-                                        <option>Primària completa</option>
-                                        <option>Secundaria o grau mig de formació professional</option>
-                                        <option>Estudis superiors</option>
-                                        <option>NS/NC</option>
+                                        <option value="No sap llegir ni esciure">No sap llegir ni esciure</option>
+                                        <option value="Primària incompleta">Primària incompleta</option>
+                                        <option value="Primària completa">Primària completa</option>
+                                        <option value="Secundaria o grau mig de formació professional">Secundaria o grau mig de formació professional</option>
+                                        <option value="Estudis superiors">Estudis superiors</option>
+                                        <option value="NS/NC">NS/NC</option>
                                     </Form.Select>
                                 </div>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label> Situació Laboral: </Form.Label>
                                 <div>
-                                    <Form.Select>
+                                    <Form.Select name="situacioLaboral" id="situacioLaboral"
+                                                 onChange={handleFormChange} defaultValue={encuesta.situacioLaboral}>
                                         <option></option>
-                                        <option>Treball a temps parcial</option>
-                                        <option>Treball a temps complet</option>
-                                        <option>Estudiant</option>
-                                        <option>Tasques d'habitatge</option>
-                                        <option>Pensionista</option>
-                                        <option>Aturat/da</option>
-                                        <option>Incapacitat permanent</option>
-                                        <option>Inactiu per altres motius</option>
+                                        <option value="Treball a temps parcial">Treball a temps parcial</option>
+                                        <option value="Treball a temps complet">Treball a temps complet</option>
+                                        <option value="Estudiant">Estudiant</option>
+                                        <option value="Tasques d'habitatge">Tasques d'habitatge</option>
+                                        <option value="Pensionista">Pensionista</option>
+                                        <option value="Aturat/da">Aturat/da</option>
+                                        <option value="Incapacitat permanent">Incapacitat permanent</option>
+                                        <option value="Inactiu per altres motius">Inactiu per altres motius</option>
                                     </Form.Select>
                                 </div>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label> Com ens ha conegut: </Form.Label>
                                 <div>
-                                    <Form.Select>
+                                    <Form.Select name="comenshaconegut" id="comenshaconegut"
+                                                 onChange={handleFormChange} defaultValue={encuesta.comenshaconegut}>
                                         <option></option>
-                                        <option>Boca-orella</option>
-                                        <option>Web</option>
-                                        <option>Xarxes socials</option>
-                                        <option>Cartells publicitaris</option>
-                                        <option>Ve derivat d'un altre servei</option>
-                                        <option>Accions de dinamització</option>
-                                        <option>Altre VilaVeïna</option>
-                                        <option>Premsa</option>
-                                        <option>Altres</option>
-                                        <option>NS/NC</option>
+                                        <option value="Boca-orella">Boca-orella</option>
+                                        <option value="Web">Web</option>
+                                        <option value="Xarxes socials">Xarxes socials</option>
+                                        <option value="Cartells publicitaris">Cartells publicitaris</option>
+                                        <option value="Ve derivat d'un altre servei">Ve derivat d'un altre servei</option>
+                                        <option value="Accions de dinamització">Accions de dinamització</option>
+                                        <option value="Altre VilaVeïna">Altre VilaVeïna</option>
+                                        <option value="Premsa">Premsa</option>
+                                        <option value="Altres">Altres</option>
+                                        <option value="NS/NC">NS/NC</option>
                                     </Form.Select>
                                 </div>
                             </Form.Group>
