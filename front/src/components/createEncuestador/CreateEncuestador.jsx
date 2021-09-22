@@ -112,24 +112,29 @@ export class CreateEncuestador extends Component {
                             <Form.Group>
                                 <Form.Label> Vila Veïna </Form.Label>
                                 <div>
-                                    <Form.Select>
+                                    <Form.Select
+                                        name="vilaveina"
+                                        id="vilaveina"
+                                        defaultValue={this.state.vilaveina}
+                                        onChange={this.handleChange}
+                                    >
                                         <option></option>
-                                        <option>Badal</option>
-                                        <option>Carmel de dalt</option>
-                                        <option>Casc antic d'Horta</option>
-                                        <option>Casc antic Les Corts</option>
-                                        <option>Consell de Cent - Girona - Eixample</option>
-                                        <option>El Camp de l'Arpa - Alchemika</option>
-                                        <option>El Congrés i els Indians</option>
-                                        <option>Gotic</option>
-                                        <option>La Marina - Mare de Déu del Port</option>
-                                        <option>La Trinidad Vella</option>
-                                        <option>Maresme</option>
-                                        <option>Prosperitat</option>
-                                        <option>Provençals de Poblenou</option>
-                                        <option>Sant Gervasi de Cassoles</option>
-                                        <option>Vila de Gracia</option>
-                                        <option>Vilapicina i la Torre LLobeta - Cotxeres</option>
+                                        <option value="Badal">Badal</option>
+                                        <option value="Carmel de dalt">Carmel de dalt</option>
+                                        <option value="Casc antic d'Horta">Casc antic d'Horta</option>
+                                        <option value="Casc antic Les Corts">Casc antic Les Corts</option>
+                                        <option value="Consell de Cent - Girona - Eixample">Consell de Cent - Girona - Eixample</option>
+                                        <option value="El Camp de l'Arpa - Alchemika">El Camp de l'Arpa - Alchemika</option>
+                                        <option value="El Congrés i els Indians">El Congrés i els Indians</option>
+                                        <option value="Gotic">Gotic</option>
+                                        <option value="La Marina - Mare de Déu del Port">La Marina - Mare de Déu del Port</option>
+                                        <option value="La Trinidad Vella">La Trinidad Vella</option>
+                                        <option value="Maresme">Maresme</option>
+                                        <option value="Prosperitat">Prosperitat</option>
+                                        <option value="Provençals de Poblenou">Provençals de Poblenou</option>
+                                        <option value="Sant Gervasi de Cassoles">Sant Gervasi de Cassoles</option>
+                                        <option value="Vila de Gracia">Vila de Gracia</option>
+                                        <option value="Vilapicina i la Torre LLobeta - Cotxeres">Vilapicina i la Torre LLobeta - Cotxeres</option>
                                     </Form.Select>
                                 </div>
                             </Form.Group>

@@ -16,7 +16,6 @@ export default function FormEnquestas() {
         canalDeAtencio: "",
         edat: "",
         llocDeNaixement: "",
-        ambitsTematiques: "",
         consultaDeTitol: "",
         motiuCures: "",
         situacioJuridica: "",
@@ -24,8 +23,6 @@ export default function FormEnquestas() {
         nivelEstudis: "",
         situacioLaboral: "",
         comenshaconegut: "",
-        altres: "",
-
     }
 
     const [encuesta, setEncuesta] = useState(initialData)
@@ -36,8 +33,10 @@ export default function FormEnquestas() {
         const postData = {
             encuesta
         };
+        console.log(":)")
+        console.log(postData)
         axios.post(`http://localhost:8080/createencuesta`,
-            postData,
+            postData.encuesta,
         )
             .then(res => {
                 alert("Enquesta guardada correctament")
@@ -47,6 +46,7 @@ export default function FormEnquestas() {
 
     function handleFormChange(e) {
         setEncuesta({
+
             ...encuesta,
             [e.target.name]: e.target.value
         })

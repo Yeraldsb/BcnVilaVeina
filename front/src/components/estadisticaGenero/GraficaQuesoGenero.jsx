@@ -7,8 +7,18 @@ import consulta from "../img/arbre.png";
 import suport from "../img/escales.png";
 import './graficasGenero.css'
 import { Pie} from "react-chartjs-2";
+import axios from "axios";
 
 const GraficaQuesoGenero = () => {
+
+    React.useEffect(() => {
+        axios.get('http://localhost:8080/enquestadors/${encuestadoresInfo.id}')
+            .then((res) => {
+                console.log("Getting data here")
+                console.log(res.data)
+            })
+    }, []);
+
     return(
         <div className="barras-genero-container">
             <div className="butones-Container-barras-genero">
@@ -54,3 +64,13 @@ const GraficaQuesoGenero = () => {
     )
 }
 export default GraficaQuesoGenero;
+
+/*
+* data = llamada a java/ Back
+*
+* tomo data en useState
+* con el use state lo pinto en los datas
+*
+* todos los filtros pasan al back
+* el back los pone en la consulta y  ya pasan en el filtrado!!
+* */
