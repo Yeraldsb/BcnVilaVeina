@@ -122,8 +122,8 @@ export default function FormEnquestas() {
                                 </Form.Group>
                                 <div className={"form-age-origin"}>
                                     <Form.Group>
-                                        <Form.Label className={"age"}> Edat </Form.Label>
-                                        <Form.Select className={"age"} name="edat" id="edat"
+                                        <Form.Label className="age"> Edat </Form.Label>
+                                        <Form.Select className="age" name="edat" id="edat"
                                                      onChange={handleFormChange} defaultValue={encuesta.edat}>
                                             <option></option>
                                             <option value="-18 anys">-18 anys</option>
@@ -139,7 +139,7 @@ export default function FormEnquestas() {
                                         </Form.Select>
                                     </Form.Group>
 
-                                    <Form.Group className={"llocdenaixement"}>
+                                    <Form.Group className="llocdenaixement">
                                         <Form.Label className="origin"> Lloc de naixement </Form.Label>
                                         <Form.Select className="origin" name="llocDeNaixement" id="llocDeNaixement"
                                                      onChange={handleFormChange} defaultValue={encuesta.llocDeNaixement}>
@@ -172,7 +172,7 @@ export default function FormEnquestas() {
                             </div>
                         </div>
                     </div>
-                    <div className={"form-column-2"}>
+                    <div className="form-column-2">
                         <div className={"form-column-2-content"}>
                             <Form.Group>
                                 <Form.Label> Consulta de títol: </Form.Label>
