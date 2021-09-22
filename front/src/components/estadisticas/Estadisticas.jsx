@@ -7,57 +7,28 @@ import enquestes from "../img/cures.png"
 import consulta from "../img/arbre.png"
 import suport from "../img/escales.png"
 import DatePicker from "react-datepicker";
-import {BarChart, Bar, Cell, XAxis, YAxis, ResponsiveContainer} from 'recharts';
+import {Bar} from "react-chartjs-2";
+import axios from "axios";
 
 export default function Estadisticas() {
 
-    const data = [
-        {
-            name: '0 - 3',
-            uv: 4000,
-            pv: 2400,
-            amt: 2400,
-        },
-        {
-            name: '4 - 7',
-            uv: 3000,
-            pv: 1398,
-            amt: 2210,
-        },
-        {
-            name: '8 - 14',
-            uv: 2000,
-            pv: 9800,
-            amt: 2290,
-        },
-        {
-            name: '15 - 18',
-            uv: 2780,
-            pv: 3908,
-            amt: 2000,
-        },
-        {
-            name: '18 - 26',
-            uv: 1890,
-            pv: 4800,
-            amt: 2181,
-        },
-        {
-            name: '27 - 40',
-            uv: 2390,
-            pv: 3800,
-            amt: 2500,
-        },
-        {
-            name: '40 - 60',
-            uv: 3490,
-            pv: 4300,
-            amt: 2100,
-        },
-    ];
 
     const [startDate, setStartDate] = useState(new Date("2021/08/31"));
     const [endDate, setEndDate] = useState(new Date("2021/08/31"));
+    const [edades, setEdades] = useState(null)
+
+    React.useEffect(() => {
+        axios.get('http://localhost:8080/all')
+            .then((res) => {
+                setEdades(res.data)
+            }).catch(err => alert(err))
+    }, []);
+
+    let respuestaEdades = []
+    if(edades){
+        respuestaEdades = edades.map( e => e.edat)
+    }
+    console.log(respuestaEdades)
 
 
     return (
@@ -97,42 +68,54 @@ export default function Estadisticas() {
                <h3 className="tableTitle"> Tabla Title</h3>
            </div>
            <div className="graficaContainer">
-               <ResponsiveContainer width="100%" height="100%">
-                   <BarChart data={data}>
-                       <XAxis dataKey="name" stroke="#5550bd" />
-                       <YAxis />
-                       <Bar dataKey="pv" fill="#8884d8" />
-                       <Bar dataKey="uv" fill="#82ca9d" />
-                   </BarChart>
-               </ResponsiveContainer>
+
+               <Bar
+                   data={{
+                       labels: respuestaEdades,
+                       datasets: [{
+                           label: 'Gráfica rango de edad',
+                           data: [100, 200, 300, 400, 500, 600, 300, 400, 600, 150],
+                           backgroundColor: [
+                               'rgba(159,99,255,0.2)',
+                               'rgba(82,196,97,0.2)',
+                               'rgba(159,99,255,0.2)',
+                               'rgba(82,196,97,0.2)',
+                               'rgba(159,99,255,0.2)',
+                               'rgba(82,196,97,0.2)',
+                               'rgba(159,99,255,0.2)',
+                               'rgba(82,196,97,0.2)',
+                               'rgba(159,99,255,0.2)',
+                               'rgba(82,196,97,0.2)',
+                               'rgba(159,99,255,0.2)',
+                               'rgba(82,196,97,0.2)',
+                           ],
+                           borderColor: [
+                               'rgb(137,86,239)',
+                               'rgb(39,156,59)',
+                               'rgb(137,86,239)',
+                               'rgb(39,156,59)',
+                               'rgb(137,86,239)',
+                               'rgb(39,156,59)',
+                               'rgb(137,86,239)',
+                               'rgb(39,156,59)',
+                               'rgb(137,86,239)',
+                               'rgb(39,156,59)',
+                               'rgb(137,86,239)',
+                               'rgb(39,156,59)',
+                           ],
+                           borderWidth: 1
+                       }]
+
+                   }}
+                   height={300}
+                   width={300}
+                   options={{
+                       maintainAspectRatio: false
+                   }}
+               />
            </div>
 
        </div>
 
     )
 }
-
-/*
-    console.log(this.state.Encuestas)
-    console.log(this.state.Encuestas.map(e=>e.edat))
-
-
-*  <div className="bodyestadisticas">
-            <div className="containerestadisticas">
-                <div className="containerdatepicker">
-
-                </div>
-                <div >
-                    <div className="botonContainer">
-
-                    </div>
-                    <div className="botonContainer">
-
-                    </div>
-                </div>
-                <div className="containergrafica">
-                    <p>aquí irá la gráfica</p>
-
-                </div>
-            </div>
-        </div>*/

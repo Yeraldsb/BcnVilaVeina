@@ -24,7 +24,7 @@ const BarrasLugarNacimiento = () => {
     let ids = []
     let result = []
     if (neiborhood){
-        result = neiborhood.map( n => n.barris)
+        result = neiborhood.map( n => n.llocDeNaixement)
         ids = neiborhood.map(x => x.id)
     }
     console.log(result)

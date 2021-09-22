@@ -21,16 +21,7 @@ const GraficaQuesoGenero = () => {
 
     return(
         <div className="barras-genero-container">
-            <div className="butones-Container-barras-genero">
-                <button className="butones-estadistica-genero"><img src={genere} alt="" className="iconoboton"/>Gènere</button>
-                <button className="butones-estadistica-genero"><img src={edat} alt="" className="iconoboton"/>Edat</button>
-                <button className="butones-estadistica-genero"><img src={naixement} alt="" className="iconoboton"/>Lloc naixement</button>
-                <div className="buttonContainer second">
-                    <button className="butones-estadistica-genero"><img src={enquestes} alt="" className="iconoboton"/>Enquestes realitzades</button>
-                    <button className="butones-estadistica-genero"><img src={consulta} alt="" className="iconoboton"/>Consulta a títol</button>
-                    <button className="butones-estadistica-genero"><img src={suport} alt="" className="iconoboton"/>Cures /suport</button>
-                </div>
-            </div>
+
             <div className="container-wrapper-genero">
                 <Pie
                     width={100}
@@ -64,13 +55,3 @@ const GraficaQuesoGenero = () => {
     )
 }
 export default GraficaQuesoGenero;
-
-/*
-* data = llamada a java/ Back
-*
-* tomo data en useState
-* con el use state lo pinto en los datas
-*
-* todos los filtros pasan al back
-* el back los pone en la consulta y  ya pasan en el filtrado!!
-* */
