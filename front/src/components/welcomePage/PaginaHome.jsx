@@ -15,7 +15,7 @@ export function PaginaHome(props) {
     return (
         <div className="containerHome">
             <div className="containerLogoVila">
-                <img src={imgLogoVeina} alt="logo veina"/>
+                <img  className="logo-home" src={imgLogoVeina} alt="logo veina" />
             </div>
             <StartSession/>
 

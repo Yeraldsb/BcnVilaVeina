@@ -50,3 +50,86 @@
 }
 
 
+@media only screen and (min-width: 760px){
+    .logo-home {
+        width: 70%;
+        height: auto;
+        margin-left: 65px;
+    }
+    .botonWelcome {
+        font-size: 18px;
+        width: 110px;
+        height: 41px;
+    }
+    .imgAgendahome {
+        width: 3.5rem;
+
+    }
+
+    .imgAyuntamenthome {
+        width: 7rem;
+
+    }
+
+    .imgFomenthome {
+        width: 4rem;
+    }
+
+}
+
+
+@media only screen and (min-width: 480px){
+    .logo-home {
+        width: 70%;
+        height: auto;
+        margin-left: 65px;
+    }
+    .botonWelcome {
+        font-size: 15px;
+        width: 90px;
+        height: 37px;
+    }
+    .imgAgendahome {
+        width: 3.5rem;
+
+    }
+
+    .imgAyuntamenthome {
+        width: 7rem;
+
+    }
+
+    .imgFomenthome {
+        width: 4rem;
+    }
+
+}
+
+
+@media only screen and (min-width: 320px) {
+
+    .logo-home {
+        width: 65%;
+        height: auto;
+        margin-left: 62px;
+    }
+    .botonWelcome {
+        font-size: 15px;
+        width: 90px;
+        height: 37px;
+    }
+    .imgAgendahome {
+        width: 3.5rem;
+
+    }
+
+    .imgAyuntamenthome {
+        width: 7rem;
+
+    }
+    .imgFomenthome {
+        width: 4rem;
+    }
+
+
+}

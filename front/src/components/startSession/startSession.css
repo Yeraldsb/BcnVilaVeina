@@ -13,5 +13,26 @@
     color: #ffb3d7;
 }
 
+@media only screen and (min-width: 760px) {
+    .typical p{
+        font-size: 2rem;
+    }
+
+}
+@media only screen and (min-width: 480px) {
+    .typical p {
+        font-size: 2rem;
+    }
+
+
+}
+@media only screen and (min-width: 320px) {
+    .typical p{
+        font-size: 1.5rem;
+    }
+
+}
+
+
 
 
