@@ -9,13 +9,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Encuestas {
     @Id
     private String id;
-    private String data;
     private String barris;
     private String genere;
     private String canalDeAtencio;
     private String edat;
     private String llocDeNaixement;
-    private String ambitsTematiques;
     private String consultaDeTitol;
     private String motiuCures;
     private String situacioJuridica;
@@ -23,7 +21,6 @@ public class Encuestas {
     private String nivelEstudis;
     private String situacioLaboral;
     private String comenshaconegut;
-    private String altres;
 
 
     public String getId() {
@@ -32,14 +29,6 @@ public class Encuestas {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
     }
 
     public String getBarris() {
@@ -80,14 +69,6 @@ public class Encuestas {
 
     public void setLlocDeNaixement(String llocDeNaixement) {
         this.llocDeNaixement = llocDeNaixement;
-    }
-
-    public String getAmbitsTematiques() {
-        return ambitsTematiques;
-    }
-
-    public void setAmbitsTematiques(String ambitsTematiques) {
-        this.ambitsTematiques = ambitsTematiques;
     }
 
     public String getConsultaDeTitol() {
@@ -146,11 +127,4 @@ public class Encuestas {
         this.comenshaconegut = comenshaconegut;
     }
 
-    public String getAltres() {
-        return altres;
-    }
-
-    public void setAltres(String altres) {
-        this.altres = altres;
-    }
 }
