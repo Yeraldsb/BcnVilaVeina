@@ -6,13 +6,13 @@
     overflow: hidden;
     margin-left: 320px ;
 }
-.butones-Container-barras-genero{
+.butones-Container-barras-Edad{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     height: 100px;
     width: 800px;
-    margin-left: 700px;
+    margin-left: 800px;
 }
 .butones-estadistica-genero{
     background-color: #f6f6f6;

@@ -1,20 +1,37 @@
 .barras-edad-container{
-
     padding: 0;
     background-color: white;
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    margin-left: 320px ;
 }
 .parrafo{
     font-size: 50px;
     font-weight: 900;
 }
 .container-wrapper-barra{
-    margin-top: 70px;
-    height: 70%;
-    width: 80%;
+    position: sticky;
+    margin: 66px 0 0 311px;
+    background-color: white;
+    height: 66%;
+    width: 78%;
+}
+.iconoboton {
+
+    position: relative;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    padding-right: 20px;
+}
+.genere{
+    right: 32px;
+}
+.encuesta{
+    left: 15px;
+}
+.span-genere{
+    right: 20px;
 }
 .butones-Container-barras-Edad{
     display: flex;
@@ -22,12 +39,101 @@
     justify-content: center;
     height: 100px;
     width: 800px;
-    margin-left: 600px;
+    margin-left: 780px;
 }
 .butones-estadistica-nacimiento{
-    background-color: #f6f6f6;
     height: 50px;
     width: 200px;
     margin: 10px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+.botonesHoover {
+    background-color: #f0ecfc;
+    background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
 
+.botonesHoover:before,
+.botonesHoover:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #c797eb;
+    transition: all 0.3s ease;
+}
+
+.botonesHoover:before {
+    height: 0%;
+    width: 2px;
+}
+
+.botonesHoover:after {
+    width: 0%;
+    height: 2px;
+}
+
+.botonesHoover:hover:before {
+    height: 100%;
+}
+
+.botonesHoover:hover:after {
+    width: 100%;
+}
+
+.botonesHoover:hover {
+    background: transparent;
+}
+
+.botonesHoover span:hover {
+    color: #c797eb;
+}
+
+.botonesHoover span:before,
+.botonesHoover span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #c797eb;
+    transition: all 0.3s ease;
+}
+
+.botonesHoover span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.botonesHoover span:after {
+    height: 2px;
+    width: 0%;
+}
+
+.botonesHoover span:hover:before {
+    height: 100%;
+}
+
+.botonesHoover span:hover:after {
+    width: 100%;
+}
+
+span {
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
 }

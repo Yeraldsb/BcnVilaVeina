@@ -10,7 +10,7 @@ body{
     left: 0;
     bottom: 0;
     background: var(--grey-color);
-    box-shadow: 2px 0px #E0E0E0;
+    box-shadow: 2px 0px rgba(153, 102, 255, 1);
     height: 100vh;
 }
 

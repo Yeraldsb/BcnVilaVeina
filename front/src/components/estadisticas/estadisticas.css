@@ -1,12 +1,13 @@
 .mainContainer {
     margin: 0;
     padding: 0;
-    background-color: white ;
+    background-color: white;
     height: 100vh;
     width: 100%;
     overflow: hidden;
 }
-.wrapperContainer{
+
+.wrapperContainer {
     position: sticky;
     margin: 0 0 0 302px;
     background-color: white;
@@ -14,7 +15,8 @@
     width: 100%;
     display: flex;
 }
-.dataPickerContainer{
+
+.dataPickerContainer {
     background-color: var(--purple-color);
     padding: 10px;
     border-radius: 6%;
@@ -22,145 +24,159 @@
     height: 124px;
     width: 237px;
 }
-.opcionFechas{
+
+.opcionFechas {
     font-family: Arial;
     font-size: 23px;
     font-weight: 200;
     height: 5px;
 }
-.buttonContainer{
+
+.buttonContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 10px;
     height: 100px;
     width: 800px;
+    margin-left: 120px;
 }
 
-.graficaContainer{
-    display: flex;
-    margin-top: 200px;
+.second {
+    margin-left: 10px;
+}
+
+.graficaContainer {
     background-color: white;
-    height: 63%;
+    height: 55%;
     width: 75%;
     margin: 10px 0 0 350px;
 }
-.buttonEstadisticas{
-    background-color: #f6f6f6;
+
+.buttonEstadisticas {
     height: 50px;
     width: 200px;
     margin: 10px;
-
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
 }
+
+.botonesHoover {
+    background-color: #f0ecfc;
+    background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+
+.botonesHoover:before,
+.botonesHoover:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #c797eb;
+    transition: all 0.3s ease;
+}
+
+.botonesHoover:before {
+    height: 0%;
+    width: 2px;
+}
+
+.botonesHoover:after {
+    width: 0%;
+    height: 2px;
+}
+
+.botonesHoover:hover:before {
+    height: 100%;
+}
+
+.botonesHoover:hover:after {
+    width: 100%;
+}
+
+.botonesHoover:hover {
+    background: transparent;
+}
+
+.botonesHoover span:hover {
+    color: #c797eb;
+}
+
+.botonesHoover span:before,
+.botonesHoover span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #c797eb;
+    transition: all 0.3s ease;
+}
+
+.botonesHoover span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.botonesHoover span:after {
+    height: 2px;
+    width: 0%;
+}
+
+.botonesHoover span:hover:before {
+    height: 100%;
+}
+
+.botonesHoover span:hover:after {
+    width: 100%;
+}
+
+span {
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+}
+
 .iconoboton {
+    position: relative;
+    top: 10px;
     width: 30px;
     height: 30px;
     padding-right: 20px;
 }
-.tablaTitleContainer{
+.genere{
+    right: 32px;
+}
+.encuesta{
+    left: 15px;
+}
+.span-genere{
+    right: 20px;
+}
+
+
+
+.tablaTitleContainer {
     background-color: #ff7432;
     height: 20px;
     width: 50px;
 }
-.tableTitle{
+
+.tableTitle {
     font-family: Arial;
 }
 
-/*.bodyestadisticas {
-    margin: 0;
-    padding: 0;
-    background: var(--grey-color);
-    height: 100vh;
-    width: 100%;
-}
-
-.containerestadisticas {
-    position: fixed;
-    margin: 0 0 0 302px;
-    background: var(--grey-color);
-    box-shadow: 2px 0 #E0E0E0;
-    height: 307px;
-    width: 100%;
-}
-
-
-.botonContainer {
-    display: flex;
-    justify-content: center;
-}
-
-.botones {
-    width: 14%;
-    margin: 20px;
-    padding: 20px;
-    -webkit-box-shadow: 0px 2px 21px -3px rgba(0, 0, 0, 0.91);
-    box-shadow: 0px 2px 21px -3px rgba(0, 0, 0, 0.91);
-}
-.iconoboton {
-    width: 30px;
-    height: 30px;
-    padding-right: 20px;
-}
-
-.containergrafica {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.containerdatepicker {
-
-
-}
-
-h6 {
-    margin: 10px 0 10px 10px;
-    color: var(--grey-color);
-    font-size: 14px;
-}
-
-.containergrafica {
-    -webkit-box-shadow: 0px 2px 21px -3px rgba(0, 0, 0, 0.91);
-    box-shadow: 0px 2px 21px -3px rgba(0, 0, 0, 0.91);
-    margin: 20px;
-    padding: 20px;
-    width: 75%;
-    height: 100%;
-}
-
-.containerdatepicker {
-    margin: 20px;
-    padding: 20px;
-}
-.prueba{
-    width: 80px;
-    height: 80px;
-    margin: 20px;
-    -webkit-box-shadow: 0px 2px 21px -3px rgba(0, 0, 0, 0.91);
-    box-shadow: 0px 2px 21px -3px rgba(0, 0, 0, 0.91);
-}
-
-/*
-input, .formselect {
-    border: none;
-    background-color: transparent;
-    display: flex;
-    cursor: pointer;
-    text-align: center;
-}
-
-.react-datepicker__input-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-
-    padding: 16px;
-    border-radius: 5%;
-    height: 31px;
-    width: 135px;
-    border: 2px solid #a6a6a6;
-    box-shadow: 2px 2px #c9c9c9;
-    cursor: pointer;
-} */

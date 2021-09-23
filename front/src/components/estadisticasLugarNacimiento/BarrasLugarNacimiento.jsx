@@ -8,6 +8,7 @@ import enquestes from "../img/cures.png";
 import consulta from "../img/arbre.png";
 import suport from "../img/escales.png";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 
 const BarrasLugarNacimiento = () => {
@@ -18,6 +19,7 @@ const BarrasLugarNacimiento = () => {
         axios.get('http://localhost:8080/all')
             .then((res) => {
                 setNeiborhood(res.data)
+                console.log(setNeiborhood(res.data))
             }).catch(err => alert(err))
     }, []);
 
@@ -31,24 +33,36 @@ const BarrasLugarNacimiento = () => {
     console.log(ids)
     return (
         <div className="barras-edad-container">
-            <div className="butones-Container-barras-Edad">
-                <button className="butones-estadistica-nacimiento"><img src={genere} alt="" className="iconoboton"/>Gènere
+            <div className="butones-Container-barras-Edad ">
+                <button className="butones-estadistica-nacimiento botonesHoover">
+                    <img src={genere} alt="" className="iconoboton genere"/>
+                   <span>Gènere</span>
                 </button>
-                <button className="butones-estadistica-nacimiento"><img src={edat} alt="" className="iconoboton"/>Edat
+
+                <Link to="/estadistiques">
+                <button className="butones-estadistica-nacimiento botonesHoover">
+                    <img src={edat} alt="" className="iconoboton genere"/>
+                    <span>Edat</span>
                 </button>
-                <button className="butones-estadistica-nacimiento"><img src={naixement} alt="" className="iconoboton"/>Lloc
-                    naixement
+                </Link>
+
+                <button className="butones-estadistica-nacimiento botonesHoover">
+                    <img src={naixement} alt="" className="iconoboton"/>
+                  <span>  Lloc naixement</span>
                 </button>
+
                 <div className="buttonContainer second">
-                    <button className="butones-estadistica-nacimiento"><img src={enquestes} alt=""
-                                                                            className="iconoboton"/>Enquestes
-                        realitzades
+                    <button className="butones-estadistica-nacimiento botonesHoover">
+                        <img src={enquestes} alt="" className="iconoboton encuesta"/>
+                        <span>Enquestes realitzades</span>
                     </button>
-                    <button className="butones-estadistica-nacimiento"><img src={consulta} alt=""
-                                                                            className="iconoboton"/>Consulta a títol
+                    <button className="butones-estadistica-nacimiento botonesHoover">
+                        <img src={consulta} alt="" className="iconoboton"/>
+                        <span>Consulta a títol</span>
                     </button>
-                    <button className="butones-estadistica-nacimiento"><img src={suport} alt="" className="iconoboton"/>Cures
-                        /suport
+                    <button className="butones-estadistica-nacimiento botonesHoover">
+                        <img src={suport} alt="" className="iconoboton"/>
+                        <span>Cures /suport</span>
                     </button>
                 </div>
             </div>

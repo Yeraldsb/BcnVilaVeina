@@ -3,12 +3,13 @@ import "./estadisticas.css"
 import genere from "../img/cures.png"
 import edat from "../img/altaBaja.png"
 import naixement from "../img/cor.png"
-import enquestes from "../img/cures.png"
+import enquestes from "../img/xarxa.png"
 import consulta from "../img/arbre.png"
 import suport from "../img/escales.png"
 import DatePicker from "react-datepicker";
 import {Bar} from "react-chartjs-2";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 export default function Estadisticas() {
 
@@ -16,11 +17,13 @@ export default function Estadisticas() {
     const [startDate, setStartDate] = useState(new Date("2021/08/31"));
     const [endDate, setEndDate] = useState(new Date("2021/08/31"));
     const [edades, setEdades] = useState(null)
+    const [encuestas , setEncuestas ] = useState(null)
 
     React.useEffect(() => {
         axios.get('http://localhost:8080/all')
             .then((res) => {
                 setEdades(res.data)
+                setEncuestas(res.data)
             }).catch(err => alert(err))
     }, []);
 
@@ -53,13 +56,38 @@ export default function Estadisticas() {
                    />
                </div>
                <div className="buttonContainer">
-                   <button className="buttonEstadisticas"><img src={genere} alt="" className="iconoboton"/>Gènere</button>
-                   <button className="buttonEstadisticas"><img src={edat} alt="" className="iconoboton"/>Edat</button>
-                   <button className="buttonEstadisticas"><img src={naixement} alt="" className="iconoboton"/>Lloc naixement</button>
+                   <button className="buttonEstadisticas botonesHoover">
+                       <img src={genere} alt="" className="iconoboton genere"/>
+                       <span className="span-genere">Gènere</span>
+                   </button>
+
+                   <button className="buttonEstadisticas botonesHoover">
+                       <img src={edat} alt="" className="iconoboton genere "/>
+                       <span>Edat</span>
+                   </button>
+
+                   <Link to="/barrasnacimiento">
+                   <button className="buttonEstadisticas botonesHoover">
+                       <img src={naixement} alt="" className="iconoboton"/>
+                       <span>Lloc naixement</span>
+                   </button>
+                   </Link>
+
                    <div className="buttonContainer second">
-                       <button className="buttonEstadisticas"><img src={enquestes} alt="" className="iconoboton"/>Enquestes realitzades</button>
-                       <button className="buttonEstadisticas"><img src={consulta} alt="" className="iconoboton"/>Consulta a títol</button>
-                       <button className="buttonEstadisticas"><img src={suport} alt="" className="iconoboton"/>Cures /suport</button>
+                       <button className="buttonEstadisticas botonesHoover">
+                           <img src={enquestes} alt="" className="iconoboton encuesta"/>
+                           <span>Enquestes realitzades</span>
+                       </button>
+
+                       <button className="buttonEstadisticas botonesHoover">
+                           <img src={consulta} alt="" className="iconoboton"/>
+                           <span>Consulta a títol</span>
+                       </button>
+
+                       <button className="buttonEstadisticas botonesHoover">
+                           <img src={suport} alt="" className="iconoboton"/>
+                           <span>Cures /suport</span>
+                       </button>
                    </div>
                </div>
 
@@ -107,7 +135,7 @@ export default function Estadisticas() {
                        }]
 
                    }}
-                   height={300}
+                   height={180}
                    width={300}
                    options={{
                        maintainAspectRatio: false
