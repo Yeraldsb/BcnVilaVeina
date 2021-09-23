@@ -50,7 +50,12 @@
 }
 
 
-@media only screen and (min-width: 760px){
+
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
     .logo-home {
         width: 70%;
         height: auto;
@@ -78,7 +83,7 @@
 }
 
 
-@media only screen and (min-width: 480px){
+@media only screen and (min-width: 480px) and (max-width: 767px){
     .logo-home {
         width: 70%;
         height: auto;
@@ -106,34 +111,3 @@
 }
 
 
-@media only screen and (min-width: 320px) {
-
-    .logo-home {
-        width: 65%;
-        height: auto;
-        margin-left: 62px;
-    }
-    .botonWelcome {
-        font-size: 15px;
-        width: 90px;
-        height: 37px;
-    }
-    .imgAgendahome {
-        width: 3.5rem;
-
-    }
-
-    .imgAyuntamenthome {
-        width: 7rem;
-
-    }
-    .imgFomenthome {
-        width: 4rem;
-    }
-    .containerFooter{
-        padding: 30px 20px 20px 20px;
-    }
-
-
-
-}
