@@ -120,22 +120,20 @@
         height: 2rem;
     }
      .form-login {
-         width: 110px;
-         height: 50px;
+         width: 90px;
+         height: 37px;
          font-size: 15px;
 
      }
     .popup-inner {
         width: 250px;
-        height: 360px;
+        height: 380px;
 
 
     }
-    .form {
-        height: 250px;
-    }
+
     .labelUsuario {
-        font-size: 18px;
+        font-size: 15px;
     }
 
   }
