@@ -2,29 +2,23 @@
     padding: 0;
     background-color: white;
     height: 100vh;
-    width: 100%;
+    width: 80%;
     overflow: hidden;
-    margin-left: 320px ;
+    margin-left: 300px ;
 }
-.butones-Container-barras-Edad{
+.botones-container-genero{
     display: flex;
     flex-wrap: wrap;
+    height: 134px;
+    width: 100%;
     justify-content: center;
-    height: 100px;
-    width: 800px;
-    margin-left: 800px;
+    overflow: hidden;
+    position: sticky;
 }
-.butones-estadistica-genero{
-    background-color: #f6f6f6;
-    height: 50px;
-    width: 200px;
-    margin: 10px;
-}
-.container-wrapper-genero{
-    margin-left: 50px;
-    margin-top: 50px;
-    height: 80%;
-    width: 50%;
+.container-wrapper-estadistica{
+    margin-left: 40px;
+    height: 72%;
+    width: 93%;
 }
 .container-buttons-genero{
     display: flex;
@@ -33,4 +27,101 @@
     height: 100px;
     width: 800px;
     margin-left: 780px;
+}
+.butones-estadistica-genero{
+    overflow: hidden;
+    height: 50px;
+    width: 185px;
+    margin: 8px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: sticky;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+.botonesHoover {
+    background-color: #f0ecfc;
+    background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+
+.botonesHoover:before,
+.botonesHoover:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #c797eb;
+    transition: all 0.3s ease;
+}
+
+.botonesHoover:before {
+    height: 0%;
+    width: 2px;
+}
+
+.botonesHoover:after {
+    width: 0%;
+    height: 2px;
+}
+
+.botonesHoover:hover:before {
+    height: 100%;
+}
+
+.botonesHoover:hover:after {
+    width: 100%;
+}
+
+.botonesHoover:hover {
+    background: transparent;
+}
+
+.botonesHoover span:hover {
+    color: #c797eb;
+}
+
+.botonesHoover span:before,
+.botonesHoover span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #c797eb;
+    transition: all 0.3s ease;
+}
+
+.botonesHoover span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.botonesHoover span:after {
+    height: 2px;
+    width: 0%;
+}
+
+.botonesHoover span:hover:before {
+    height: 100%;
+}
+
+.botonesHoover span:hover:after {
+    width: 100%;
+}
+
+span {
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
 }

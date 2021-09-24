@@ -6,6 +6,7 @@ import naixement from "../img/cor.png"
 import enquestes from "../img/xarxa.png"
 import consulta from "../img/arbre.png"
 import suport from "../img/escales.png"
+import calendario from '../img/calendario.png'
 import DatePicker from "react-datepicker";
 import {Bar} from "react-chartjs-2";
 import axios from "axios";
@@ -24,8 +25,6 @@ function cuantasVecesSeRepite(edades, valoresPosibles) {
     }
 }
 
-
-
 export default function Estadisticas() {
 
 
@@ -37,7 +36,6 @@ export default function Estadisticas() {
         axios.get('http://localhost:8080/all')
             .then((res) => {
                 setEdades(res.data.map(e => e.edat))
-
             }).catch(err => alert(err))
     }, []);
 
@@ -47,7 +45,9 @@ export default function Estadisticas() {
             <div className="wrapperContainer">
                 <div className="dataPickerContainer">
                     <p className="opcionFechas">Selecciona periode</p>
+                    <img src={calendario} alt=""className="calendario-img"/>
                     <DatePicker
+                        className="inputs-picker"
                         selected={startDate}
                         onCpnge={(date) => setStartDate(date)}
                         selectsStart
@@ -55,6 +55,7 @@ export default function Estadisticas() {
                         endDate={endDate}
                     />
                     <DatePicker
+                        className="inputs-picker"
                         selected={endDate}
                         onCpnge={(date) => setEndDate(date)}
                         selectsEnd
@@ -64,10 +65,12 @@ export default function Estadisticas() {
                     />
                 </div>
                 <div className="buttonContainer">
-                    <button className="buttonEstadisticas botonesHoover">
-                        <img src={genere} alt="" className="iconoboton genere"/>
-                        <span className="span-genere">Gènere</span>
-                    </button>
+                    <Link to="/generos">
+                        <button className="buttonEstadisticas botonesHoover">
+                            <img src={genere} alt="" className="iconoboton genere"/>
+                            <span className="span-genere">Gènere</span>
+                        </button>
+                    </Link>
 
                     <button className="buttonEstadisticas botonesHoover">
                         <img src={edat} alt="" className="iconoboton genere "/>

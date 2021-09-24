@@ -16,20 +16,43 @@
     display: flex;
 }
 
+.calendario-img {
+    position: relative;
+    left: 1px;
+    height: 40px;
+    width: 40px;
+}
+
 .dataPickerContainer {
-    background-color: var(--purple-color);
+   background-color: whitesmoke;
     padding: 10px;
     border-radius: 6%;
     margin: 10px 50px;
     height: 140px;
     width: 300px;
+    border: thick double #6f21bd;
+}
+
+.inputs-picker {
+    width: 80%;
+    font-size: 16px;
+    font-family: inherit;
+    margin-left: 3em;
+    border: none;
+    border-bottom: 2px solid;
+    cursor: inherit;
+    background: inherit;
+    color: inherit;
+    position: relative;
+    top: -56px;
 }
 
 .opcionFechas {
-    font-family: Arial;
+    font-family: arial;
     font-size: 23px;
     font-weight: 200;
     height: 5px;
+    letter-spacing: 1px;
 }
 
 .buttonContainer {
@@ -158,16 +181,18 @@ span {
     height: 30px;
     padding-right: 20px;
 }
-.genere{
+
+.genere {
     right: 32px;
 }
-.encuesta{
+
+.encuesta {
     left: 15px;
 }
-.span-genere{
+
+.span-genere {
     right: 20px;
 }
-
 
 
 .tablaTitleContainer {
