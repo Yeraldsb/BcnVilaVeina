@@ -19,7 +19,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 70px 20px;
     margin-top: 2rem;
 
 
@@ -29,18 +28,27 @@ body{
     text-decoration: none;
     font-family: "arial";
     letter-spacing: 1px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     padding: 11px;
     cursor: pointer;
     border-radius: 10px;
-    width: 234px;
+    width: 202px;
     display: flex;
     align-items: center;
     margin: 0px;
     border-style: none;
     color: var(--purple-color);
+    transition: all 0.16s ease-in;
 }
+
+.buttonsidebaradmin:hover{
+    box-shadow: 0 0 0 2px rgba(104, 61, 195, .5);
+    margin-left: 5px;
+
+}
+
+
 .logovilasideadmin{
     display: block;
     width: 65%;
@@ -49,7 +57,7 @@ body{
 
 }
 
-.sidebar a:hover{
+.button-logout-admin:hover{
     color: #fff;
     margin-left: 20px;
     transition: 0.4s;
@@ -62,7 +70,7 @@ body{
     height: 40px;
     border-radius: 5px;
     margin-bottom: 10px;
-    margin-top: 31vh;
+    margin-top: 4rem;
     padding: 10px;
     font-weight: bold;
     font-size: 18px;
@@ -79,4 +87,60 @@ body{
     width: 40px;
     height: auto;
     padding-right: 6px;
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .sidebaradmin {
+        width: 230px;
+    }
+
+    .buttonsidebaradmin{
+        font-size: 11px;
+        width: 172px;
+        height: 2.5rem;
+    }
+
+    .logobotonsidebar {
+        width: 29px;
+        padding-right: 5px;
+    }
+
+    .button-logout-admin {
+        width: 86px;
+        height: 32px;
+        padding: 0px;
+        font-size: 13px;
+        margin-top: 6rem;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+    .sidebaradmin {
+        width: 230px;
+    }
+
+    .buttonsidebaradmin{
+        font-size: 11px;
+        width: 172px;
+        height: 2.5rem;
+    }
+
+    .logobotonsidebar {
+        width: 29px;
+        padding-right: 5px;
+    }
+
+    .button-logout-admin {
+        width: 86px;
+        height: 32px;
+        padding: 0px;
+        font-size: 13px;
+        margin-top: 6rem;
+    }
+
 }

@@ -14,13 +14,13 @@ function AppAdmin(props) {
         <Router>
             <SideBarAdmin />
                 <Switch>
+
                     <Route exact path ="/">
                         <BarrasLugarNacimiento/>
                     </Route>
                     <Route exact path="/enquesta">
                         <FormEnquestas/>
                     </Route>
-
                     <Route path="/estadistiques">
                         <Estadisticas/>
                     </Route>

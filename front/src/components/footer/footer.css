@@ -37,3 +37,17 @@ footer{
 
 
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .logomodalvilaveina {
+        width: 12rem;
+        height: auto;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .logomodalvilaveina {
+    }
+}
