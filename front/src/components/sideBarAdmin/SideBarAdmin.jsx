@@ -28,7 +28,7 @@ export default function SideBarAdmin() {
                     <button className="buttonsidebaradmin"><img src={altaBaja} alt="" className="logobotonsidebar"/>ALTA/BAIXA USUARIS</button>
 
                 </Link>
-                <Link to="/paginaHome" className="linktoenquesta">
+                <Link to="/PaginaHome" className="linktoenquesta">
                     <button className="button-logout-admin">SORTIR</button>
                 </Link>
 

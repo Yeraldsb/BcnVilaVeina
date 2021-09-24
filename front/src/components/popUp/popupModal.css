@@ -11,6 +11,8 @@
     align-items: center;
 }
 
+
+
 .popup-inner {
     display: flex;
     flex-direction: column;
@@ -21,21 +23,27 @@
     top: 226px;
     background-color: var(--purple-color);
     border-radius: 66px;
-    padding: 3rem;
+    padding: 2rem;
 }
-.popup-inner .close-btn{
-    position: absolute;
-    top: -10px;
-    right: -7px;
-    cursor: pointer;
-    width: 40px;
-    height: 30px;
-    background-color: var(--orange-color);
+.close-btn{
     display: flex;
-    justify-content: center;
-    color: #f4f4f4;
-    font-weight: 550;
+    font-family: arial;
+    text-align: center;
+    cursor: pointer;
+    color: #7c6aa1;
+    font-weight: normal;
+    font-size: 20px;
+    border:none;
+    margin-left:310px;
+    margin-top: -13px;
 }
+
+.close-btn:hover {
+    font-size:21px;
+    color: #7c6aa1;
+}
+
+
 
 .logomodalvilaveina {
     width: 12rem;
@@ -46,7 +54,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--purple-color);
 
 }
 .form-element {
@@ -71,8 +78,8 @@
     margin: 3rem;
     background-color: var(--green-color);
     color: white;
-    width: 119px;
-    height: 39px;
+    width: 117px;
+    height: 44px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -80,8 +87,20 @@
     box-shadow: none;
     font-weight: bold;
     align-items: center;
+    transition: all 0.16s ease-in;
+    border-style: groove;
+    border-width: 0.5px;
+    border-color: #0cba7e;
+
 
 }
+.form-login:hover {
+    background: #FFFFFF;
+    color: #0cba7e;
+    box-shadow: 0 0 0 2px rgba(12, 186, 126, .5);
+    border-color: #0cba7e;;
+}
+
 .labelUsuario{
     font-size: 20px;
     font-weight: normal;
@@ -119,22 +138,20 @@
         width: 14rem;
         height: 2rem;
     }
-     .form-login {
-         width: 90px;
-         height: 37px;
-         font-size: 15px;
+    .form-login {
+        width: 102px;
+        height: 40px;
+        font-size: 15px;
 
-     }
+    }
     .popup-inner {
         width: 250px;
-        height: 380px;
+        height: 360px;
 
 
     }
-
     .labelUsuario {
-        font-size: 15px;
+        font-size: 18px;
     }
 
-  }
-
+}
