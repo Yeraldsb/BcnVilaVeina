@@ -26,3 +26,11 @@
     height: 80%;
     width: 50%;
 }
+.container-buttons-genero{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100px;
+    width: 800px;
+    margin-left: 780px;
+}

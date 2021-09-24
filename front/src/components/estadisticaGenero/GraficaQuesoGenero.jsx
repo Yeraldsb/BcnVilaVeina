@@ -29,7 +29,8 @@ const GraficaQuesoGenero = () => {
     return(
         <div className="barras-genero-container">
             <div className="graficas-genero-wrapper">
-                <div className="container-buttons-genero">
+                <div className="
+">
                     <button className="butones-estadistica-genero">
                         <img src={genere} alt="" className="iconoboton"/>
                         Gènere

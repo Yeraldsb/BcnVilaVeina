@@ -1,38 +1,70 @@
 /* -------------- MOTHER DIVS -------------------------------------------- */
 .pollbackground {
-    box-shadow: 5px 5px 20px -6px #683dc3;
-    margin: 5% 50%;
     font-family: Arial;
-    background: #f4f4f4;
-    border-radius: 1%;
-    height: 400px;
-    padding:  2rem 5rem 15rem 5rem;
-    width: 43rem;
-    margin-left: 32%;
-    border: 3rem solid #683dc3;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    border-radius: 40px;
+    height: 376px;
+    padding: 2rem 5rem 15rem 5rem;
+    width: 55%;
+    margin-left: 25%;
+    margin-top: 8px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+
 }
-.form-content{
+.form-title{
+    font-weight: 500;
+}
+
+.form-img {
+    height: 80px;
+    width: 80px;
+    position: relative;
+    left: 70%;
+    top: -100px;
+    border-radius: 7rem;
+    background-color: white;
+}
+
+.poll-form {
+    width: 850px;
+    height: 580px;
+    background-color: white;
+    border-radius: 40px;
+    margin-top: -30px;
+}
+
+.form-content {
     display: flex;
     font-size: 16px;
     font-width: normal;
 
 }
-
+.inputs-style{
+    border-radius:1rem;
+    height: 33px;
+    width: 350px;
+}
+.all-labels{
+    font-size: 16px;
+    font-weight: 200;
+}
 /* ----------------- COLUMN 1 -------------------------------------------- */
 .form-column-1 {
     display: flex;
     flex-direction: column;
-    padding: 0px 10px 40px 10px;
+    margin: -35px;
+    width: 45%;
 }
 
-.form-column-1-content {
-}
 .form-datalabelpicker {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
-label.data.form-label{
+
+label.data.form-label {
     margin: 0;
     width: 43px;
 }
@@ -44,32 +76,37 @@ input.datepickerbox {
     width: 85px;
     text-align: center;
 }
+
 .form-checkboxgenre {
     display: flex;
 }
 
-.form-age-origin{
+.form-age-origin {
     align-items: flex-end;
     flex-wrap: wrap;
     display: flex;
     justify-content: flex-start;
 }
-label.age.form-label{
+
+label.age.form-label {
     display: flex;
     margin: 5px;
     width: 60px;
     font-size: 14px;
 }
-label.origin.form-label{
+
+label.origin.form-label {
     display: flex;
     margin: 5px;
     font-size: 14px;
 }
-select.age.form-select{
+
+select.age.form-select {
     border-radius: 5px;
     height: 23px;
     margin-left: 8px;
 }
+
 select.origin.form-select {
     border-radius: 5px;
     height: 23px;
@@ -77,7 +114,7 @@ select.origin.form-select {
     width: 150px;
 }
 
-.form-ambits-theme{
+.form-ambits-theme {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -86,11 +123,13 @@ select.origin.form-select {
     align-content: center;
 
 }
-input.ambit-box{
+
+input.ambit-box {
     border: 1px solid #683dc3;
     border-radius: 5px;
     height: 20px;
 }
+
 .ambit-p {
     font-size: 16px;
 }
@@ -99,26 +138,23 @@ input.ambit-box{
 .form-column-2 {
     display: flex;
     flex-direction: column;
-    padding: 0px 20px 40px 40px;
-    margin: 8px 0 9px 0;
+    padding-left: 75px;
+    margin-top: 15px;
 }
+
 .submitpoll {
     color: white;
-    text-align: center;
     background-color: #0cba7e;
     font-family: Arial;
     font-weight: bold;
-    margin-left: 50px;
+    margin-left: 225px;
     border-style: none;
     width: 120px;
     height: 40px;
     border-radius: 5px;
-    margin-bottom: 10px;
     margin-top: 2vh;
-    padding: 10px;
-    font-weight: bold;
     font-size: 16px;
-    text-align: center;
+
 }
 
 
@@ -133,7 +169,8 @@ select.form-select {
     border-radius: 5px;
     height: 30px;
 }
-.genrebox,.ambitbox {
+
+.genrebox, .ambitbox {
     background-color: white;
     border: 1px solid black;
     border-radius: 50px;
@@ -141,7 +178,8 @@ select.form-select {
     height: 18px;
 
 }
-input#genrebox.genrebox{
+
+input#genrebox.genrebox {
     margin: 10px 0px 0px 3px;
     padding: 0;
     display: block;
@@ -149,7 +187,7 @@ input#genrebox.genrebox{
     overflow: hidden;
 }
 
-p{
+p {
     margin: 10px 0px 30px 1px;
     font-size: 14px;
 }
