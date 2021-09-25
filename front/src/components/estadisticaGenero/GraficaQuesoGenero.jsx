@@ -46,7 +46,7 @@ const GraficaQuesoGenero = () => {
 
                 </Link>
 
-                <Link to="barrasnacimiento">
+                <Link to="graficanacimiento">
                     <button className="butones-estadistica-genero botonesHoover">
                         <img src={naixement} alt="" className="iconoboton"/>
                         Lloc naixement
