@@ -25,7 +25,7 @@ function AppAdmin(props) {
                         <Estadisticas/>
                     </Route>
 
-                    <Route path="/barrasnacimiento">
+                    <Route path="/graficanacimiento">
                         <BarrasLugarNacimiento/>
                     </Route>
 

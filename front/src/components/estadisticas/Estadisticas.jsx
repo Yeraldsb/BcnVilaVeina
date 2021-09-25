@@ -84,7 +84,7 @@ export default function Estadisticas() {
                         <span>Edat</span>
                     </button>
 
-                    <Link to="/barrasnacimiento">
+                    <Link to="/graficanacimiento">
                         <button className="buttonEstadisticas botonesHoover">
                             <img src={naixement} alt="" className="iconoboton"/>
                             <span>Lloc naixement</span>
