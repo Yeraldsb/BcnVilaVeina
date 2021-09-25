@@ -1,23 +1,52 @@
 
 .registerForm-edit {
-    box-shadow: 5px 5px 20px -6px #683dc3;
-    margin: 5% 50%;
+    width: 850px;
+    height: 580px;
+    background-color: white;
+    border-radius: 40px;
+    margin-top: -30px;
+
+}
+.main-container-edit{
     font-family: Arial;
-    background: #f4f4f4;
-    border-radius: 1%;
-    height: 400px;
-    padding:  4rem 5rem  12rem 5rem;
-    width: 43rem;
-    margin-left: 32%;
-    border: 3rem solid #683dc3;
-
-
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    border-radius: 40px;
+    height: 376px;
+    padding: 2rem 5rem 15rem 5rem;
+    width: 55%;
+    margin-left: 25%;
+    margin-top: 8px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.edit-title{
+    margin-left: -60px;
+}
+.edit-img{
+    height: 80px;
+    width: 80px;
+    position: relative;
+    left: 70%;
+    top: -100px;
+    border-radius: 7rem;
+    background-color: white;
 }
 
 .columnpile {
     display: flex;
     font-weight: normal;
     font-size: 16px;
+    margin-top: -70px;
+}
+.edit-labels{
+    font-size: 16px;
+    font-weight: 200;
+}
+.edit-inputs-style{
+    border-radius:1rem;
+    height: 33px;
+    width: 350px;
+    border: 1px solid;
 }
 
 .button-save {
@@ -42,21 +71,14 @@
     flex-direction: column;
     padding: 0px 10px 40px 30px
 }
-label , .columna-1 {
-       margin: 8px 90px 0 11px;
-}
 
 .columna-2 {
     display: flex;
     flex-direction: column;
     padding: 0px 20px 40px 40px;
-    margin: 8px 0 9px 0;
+    margin: 0 0 9px 0;
 }
-input , .formselect {
-    margin: 10px 20px 10px 10px;
-
-}
-h3 {
+.edit-title {
     text-align: center;
     padding: 3px;
     font-size: 33px;
@@ -64,10 +86,3 @@ h3 {
     color: #683dc3;
 }
 
-
-input {
-    border: none;
-    border-radius: 5px;
-    height: 30px;
-    margin-left: 8px;
-}

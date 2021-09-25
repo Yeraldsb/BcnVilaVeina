@@ -11,6 +11,12 @@ import DatePicker from "react-datepicker";
 import {Bar} from "react-chartjs-2";
 import axios from "axios";
 import {Link} from "react-router-dom";
+import ExportExcel from 'react-export-excel';
+
+
+const ExcelFile = ExportExcel.ExcelFile;
+const ExcelSheet = ExportExcel.ExceSheet;
+const ExcelColumn = ExportExcel.ExcelColumn;
 
 function edadesDiferentes() {
     return ["-18 anys", "De 18 a 24 anys", "De 25 a 34 anys", "De 35 a 44 anys", "De 45 a 54 anys", "De 55 a 64 anys", "De 65 a 74 anys", "De 75 a 84 anys", "De 85 y més", "NS/NC"]
@@ -27,15 +33,16 @@ function cuantasVecesSeRepite(edades, valoresPosibles) {
 
 export default function Estadisticas() {
 
-
     const [startDate, setStartDate] = useState(new Date("2021/08/31"));
     const [endDate, setEndDate] = useState(new Date("2021/08/31"));
     const [edades, setEdades] = useState([])
+    const [descargaCsv, setDescargaCsv] = useState([])
 
     React.useEffect(() => {
         axios.get('http://localhost:8080/all')
             .then((res) => {
                 setEdades(res.data.map(e => e.edat))
+                setDescargaCsv(res.data)
             }).catch(err => alert(err))
     }, []);
 
@@ -106,6 +113,22 @@ export default function Estadisticas() {
             <div className="tablaTitleContainer">
                 <h3 className="tableTitle"> Tabla Title</h3>
             </div>
+            <ExcelFile element={<button className="botonCsv"> Exportar a Excel</button>} filename="Excel Encuestas">
+                <ExcelSheet data={descargaCsv} name="Encuestas">
+                    <ExcelColumn label="Barris" value="barris" />
+                    <ExcelColumn label="Canal De Atencio" value="canalDeAtencio" />
+                    <ExcelColumn label="Edat" value="edat" />
+                    <ExcelColumn label="lloc De Naixement" value="llocDeNaixement" />
+                    <ExcelColumn label="consulta De Titol" value="consultaDeTitol" />
+                    <ExcelColumn label="Motiu Cures" value="motiuCures" />
+                    <ExcelColumn label="situacio Juridica" value="situacioJuridica" />
+                    <ExcelColumn label="serveis Tramits" value="serveisTramits" />
+                    <ExcelColumn label="nivel De Estudis" value="nivelEstudis" />
+                    <ExcelColumn label="Situacio Laboral" value="situacioLaboral" />
+                    <ExcelColumn label="Comens ha conegut" value="comenshaconegut" />
+                </ExcelSheet>
+            </ExcelFile>
+
             <div className="graficaContainer">
 
                 <Bar
@@ -153,6 +176,10 @@ export default function Estadisticas() {
                     }}
                 />
             </div>
+            <button>
+                <a href={"url"}> </a>
+                Descarga csv
+            </button>
 
         </div>
 

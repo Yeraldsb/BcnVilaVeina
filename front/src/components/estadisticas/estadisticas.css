@@ -34,7 +34,7 @@
 }
 
 .inputs-picker {
-    width: 80%;
+    width: 70%;
     font-size: 16px;
     font-family: inherit;
     margin-left: 3em;
@@ -45,6 +45,7 @@
     color: inherit;
     position: relative;
     top: -56px;
+    padding: 10px;
 }
 
 .opcionFechas {
@@ -203,5 +204,8 @@ span {
 
 .tableTitle {
     font-family: Arial;
+}
+.botonCsv{
+    margin-left: 350px;
 }
 

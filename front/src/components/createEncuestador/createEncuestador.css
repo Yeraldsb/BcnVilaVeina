@@ -1,14 +1,45 @@
-.registerFormalta {
-    box-shadow: 5px 5px 20px -6px #683dc3;
-    margin: 5% 50%;
+.main-container-create{
     font-family: Arial;
-    background: #f4f4f4;
-    border-radius: 1%;
-    height: 400px;
-    padding:  4rem 5rem  12rem 5rem;
-    width: 43rem;
-    margin-left: 32%;
-    border: 3rem solid #683dc3;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    border-radius: 40px;
+    height: 376px;
+    padding: 2rem 5rem 15rem 5rem;
+    width: 55%;
+    margin-left: 25%;
+    margin-top: 8px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.registerFormalta {
+    width: 850px;
+    height: 580px;
+    background-color: white;
+    border-radius: 40px;
+    margin-top: -30px;
+}
+.create-img{
+    height: 80px;
+    width: 80px;
+    position: relative;
+    left: 70%;
+    top: -100px;
+    border-radius: 7rem;
+    background-color: white;
+}
+.labels-create{
+    font-size: 16px;
+    font-weight: 200;
+}
+.inputs-style-create{
+    border-radius:1rem;
+    height: 33px;
+    width: 350px;
+    border: 1px solid;
+}
+.select{
+    width: 360px;
+    height: 34px;
 }
 
 .columnpilecreate {
@@ -17,40 +48,21 @@
     font-size: 16px;
 }
 
-.button-save {
-    color: white;
-    text-align: center;
-    background-color: #ff7432;
-    font-family: Arial;
-    padding: 15px 15px 15px;
-    width: 125px;
-    margin-top: 50px;
-    border: 2px solid #a6a6a6;
-}
 
 .columna-1encuestador {
     display: flex;
     flex-direction: column;
-    padding: 0px 10px 40px 30px
+    padding: 0px 10px 40px 30px;
+    margin-top: -80px;
+
 }
 .columna-2encuestador {
     display: flex;
     flex-direction: column;
     padding: 0px 20px 40px 40px;
-    margin: 8px 0 9px 0;
-}
-input , .formselect {
-    margin: 10px 20px 10px 10px;
-
+    margin-top: -78px;
 }
 h3 {
     text-align: center;
     padding: 3px;
-}
-
-input {
-    border: 1px solid #683dc3;
-    border-radius: 5px;
-    height: 20px;
-    margin-left: 8px;
 }
