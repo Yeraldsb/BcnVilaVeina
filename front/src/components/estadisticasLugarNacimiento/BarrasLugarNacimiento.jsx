@@ -10,27 +10,31 @@ import suport from "../img/escales.png";
 import axios from "axios";
 import {Link} from "react-router-dom";
 
+function lugaresDeNacimiento() {
+    return [ "Catalunya", "Resta de l'Estat", "Unión Europea", "Resta d'Europa", "Asia", "Àfrica del Nord", "Resta d'Àfrica", "América del Sud i Central", "América del Nord", "Oceania", "NS/NC" ]
+}
+function lugarDeNacimientoRepetido( lugares, lugaresRepetidos) {
+    if (lugares === null){
+        return []
+    }else{
+        return lugaresRepetidos.map(lugarRepetido =>
+        lugares.filter(lugar => lugar === lugarRepetido).length)
+    }
+}
 
-const BarrasLugarNacimiento = () => {
+export default function  BarrasLugarNacimiento(){
 
-    const[neiborhood, setNeiborhood] = useState(null);
+    const[lugares, setLugares] = useState([]);
 
     React.useEffect(() => {
         axios.get('http://localhost:8080/all')
             .then((res) => {
-                setNeiborhood(res.data)
-                console.log(setNeiborhood(res.data))
+                setLugares(res.data.map(e => e.llocDeNaixement))
+
             }).catch(err => alert(err))
     }, []);
 
-    let ids = []
-    let result = []
-    if (neiborhood){
-        result = neiborhood.map( n => n.llocDeNaixement)
-        ids = neiborhood.map(x => x.id)
-    }
-    console.log(result)
-    console.log(ids)
+
     return (
         <div className="barras-edad-container">
             <div className="butones-Container-barras-Edad ">
@@ -46,10 +50,12 @@ const BarrasLugarNacimiento = () => {
                 </button>
                 </Link>
 
+                <Link to="/graficanacimiento">
                 <button className="butones-estadistica-nacimiento botonesHoover">
                     <img src={naixement} alt="" className="iconoboton"/>
                   <span>  Lloc naixement</span>
                 </button>
+                </Link>
 
                 <div className="buttonContainer second">
                     <button className="butones-estadistica-nacimiento botonesHoover">
@@ -69,10 +75,10 @@ const BarrasLugarNacimiento = () => {
             <div className="container-wrapper-barra">
                 <Bar
                     data={{
-                        labels: result,
+                        labels: lugaresDeNacimiento(),
                         datasets: [{
                             label: 'Gráfica de lloc de naixement',
-                            data: [100, 200, 300, 400, 500, 600, 300, 400, 600, 150],
+                            data: lugarDeNacimientoRepetido(lugares, lugaresDeNacimiento()),
                             backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)',
                                 'rgba(54, 162, 235, 0.2)',
@@ -123,4 +129,3 @@ const BarrasLugarNacimiento = () => {
     )
 }
 
-export default BarrasLugarNacimiento;
