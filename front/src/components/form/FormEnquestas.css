@@ -168,6 +168,12 @@ input.ambit-box {
     font-size: 16px;
 
 }
+.submitpoll:hover {
+    background: none;
+    color: #0cba7e;
+    box-shadow: 0 0 0 2px rgba(12, 186, 126, .5);
+    border-color: #0cba7e;
+}
 
 
 /* ------------- BOOTSTRAP CLASSES --------------------------------------- */

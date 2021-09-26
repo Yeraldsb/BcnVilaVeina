@@ -19,41 +19,43 @@
 .calendario-img {
     position: relative;
     left: 1px;
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
 }
 
 .dataPickerContainer {
-   background-color: whitesmoke;
+   background-color: #ffffff;
     padding: 10px;
     border-radius: 6%;
     margin: 10px 50px;
-    height: 140px;
-    width: 300px;
+    height: 100px;
+    width: 185px;
     border: thick double #6f21bd;
 }
 
 .inputs-picker {
-    width: 70%;
-    font-size: 16px;
-    font-family: inherit;
+    width: 35%;
+    font-size: 12px;
+    font-family: arial;
     margin-left: 3em;
     border: none;
     border-bottom: 2px solid;
     cursor: inherit;
-    background: inherit;
+    background: #FFFFFF;
     color: inherit;
     position: relative;
     top: -56px;
+    left: 16px;
     padding: 10px;
 }
 
 .opcionFechas {
     font-family: arial;
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 200;
     height: 5px;
     letter-spacing: 1px;
+    color: #683dc3;
 }
 
 .buttonContainer {
@@ -206,6 +208,29 @@ span {
     font-family: Arial;
 }
 .botonCsv{
+    background-color: var(--green-color);
+    color: white;
+    width: 110px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    box-shadow: none;
+    font-weight: bold;
+    align-items: center;
+    transition: all 0.16s ease-in;
+    border-style: groove;
+    border-width: 0.5px;
+    border-color: #0cba7e;
     margin-left: 350px;
+    border: none;
+}
+
+.botonCsv:hover {
+    background: none;
+    color: #0cba7e;
+    box-shadow: 0 0 0 2px rgba(12, 186, 126, .5);
+    border-color: #0cba7e;
 }
 

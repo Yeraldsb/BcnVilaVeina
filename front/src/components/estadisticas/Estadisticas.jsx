@@ -52,7 +52,7 @@ export default function Estadisticas() {
         <div className="mainContainer">
             <div className="wrapperContainer">
                 <div className="dataPickerContainer">
-                    <p className="opcionFechas">Selecciona periode</p>
+                    <p className="opcionFechas">Selecciona període</p>
                     <img src={calendario} alt=""className="calendario-img"/>
                     <DatePicker
                         className="inputs-picker"
