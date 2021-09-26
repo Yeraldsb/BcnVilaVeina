@@ -11,7 +11,8 @@ import DatePicker from "react-datepicker";
 import {Bar} from "react-chartjs-2";
 import axios from "axios";
 import {Link} from "react-router-dom";
-import ExportExcel from 'react-export-excel';
+import ExportExcel from "react-export-excel";
+
 
 
 const ExcelFile = ExportExcel.ExcelFile;

@@ -53,6 +53,11 @@ body{
     color: var(--purple-color);
 }
 
+.buttonsidebaruser:hover {
+    box-shadow: 0 0 0 2px rgba(104, 61, 195, .5);
+    margin-left: 5px;
+}
+
 
 .logobotonsidebaruser{
 
@@ -61,7 +66,7 @@ body{
     padding-right: 6px;
 }
 
-.button-logout-admin:hover{
+.button-logout-user:hover{
     color: #fff;
     margin-left: 20px;
     transition: 0.4s;
