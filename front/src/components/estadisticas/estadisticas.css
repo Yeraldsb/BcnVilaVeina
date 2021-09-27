@@ -79,28 +79,24 @@
     margin: 10px 0 0 350px;
 }
 
-.buttonEstadisticas {
-    height: 50px;
-    width: 200px;
-    margin: 10px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    outline: none;
-}
 
 .botonesHoover {
     background-color: #ffffff;
     line-height: 42px;
     padding: 0;
     border: 1px solid #683dc3;
+    height: 50px;
+    width: 200px;
+    margin: 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
 }
 
 .botonesHoover:before,

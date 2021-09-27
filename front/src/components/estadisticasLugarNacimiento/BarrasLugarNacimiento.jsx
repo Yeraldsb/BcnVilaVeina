@@ -38,35 +38,35 @@ export default function  BarrasLugarNacimiento(){
     return (
         <div className="barras-edad-container">
             <div className="butones-Container-barras-Edad ">
-                <button className="butones-estadistica-nacimiento botonesHoover">
+                <button className="botonesHoover">
                     <img src={genere} alt="" className="iconoboton genere"/>
                    <span>Gènere</span>
                 </button>
 
                 <Link to="/estadistiques">
-                <button className="butones-estadistica-nacimiento botonesHoover">
+                <button className="botonesHoover">
                     <img src={edat} alt="" className="iconoboton genere"/>
                     <span>Edat</span>
                 </button>
                 </Link>
 
                 <Link to="/graficanacimiento">
-                <button className="butones-estadistica-nacimiento botonesHoover">
+                <button className="botonesHoover">
                     <img src={naixement} alt="" className="iconoboton"/>
                   <span>  Lloc naixement</span>
                 </button>
                 </Link>
 
                 <div className="buttonContainer second">
-                    <button className="butones-estadistica-nacimiento botonesHoover">
+                    <button className="botonesHoover">
                         <img src={enquestes} alt="" className="iconoboton encuesta"/>
                         <span>Enquestes realitzades</span>
                     </button>
-                    <button className="butones-estadistica-nacimiento botonesHoover">
+                    <button className="botonesHoover">
                         <img src={consulta} alt="" className="iconoboton"/>
                         <span>Consulta a títol</span>
                     </button>
-                    <button className="butones-estadistica-nacimiento botonesHoover">
+                    <button className="botonesHoover">
                         <img src={suport} alt="" className="iconoboton"/>
                         <span>Cures /suport</span>
                     </button>

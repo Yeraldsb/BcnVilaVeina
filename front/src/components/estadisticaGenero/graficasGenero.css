@@ -28,17 +28,19 @@
     width: 800px;
     margin-left: 780px;
 }
-.butones-estadistica-genero{
+.botonesHoover {
+    background-color: #ffffff;
+    line-height: 42px;
+    padding: 0;
+    border: 1px solid #683dc3;
     overflow: hidden;
     height: 50px;
     width: 185px;
     margin: 8px;
     color: #fff;
     border-radius: 5px;
-    padding: 10px 25px;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
-    background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
     position: sticky;
@@ -47,12 +49,6 @@
     7px 7px 20px 0px rgba(0, 0, 0, .1),
     4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
-}
-.botonesHoover {
-    background-color: #ffffff;
-    line-height: 42px;
-    padding: 0;
-    border: 1px solid #683dc3;
 }
 
 .botonesHoover:before,

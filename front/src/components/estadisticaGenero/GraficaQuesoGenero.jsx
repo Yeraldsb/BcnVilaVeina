@@ -39,7 +39,7 @@ const GraficaQuesoGenero = () => {
         <div className="barras-genero-container">
             <div className="botones-container-genero">
                 <Link to="estadistiques">
-                    <button className="butones-estadistica-genero botonesHoover">
+                    <button className="botonesHoover">
                         <img src={edat} alt="" className="iconoboton"/>
                         Edat
                     </button>
@@ -47,23 +47,23 @@ const GraficaQuesoGenero = () => {
                 </Link>
 
                 <Link to="graficanacimiento">
-                    <button className="butones-estadistica-genero botonesHoover">
+                    <button className="botonesHoover">
                         <img src={naixement} alt="" className="iconoboton"/>
                         Lloc naixement
                     </button>
                 </Link>
 
-                <button className="butones-estadistica-genero botonesHoover">
+                <button className="botonesHoover">
                     <img src={enquestes} alt="" className="iconoboton"/>
                     Enquestes realitzades
                 </button>
 
-                <button className="butones-estadistica-genero botonesHoover">
+                <button className="botonesHoover">
                     <img src={consulta} alt="" className="iconoboton"/>
                     Consulta a títol
                 </button>
 
-                <button className="butones-estadistica-genero botonesHoover">
+                <button className="botonesHoover">
                     <img src={suport} alt="" className="iconoboton"/>
                     Cures /suport
                 </button>

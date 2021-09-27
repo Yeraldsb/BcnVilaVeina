@@ -41,16 +41,19 @@
     width: 800px;
     margin-left: 780px;
 }
-.butones-estadistica-nacimiento{
+
+.botonesHoover {
+    background-color: #ffffff;
+    line-height: 42px;
+    padding: 0;
+    border: 1px solid #683dc3;
     height: 50px;
     width: 200px;
     margin: 10px;
-    color: #fff;
+    color: #000000;
     border-radius: 5px;
-    padding: 10px 25px;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
-    background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -59,12 +62,6 @@
     7px 7px 20px 0px rgba(0, 0, 0, .1),
     4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
-}
-.botonesHoover {
-    background-color: #ffffff;
-    line-height: 42px;
-    padding: 0;
-    border: 1px solid #683dc3;
 }
 
 .botonesHoover:before,
