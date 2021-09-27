@@ -161,7 +161,7 @@ export class CreateEncuestador extends Component {
                                 />
                             </div>
                         </div>
-                        <button className="button-save" type="submit"> GUARDAR</button>
+                        <button className="button-save-create" type="submit"> GUARDAR</button>
 
                     </div>
                 </form>

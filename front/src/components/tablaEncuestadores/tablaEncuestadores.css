@@ -20,17 +20,11 @@
     border-radius: 50%;
     color:#FFFFFF;
     font-size: 17px;
-
 }
-
-
 
 .tcolor {
     background-color: var(--purple-color);
-
 }
-
-
 
 
 .Tabla {
@@ -86,6 +80,14 @@
     font-weight: 600;
     font-family: Arial;
     font-size: 20px;
+}
+
+.botonTablaEncuestadores:hover{
+    background: none;
+    color: #0cba7e;
+    box-shadow: 0 0 0 2px rgba(12, 186, 126, .5);
+    border-color: #0cba7e;
+
 }
 
 

@@ -66,3 +66,28 @@ h3 {
     text-align: center;
     padding: 3px;
 }
+
+.button-save-create {
+    color: white;
+    text-align: center;
+    background-color: #0cba7e;
+    font-family: Arial;
+    font-weight: bold;
+    margin-left: 50px;
+    border-style: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 2vh;
+    padding: 10px;
+    font-size: 16px;
+
+}
+
+.button-save-create:hover {
+    background: none;
+    color: #0cba7e;
+    box-shadow: 0 0 0 2px rgba(12, 186, 126, .5);
+    border-color: #0cba7e;
+}
