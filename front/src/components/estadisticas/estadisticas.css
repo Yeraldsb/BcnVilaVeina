@@ -100,11 +100,10 @@
 }
 
 .botonesHoover {
-    background-color: #f0ecfc;
-    background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
+    background-color: #ffffff;
     line-height: 42px;
     padding: 0;
-    border: none;
+    border: 1px solid #683dc3;
 }
 
 .botonesHoover:before,
