@@ -15,10 +15,10 @@ function AppAdmin(props) {
             <SideBarAdmin />
                 <Switch>
 
-                    <Route exact path ="/">
-                        <BarrasLugarNacimiento/>
+                    <Route exact path="/">
+                        <FormEnquestas/>
                     </Route>
-                    <Route exact path="/enquesta">
+                    <Route path="/enquesta">
                         <FormEnquestas/>
                     </Route>
                     <Route path="/estadistiques">
