@@ -7,7 +7,7 @@
     padding: 2rem 5rem 15rem 5rem;
     width: 55%;
     margin-left: 25%;
-    margin-top: 8px;
+    margin-top: 50px;
     overflow-y: hidden;
     overflow-x: hidden;
 
@@ -58,6 +58,7 @@
     border-radius:1rem;
     height: 33px;
     width: 100%;
+    padding-left: 15px;
 }
 .all-labels{
     font-size: 16px;
