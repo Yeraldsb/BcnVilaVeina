@@ -121,9 +121,9 @@ export default function FormEnquestas() {
                                         </select>
                                     </div>
                                 </Form.Group>
-                                <div className={"form-age-origin"}>
-                                    <Form.Group>
-                                        <label className="age all-labels"> Edat </label>
+                                <Form.Group>
+                                     <label className="age all-labels"> Edat </label>
+                                     <div>
                                         <select className="age" name="edat" id="edat" className="inputs-style"
                                                      onChange={handleFormChange} value={encuesta.edat} 
                                             required>
@@ -139,10 +139,12 @@ export default function FormEnquestas() {
                                             <option value="De 85 y més">De 85 y més</option>
                                             <option value="NS/NC">NS/NC</option>
                                         </select>
-                                    </Form.Group>
+                                     </div>
+                                </Form.Group>
 
-                                    <Form.Group className="llocdenaixement">
-                                        <label className="origin all-labels"> Lloc de naixement </label>
+                                <Form.Group>
+                                      <label className="origin all-labels"> Lloc de naixement </label>
+                                        <div>
                                         <select className="origin inputs-style" name="llocDeNaixement" id="llocDeNaixement"
                                                      onChange={handleFormChange} value={encuesta.llocDeNaixement}
                                             required>
@@ -159,8 +161,9 @@ export default function FormEnquestas() {
                                             <option value="Oceania">Oceania</option>
                                             <option value="NS/NC">NS/NC</option>
                                         </select>
+                                        </div>
                                     </Form.Group>
-                                </div>
+
                                 <Form.Group>
                                     <label className="all-labels"> Gènere </label>
                                     <select className="genere inputs-style" name="genere" id="genere"
