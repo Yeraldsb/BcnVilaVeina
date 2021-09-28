@@ -136,7 +136,7 @@ export default function Estadisticas() {
                     data={{
                         labels: edadesDiferentes(),
                         datasets: [{
-                            label: 'Gráfica rango de edad',
+                            label: 'Gràfica edats',
                             data: cuantasVecesSeRepite(edades, edadesDiferentes()),
                             backgroundColor: [
                                 'rgba(159,99,255,0.2)',

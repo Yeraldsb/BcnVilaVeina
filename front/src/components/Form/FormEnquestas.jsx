@@ -74,7 +74,8 @@ export default function FormEnquestas() {
                                     <label className="all-labels"> Vila Veïna : </label>
                                     <div>
                                         <select name="barris" id="barris" className="inputs-style"
-                                                     onChange={handleFormChange} defaultValue={encuesta.barris}>
+                                                     onChange={handleFormChange} defaultValue={encuesta.barris}
+                                            required>
                                             <option></option>
                                             <option value="Badal">Badal</option>
                                             <option value="Carmel de dalt">Carmel de dalt</option>
@@ -109,7 +110,8 @@ export default function FormEnquestas() {
                                     <label className="all-labels"> Canal d'Atenció </label>
                                     <div>
                                         <select name="canalDeAtencio" id="canalDeAtencio" className="inputs-style"
-                                                     onChange={handleFormChange} defaultValue={encuesta.canalDeAtencio}>
+                                                     onChange={handleFormChange} defaultValue={encuesta.canalDeAtencio}
+                                            required>
                                             <option></option>
                                             <option value="Presencial Espai">Presencial Espai</option>
                                             <option value="Presencial Descentralizat">Presencial Descentralizat</option>
@@ -123,7 +125,8 @@ export default function FormEnquestas() {
                                     <Form.Group>
                                         <label className="age all-labels"> Edat </label>
                                         <select className="age" name="edat" id="edat" className="inputs-style"
-                                                     onChange={handleFormChange} defaultValue={encuesta.edat}>
+                                                     onChange={handleFormChange} defaultValue={encuesta.edat} 
+                                            required>
                                             <option></option>
                                             <option value="-18 anys">-18 anys</option>
                                             <option value="De 18 a 24 anys">De 18 a 24 anys</option>
@@ -141,7 +144,8 @@ export default function FormEnquestas() {
                                     <Form.Group className="llocdenaixement">
                                         <label className="origin all-labels"> Lloc de naixement </label>
                                         <select className="origin inputs-style" name="llocDeNaixement" id="llocDeNaixement"
-                                                     onChange={handleFormChange} defaultValue={encuesta.llocDeNaixement}>
+                                                     onChange={handleFormChange} defaultValue={encuesta.llocDeNaixement}
+                                            required>
                                             <option></option>
                                             <option value="Catalunya">Catalunya</option>
                                             <option value="Resta de l'Estat">Resta de l'Estat</option>
@@ -160,7 +164,8 @@ export default function FormEnquestas() {
                                 <Form.Group>
                                     <label className="all-labels"> Gènere </label>
                                     <select className="genere inputs-style" name="genere" id="genere"
-                                                 onChange={handleFormChange} defaultValue={encuesta.genere}>
+                                                 onChange={handleFormChange} defaultValue={encuesta.genere}
+                                        required>
                                         <option></option>
                                         <option value="Home">Home</option>
                                         <option value="Dona">Dona</option>
@@ -172,7 +177,8 @@ export default function FormEnquestas() {
                                     <label className="all-labels"> Consulta de títol: </label>
                                     <br/>
                                     <select name="consultaDeTitol" id="consultaDeTitol" className="inputs-style"
-                                            onChange={handleFormChange} defaultValue={encuesta.consultaDeTitol}>
+                                            onChange={handleFormChange} defaultValue={encuesta.consultaDeTitol}
+                                        required>
                                         <option></option>
                                         <option value="Professional de les cures i de la llar"> Professional de les cures i de la llar</option>
                                         <option value="Persona cuidadora familiar"> Persona cuidadora familiar</option>
@@ -192,7 +198,8 @@ export default function FormEnquestas() {
                             <Form.Group>
                                 <label className="all-labels"> Motiu cures o suport: </label>
                                 <select name="motiuCures" id="motiuCures" className="inputs-style"
-                                             onChange={handleFormChange} defaultValue={encuesta.motiuCures}>
+                                             onChange={handleFormChange} defaultValue={encuesta.motiuCures}
+                                    required>
                                     <option></option>
                                     <option value="Edat: petita infància">Edat: petita infància</option>
                                     <option value="Edat: procés d'envelliment">Edat: procés d'envelliment</option>
@@ -207,7 +214,8 @@ export default function FormEnquestas() {
                                 <label className="all-labels"> Situació Jurídica: </label>
                                 <div>
                                     <select name="situacioJuridica" id="situacioJuridica" className=" inputs-style"
-                                                 onChange={handleFormChange} defaultValue={encuesta.situacioJuridica}>
+                                                 onChange={handleFormChange} defaultValue={encuesta.situacioJuridica}
+                                        required>
                                         <option></option>
                                         <option value="Nacionalitat espanyola">Nacionalitat espanyola</option>
                                         <option value="Autorització de residència i treball">Autorització de residència i treball</option>
@@ -223,7 +231,8 @@ export default function FormEnquestas() {
                                 <label className="all-labels"> Serveis i Tràmits: </label>
                                 <div>
                                     <select name="serveisTramits" id="serveisTramits" className=" inputs-style"
-                                                 onChange={handleFormChange} defaultValue={encuesta.serveisTramits}>
+                                                 onChange={handleFormChange} defaultValue={encuesta.serveisTramits}
+                                        required>
                                         <option></option>
                                         <option value="Informació">Informació</option>
                                         <option value="Orientació">Orientació</option>
@@ -238,7 +247,8 @@ export default function FormEnquestas() {
                                 <label className="all-labels"> Nivell d'estudis: </label>
                                 <div>
                                     <select name="nivelEstudis" id="nivelEstudis" className="genere inputs-style"
-                                                 onChange={handleFormChange} defaultValue={encuesta.nivelEstudis}>
+                                                 onChange={handleFormChange} defaultValue={encuesta.nivelEstudis}
+                                        required>
                                         <option></option>
                                         <option value="No sap llegir ni esciure">No sap llegir ni esciure</option>
                                         <option value="Primària incompleta">Primària incompleta</option>
@@ -253,7 +263,8 @@ export default function FormEnquestas() {
                                 <label className="all-labels"> Situació Laboral: </label>
                                 <div>
                                     <select name="situacioLaboral" id="situacioLaboral" className="inputs-style"
-                                                 onChange={handleFormChange} defaultValue={encuesta.situacioLaboral}>
+                                                 onChange={handleFormChange} defaultValue={encuesta.situacioLaboral}
+                                        required>
                                         <option></option>
                                         <option value="Treball a temps parcial">Treball a temps parcial</option>
                                         <option value="Treball a temps complet">Treball a temps complet</option>
@@ -270,7 +281,8 @@ export default function FormEnquestas() {
                                 <label className="all-labels"> Com ens ha conegut: </label>
                                 <div>
                                     <select name="comenshaconegut" id="comenshaconegut" className=" inputs-style"
-                                                 onChange={handleFormChange} defaultValue={encuesta.comenshaconegut}>
+                                                 onChange={handleFormChange} defaultValue={encuesta.comenshaconegut}
+                                        required>
                                         <option></option>
                                         <option value="Boca-orella">Boca-orella</option>
                                         <option value="Web">Web</option>

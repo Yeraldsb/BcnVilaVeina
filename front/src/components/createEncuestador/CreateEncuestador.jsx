@@ -121,6 +121,7 @@ export class CreateEncuestador extends Component {
                                             id="vilaveina"
                                             defaultValue={this.state.vilaveina}
                                             onChange={this.handleChange}
+                                            required
                                         >
                                             <option></option>
                                             <option value="Badal">Badal</option>
