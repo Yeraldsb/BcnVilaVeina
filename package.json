@@ -1,0 +1,10 @@
+{
+  "name": "BcnVilaVeina",
+  "version": "1.0.0",
+  "dependencies": {
+  },
+  "engines": {
+    "node": "15.x"
+  }
+}
+
