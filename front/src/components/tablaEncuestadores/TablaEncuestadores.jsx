@@ -6,18 +6,19 @@ import {Link} from "react-router-dom";
 import {Delete} from "@material-ui/icons";
 
 
-interface MyState {
-    handleSubmit: [],
-    Encuestadores: [];
-}
-
-export default class TablaEncuestadores extends Component<{}, MyState> {
 
 
-    state: MyState = {
+
+export default class TablaEncuestadores extends Component {
+
+    constructor(props) {
+        super(props);
+
+
+    this.state = {
         handleSubmit: [],
         Encuestadores: [],
-
+    }
     }
 
     componentDidMount() {
@@ -56,8 +57,8 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                 <TableContainer component={Paper}>
                     <Table className="contenedorTabla">
                         <TableHead>
-                            <TableRow className="tcolor" >
-                                <TableCell style={{color: "white"}} >#</TableCell>
+                            <TableRow className="tcolor">
+                                <TableCell style={{color: "white"}}>#</TableCell>
                                 <TableCell style={{color: "white"}}>NOM</TableCell>
                                 <TableCell style={{color: "white"}}>COGNOM</TableCell>
                                 <TableCell style={{color: "white"}}>VILA</TableCell>
@@ -82,8 +83,8 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                                     <TableCell align="left">{encuestador.adreca}</TableCell>
                                     <TableCell align="left">{encuestador.correu}</TableCell>
                                     <TableCell align="left">
-                                        <Link  to={{
-                                            pathname:`/editar/` + encuestador.id,
+                                        <Link to={{
+                                            pathname: `/editar/` + encuestador.id,
                                             state: {encuestador: encuestador}
                                         }} style={{textDecoration: "none"}}>
                                             <button
@@ -94,7 +95,8 @@ export default class TablaEncuestadores extends Component<{}, MyState> {
                                             </button>
                                         </Link>
 
-                                        <Delete onClick={() => this.deleteEncuestador(encuestador.id)} className="borrar"/>
+                                        <Delete onClick={() => this.deleteEncuestador(encuestador.id)}
+                                                className="borrar"/>
                                     </TableCell>
                                 </TableRow>
                             )}
