@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './editEncuestador.css';
-import {Redirect, useLocation, useParams} from "react-router-dom";
+import {Link, Redirect, useLocation, useParams} from "react-router-dom";
 import axios from "axios";
 import edit from '../img/edit.png'
 import Form from "react-bootstrap/Form";
@@ -112,7 +112,7 @@ export const EditEncuestador = (props) => {
                             <label className="edit-labels"> Vila Veïna : </label>
                             <div>
                                 <select name="vilaveina" id="vilaveina" className="edit-inputs-style"
-                                        onChange={handleChange} defaultValue={encuestadorInfo.vilaveina}>
+                                        onChange={handleChange} value={encuestadorInfo.vilaveina}>
                                     <option></option>
                                     <option value="Badal">Badal</option>
                                     <option value="Carmel de dalt">Carmel de dalt</option>
@@ -168,6 +168,8 @@ export const EditEncuestador = (props) => {
                     >
                         GUARDAR
                     </button>
+
+
 
                 </div>
 
