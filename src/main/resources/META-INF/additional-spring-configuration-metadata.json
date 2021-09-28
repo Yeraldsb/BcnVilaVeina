@@ -4,5 +4,10 @@
       "name": "mongodb+srv",
       "type": "java.lang.String",
       "description": "Description for mongodb+srv."
-  }
-] }
+    },
+    {
+      "name": "heroku",
+      "type": "java.lang.String",
+      "description": "Description for heroku."
+    }
+  ] }
