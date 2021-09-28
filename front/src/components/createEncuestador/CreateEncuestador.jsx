@@ -119,7 +119,7 @@ export class CreateEncuestador extends Component {
                                             className="inputs-style-create select"
                                             name="vilaveina"
                                             id="vilaveina"
-                                            defaultValue={this.state.vilaveina}
+                                            value={this.state.vilaveina}
                                             onChange={this.handleChange}
                                             required
                                         >
